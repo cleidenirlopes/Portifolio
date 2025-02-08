@@ -1,42 +1,81 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kaushan Script', cursive;
+  }
+  
+  a {
+    color: #007bff;
     text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background: #fff;
-    border-radius: 5px;
-}
-
-footer {
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Masthead */
+  .masthead {
+    position: relative;
+    background: #69b3a2;
+    color: white;
+    padding: 100px 0;
     text-align: center;
-    padding: 10px 0;
+  }
+  
+  .textlanding {
+    margin-top: 30px;
+    font-size: 24px;
+  }
+  
+  .social-buttons i {
+    font-size: 30px;
+    margin: 0 10px;
+  }
+  
+  .social-buttons a:hover i {
+    color: #007bff;
+  }
+  
+  /* Navbar */
+  .navbar {
     background: #333;
-    color: #fff;
-}
+  }
+  
+  .navbar a {
+    color: #fff !important;
+  }
+  
+  .navbar a:hover {
+    color: #69b3a2 !important;
+  }
+  
+  /* Description Section */
+  #description {
+    padding: 60px 0;
+  }
+  
+  #description .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #description p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  #description .btn-secondary {
+    background-color: #69b3a2;
+    border-color: #69b3a2;
+  }
+  
+  #description .btn-secondary:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
