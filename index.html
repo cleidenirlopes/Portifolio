@@ -1,45 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Portfolio of Your Name. Showcasing projects, skills, and contact information.">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Your Name - Portfolio</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-79254642-5');
+  </script>
+
+  <meta charset="utf-8">
+  <title>Your Name | Data - Science - Viz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Personal Portfolio showcasing data analysis and visualization projects.">
+  <meta name="keywords" content="Data Analysis, Data Visualization, Portfolio, Python, SQL, Tableau, Power BI">
+  <meta name="author" content="Your Name">
+  <link rel="icon" href="img/logo/Home_single_small.png">
+
+  <!-- Social Media Sharing -->
+  <meta property="og:title" content="Cledenir Souza | Data - Science - Viz" />
+  <meta property="og:image" content="img/logo/Home_single_medium.png" />
+  <meta property="og:description" content="Explore my portfolio focused on data analysis, visualization, and insights." />
+  <meta property='og:url' content="https://www.t9infinity.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet'>
+
+  <!-- Custom styles -->
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Your Name</h1>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Write a brief introduction about yourself.</p>
-        </section>
+<body id="page-top">
+  <header>
+    <h1>Your Name</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>List your projects here.</p>
-        </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Write a brief introduction about yourself.</p>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Provide your contact information.</p>
-        </section>
-    </main>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>List your projects here.</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Provide your contact information.</p>
+    </section>
+  </main>
 
-    <script src="js/scripts.js"></script>
+  <footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
+
 </html>
