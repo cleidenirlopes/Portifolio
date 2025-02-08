@@ -5,64 +5,38 @@ body {
     background-color: #f4f4f4;
 }
 
-.nav-link {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.intro {
+header {
     background: #333;
-    color: white;
-    padding: 50px 0;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
-.intro-title {
-    font-size: 40px;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.intro-subtitle {
-    font-size: 24px;
-    margin-top: 10px;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.btn {
-    background-color: #69b3a2;
-    color: white;
-    padding: 15px 30px;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    margin-top: 20px;
 }
 
-.about, .portfolio, .contact {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.portfolio-items {
-    display: flex;
-    justify-content: space-around;
-}
-
-.portfolio-item {
-    width: 30%;
-    background-color: white;
+section {
     padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    margin: 20px;
+    background: #fff;
+    border-radius: 5px;
 }
 
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
 }
