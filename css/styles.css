@@ -1,21 +1,23 @@
 /* Base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     line-height: 1.6;
+    color: #333;
 }
 
 /* Header */
 header {
-    background: #333;
+    background: #343a40;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    position: sticky; /* Mantém o header visível ao rolar */
+    position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation */
@@ -35,55 +37,86 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
+    font-weight: 600;
+    padding: 10px 20px;
     transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    background: #fff;
-    color: #333;
-    border-radius: 5px;
+    background: #ffc107;
+    color: #343a40;
 }
 
 /* Main Sections */
 main {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 section {
     background: #fff;
-    padding: 20px;
+    padding: 30px;
     margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-family: 'Kaushan Script', cursive;
+    color: #343a40;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 15px 0;
-    background: #333;
+    background: #343a40;
     color: #fff;
     margin-top: 20px;
     font-size: 0.9rem;
 }
 
+/* Buttons */
+.btn-custom {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
+    section {
+        margin: 15px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
     nav ul li a {
-        padding: 10px;
+        padding: 8px 15px;
     }
 
     section {
-        margin: 10px;
         padding: 15px;
     }
 }
