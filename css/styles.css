@@ -1,122 +1,128 @@
-/* Base */
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Base Styles */
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    line-height: 1.6;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
 }
 
-/* Header */
-header {
-    background: #343a40;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Masthead Styles */
+.masthead {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.textlanding {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.name-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.title-divider {
+  width: 80px;
+  height: 3px;
+  background: #4ecca3;
+  margin: 1.5rem auto;
+}
+
+.social-links {
+  margin: 2rem 0;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4ecca3;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.cta-buttons .btn {
+  margin: 0 1rem;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background: #4ecca3;
+  border: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #4ecca3;
+  color: #4ecca3;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator a {
+  color: white;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
 }
 
 /* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.navbar {
+  padding: 1rem 0;
+  transition: all 0.3s ease;
 }
 
-nav ul li {
-    display: inline;
+.navbar-brand {
+  font-weight: 700;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 20px;
-    transition: background 0.3s, color 0.3s;
-    border-radius: 5px;
-}
-
-nav ul li a:hover {
-    background: #ffc107;
-    color: #343a40;
-}
-
-/* Main Sections */
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-section {
-    background: #fff;
-    padding: 30px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-family: 'Kaushan Script', cursive;
-    color: #343a40;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px 0;
-    background: #343a40;
-    color: #fff;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-/* Buttons */
-.btn-custom {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.btn-custom:hover {
-    background-color: #0056b3;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    section {
-        margin: 15px;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 15px 0;
-    }
-
-    nav ul li a {
-        padding: 8px 15px;
-    }
-
-    section {
-        padding: 15px;
-    }
+.nav-link {
+  color: white!important;
+  margin: 0 1rem;
+  font-weight: 500;
 }
