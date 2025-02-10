@@ -1,0 +1,131 @@
+/* Global Variables */
+:root {
+  --white: #ffffff;
+  --tertiary-color: #ff6347; /* Tomato color for hover effect */
+  --primary-color: #333333;
+  --bg-color: #f9f9f9;
+  --text-color: #555555;
+  --shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding-top: 80px; /* Prevent content from hiding under fixed navbar */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--white);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.navbar__content {
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links li {
+  display: inline-block;
+}
+
+.navbar__links a {
+  padding: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+
+.navbar__links a:hover {
+  color: var(--tertiary-color);
+}
+
+/* Mobile Menu */
+.navbar__mobile,
+.mobile__links {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__mobile img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__mobile.active .mobile__links {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    position: absolute;
+    top: 98%;
+    left: 0;
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+    z-index: 1;
+  }
+
+  .mobile__links li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .mobile__links li a {
+    padding: 1rem;
+    display: block;
+    color: var(--primary-color);
+    transition: background 0.3s;
+  }
+
+  .mobile__links li a:hover {
+    background-color: var(--tertiary-color);
+    color: var(--white);
+  }
+}
+
+/* Navbar Shadow on Scroll */
+.navbar.active {
+  box-shadow: var(--shadow);
+}
+
+
+
+
+
+
+

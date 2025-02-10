@@ -1,83 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cledenir Souza | Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Link to CSS file -->
-</head>
+    <meta name="description" content="Portfolio of Cledenir Souza, showcasing data analysis projects and skills.">
+    <title>Cledenir Souza</title>
 
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Styles -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #111; color: #fff; line-height: 1.6; }
+        nav { position: fixed; top: 0; width: 100%; background: transparent; padding: 10px 20px; display: flex; justify-content: center; z-index: 1000; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); transition: background 0.3s ease; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: #f39c12; }
+
+        header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 5vh; position: relative; z-index: 1; }
+        h1.name { font-size: 60px; font-weight: bold; display: flex; align-items: center; gap: 10px; margin: 0; padding: 0; }
+        .name-logo { width: 80px; height: auto; vertical-align: middle; }
+        .intro-text { font-size: 1.2rem; max-width: 600px; margin: 20px auto 0; }
+
+        section { padding: 60px 20px; text-align: center; }
+        footer { background: #000; padding: 20px; text-align: center; }
+
+        #particles-js { position: fixed; width: 100%; height: 50vh; z-index: -1; top: 0; left: 0; pointer-events: none; }
+    </style>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
 <body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#home" class="logo">
-                <img src="img/logo.png" alt="Logo" class="logo-img">
-                Cledenir Souza
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+        <a class="js-scroll-trigger" href="#page-top">HOME</a>
+        <i class="fa fa-bars"></i>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#description">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                </li>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Home Section -->
-    <header id="home" class="home-section">
-        <div class="home-content">
-            <h1>👋 Hi! I'm Cledenir Souza</h1>
-            <p>I'm an aspiring Data Analyst passionate about data science, data visualization, and analytics. I enjoy uncovering insights and helping organizations make data-driven decisions. ❤️</p>
-            <a href="#portfolio" class="btn">View Portfolio</a>
+
+    <!-- Landing Section -->
+    <header class="masthead">
+        <div class="textlanding">
+            <p style="display:inline; font-size: 35px; padding-left: 30px">Cledenir</p>
+            <img width="90px" style="display:inline; margin-bottom: 20px; margin-right: 10px; margin-left: 10px" src="assets/logo.svg" alt="Logo" class="name-logo"> 
+            <p style="display:inline; font-size: 35px">Souza</p>
+            <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
+            <br>
+            <ul class="list-inline social-buttons">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                    <ul class="list-inline" style="display: flex; gap: 20px; padding: 0; list-style: none;">
+                        <li class="list-inline-item social-buttons">
+                            <a href="https://github.com/cleidenirlopes" target="_blank">
+                                <i class="fab fa-github" style="color: white; font-size: 32px;"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item social-buttons">
+                            <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank">
+                                <i class="fab fa-linkedin" style="color: white; font-size: 32px;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+
+            <p>👋 Hi! I’m Cledenir Souza, a Junior Data Analyst <p></p>passionate about data visualization.</p>
+            <p>With over 8 years of experience in customer support <p></p>and a background in Computer Science, I’m now focused on transforming<p></p> data into meaningful insights. 🚀</p>
+
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Contact</a>
+        </div>
+        <div class="arrowlanding">
+            <a class="js-scroll-trigger" href="#description">
+                <p style="font-size: 80px; color: #69b3a2">&#xfe40;</p>
+            </a>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>I specialize in helping businesses and researchers analyze and visualize their datasets. I excel in data visualization and love solving complex problems with data. My focus is on delivering insights that help organizations make data-driven decisions and improve their operations.</p>
-    </section>
+<!-- =======================  DESCRIPTION SECTION ======================= -->
+<section id="description" class="bg-light">
+    <div class="container" style="display: flex; justify-content: center; align-items: flex-start; height: 80vh; padding-top: 50px;">
+        <div class="row" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+            <div class="col-lg-4 text-center">
+                <img class="img-fluid rounded" src="assets/Profile.JPG" alt="Cledenir profile picture" style="max-width: 200px; height: auto; border-radius: 5px;">
+            </div>
+            <div class="col-lg-8 text-left" style="text-align: left; padding-left: 20px;">
+                <p style="font-size: 20px; font-weight: bold;">Hi, I'm Cledenir.</p>
+                <p>I've always had a passion for technology, <p></p>which led me to pursue a degree in Computer Science.</p>
+                <p>I worked for over 10 years as a Technical Support Specialist,<p></p> gaining extensive experience in solving complex technical issues.</p>
+                <p>Later, I transitioned into Graphic Design, an area I truly love <p></p>that has become more than just a job—it's a fulfilling hobby.</p>
+                <p>For the past year, I've been diving into the world of Data Analysis, <p></p>and I'm currently finishing a Data Analytics Bootcamp to strengthen my skills.</p>
+                <p>My goal is to become a Data Visualization professional, combining my technical<p></p> background and creative skills to transform data into meaningful insights and impactful stories.</p>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <h2>Portfolio</h2>
-        <p>Explore some of my previous projects and case studies. My portfolio showcases various data analysis projects, data visualizations, and business intelligence solutions that I have worked on.</p>
-        <div class="portfolio-gallery">
-            <div class="portfolio-item">
-                <img src="img/project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of the project and the technologies used.</p>
+                <div class="mt-5" style="margin-top: 20px;">
+                    <a href="https://github.com/cleidenirlopes" target="_blank" style="border: 1px solid #f5f5f5; padding: 2px 5px; margin-right: 5px; text-decoration: none; color: #f5f5f5; border-radius: 1px;">GITHUB</a>
+                    <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank" style="border: 1px solid #f5f5f5; padding:2px 5px; text-decoration: none; color: #f5f5f5; border-radius: 1px;">LINKEDIN</a>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <img src="img/project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Description of the project and the technologies used.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+            <div style="text-align: center; margin-right: 15px;">
+                <i class="fa fa-database" style="font-size: 50px; color: #0073e6;"></i>
+                <p>SQL</p>
             </div>
-            <div class="portfolio-item">
-                <img src="img/project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Description of the project and the technologies used.</p>
+            <div style="text-align: center; margin-right: 15px;">
+                <i class="fa fa-chart-bar" style="font-size: 50px; color: #ff6347;"></i>
+                <p>Power BI</p>
             </div>
+            <div style="text-align: center; margin-right: 15px;">
+                <i class="fa fa-table" style="font-size: 50px; color: #00bfae;"></i>
+                <p>Tableau</p>
+            </div>
+            <div style="text-align: center; margin-right: 15px;">
+                <i class="fab fa-python" style="font-size: 50px; color: #1261f3;"></i>
+                <p>Python</p>
+            </div>
+            <div style="text-align: center; margin-right: 15px;">
+                <i class="fa fa-chart-line" style="font-size: 50px; color: #32cd32;"></i>
+                <p>Data Visualization</p>
+            </div>
+            <div style="text-align: center; margin-right: 15px;">
+                <i class="fa fa-cogs" style="font-size: 50px; color: #cf8700;"></i>
+                <p>Data Cleaning</p>
+            </div>
+            <div style="text-align: center; margin-right: 15px;">
+                <i class="fab fa-microsoft" style="font-size: 50px; color: #0a914d;"></i>
+                <p style="color: #c9c9c9;">Excel</p>
+            </div>
+            
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <p>If you would like to get in touch, feel free to send me an email or connect with me through social media.</p>
-        <p>Email: <a href="mailto:cleidenir.lopes@example.com">cleidenir.lopes@example.com</a></p>
-        <div class="social-links">
-            <a href="https://github.com/cleidenirsouza" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/cleidenir-souza/" target="_blank">LinkedIn</a>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, please reach out via my contact form or through my social links above.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <p>&copy; 2025 Cledenir Souza. All rights reserved.</p>
     </footer>
-</body>
 
+    <!-- Particles.js Initialization -->
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 } },
+                opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0, sync: false } },
+                size: { value: 3, random: true, anim: { enable: true, speed: 40, size_min: 0, sync: false } },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+            },
+            interactivity: {
+                detect_on: "window",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
 </html>

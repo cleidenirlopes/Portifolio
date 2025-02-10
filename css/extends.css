@@ -1,0 +1,166 @@
+@import './variables.css';
+@import './globals.css';
+
+@import './components/navbar.css';
+@import './components/header.css';
+@import './components/about.css';
+@import './components/skills.css';
+@import './components/projects.css';
+@import './components/footer.css';
+
+/* Logo - Increase Size */
+.logo {
+    width: 150px;   /* Adjust size as needed */
+    height: auto;
+}
+
+/* Header - Align Text to the Left */
+.header__content {
+    padding: 50px 20px;  /* Adds space around content */
+    text-align: left;    /* Aligns text to the left */
+    margin-left: 30px;   /* Moves content more to the left */
+}
+
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Header - Align Text to the Left and Move Down */
+.header__content {
+    padding: 100px 20px;    /* Increased top padding to move content down */
+    text-align: left;       
+    margin-left: 0px;      /* Keeps content aligned to the left */
+}
+
+.navbar {
+    padding: 10px 0;         /* Reduce padding to make the navbar thinner */
+    position: fixed;         
+    top: 0;
+    width: 100%;
+    background-color: rgb(22, 22, 22);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional shadow for better separation */
+}
+
+
+/* Keep the Name at the Top and Center Horizontally */
+.header__content {
+    display: flex;
+    justify-content: center;   /* Centers the content horizontally */
+    align-items: flex-start;   /* Keeps the content at the top */
+    padding-top: 100px;        /* Adjusts spacing from the top */
+    text-align: center;        /* Aligns text in the center */
+}
+
+/* Style for the Name and Logo */
+.name {
+    font-size: 80px;           /* Adjusts the font size */
+    font-weight: lighter;
+    display: flex;             /* Aligns text and logo in a row */
+    align-items: center;       /* Aligns items vertically */
+    gap: 10px;                 /* Adds space between name and logo */
+    margin: 10 auto;           /* Removes default margin */
+    padding: 0;                /* Removes default padding */
+}
+
+/* Style for the Logo */
+.name-logo {
+    width: 120px;              /* Adjusts the logo size */
+    height: auto;
+    vertical-align: middle;    /* Aligns the logo with the text */
+}
+
+/* Add this CSS to the end of your existing css/extends.css file */
+
+/* Particles Background */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh; /* Only cover the top 30% of the viewport */
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Navbar */
+.navbar {
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+/* Header Section */
+#header {
+    display: flex;
+    justify-content: center;      /* Center horizontally */
+    align-items: flex-start;      /* Align items to the top (flex-start) */
+    padding-top: 5vh;             /* Adjust vertical space (reduce to bring name higher) */
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    height: 15vh; /* Optional: If you want to limit the height */
+}
+
+/* Name and Logo Styling */
+.name {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-size: 60px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Name and Logo Styling */
+.name span {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* Description Section */
+#description {
+    display: flex;
+    flex-wrap: nowrap;        /* Ensures that content stays on the same line */
+    align-items: center;      /* Vertically aligns the items */
+    justify-content: flex-start; /* Ensures items are aligned to the start */
+    padding: 40px 20px;        /* Padding for space around the content */
+}
+
+#description .col-lg-4 {
+    margin-right: 20px;         /* Adds space between image and text */
+}
+
+#description img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#description .col-lg-8 {
+    display: flex;
+    flex-direction: column;     /* Ensures text stays in a column layout */
+}
+
+#description p {
+    margin-bottom: 10px;        /* Adds space between paragraphs */
+}
+
+#description .mt-5 {
+    margin-top: 20px;           /* Adds more space for social buttons */
+}
+
+#description a {
+    padding: 4px 10px;
+    margin-right: 10px;         /* Space between social buttons */
+    text-decoration: none;
+    color: #f5f5f5;
+    border-radius: 2px;
+    border: 1px solid #f5f5f5;
+}
