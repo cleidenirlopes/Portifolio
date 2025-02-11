@@ -123,6 +123,11 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* Paragraph Styling */
+p {
+  margin: 0.3rem 0; /* Reduces vertical space between paragraphs */
+  line-height: 1.4;  /* Adjusts line spacing within paragraphs */
+}
 
 
 

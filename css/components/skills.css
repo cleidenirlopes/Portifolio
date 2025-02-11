@@ -28,12 +28,3 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-}
-
-.skills .skills__content ul li h3 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin: 2rem 0 1rem;
-}

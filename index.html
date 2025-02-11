@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Cledenir Souza, showcasing data analysis projects and skills.">
     <title>Cledenir Souza</title>
+    <link rel="stylesheet" href="css/extends.css">
 
     <!-- Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -38,74 +39,71 @@
     <!-- Particles Background -->
     <div id="particles-js"></div>
 
-    <!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-    <div class="container">
-        <a class="js-scroll-trigger" href="#page-top">HOME</a>
-        <i class="fa fa-bars"></i>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#description">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
+    <!-- Navigation Section -->
+    <nav id="mainNav">
+        <div class="nav-container">
+            <!-- HOME aligned left -->
+            <a class="nav-home" href="#page-top">HOME</a>
+    
+            <!-- Navigation Menu aligned right -->
+            <ul class="nav-menu">
+                <li><a href="#description">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+    
 
 
-    <!-- Landing Section -->
-    <header class="masthead">
-        <div class="textlanding">
-            <p style="display:inline; font-size: 35px; padding-left: 30px">Cledenir</p>
-            <img width="90px" style="display:inline; margin-bottom: 20px; margin-right: 10px; margin-left: 10px" src="assets/logo.svg" alt="Logo" class="name-logo"> 
+   <!-- Landing Section -->
+<header class="masthead">
+    <div class="textlanding" style="text-align: center;">
+        <div style="display: inline-block; text-align: center;">
+            <p style="display:inline; font-size: 35px; padding-left: 35px">Cledenir</p>
+            <img width="150px" style="display:inline; margin: 0 10px 10px 10px;" src="assets/logo.webp" alt="Logo" class="name-logo"> 
             <p style="display:inline; font-size: 35px">Souza</p>
-            <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
-            <br>
-            <ul class="list-inline social-buttons">
-                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
-                    <ul class="list-inline" style="display: flex; gap: 20px; padding: 0; list-style: none;">
-                        <li class="list-inline-item social-buttons">
-                            <a href="https://github.com/cleidenirlopes" target="_blank">
-                                <i class="fab fa-github" style="color: white; font-size: 32px;"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item social-buttons">
-                            <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank">
-                                <i class="fab fa-linkedin" style="color: white; font-size: 32px;"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </ul>
-
-            <p>👋 Hi! I’m Cledenir Souza, a Junior Data Analyst <p></p>passionate about data visualization.</p>
-            <p>With over 8 years of experience in customer support <p></p>and a background in Computer Science, I’m now focused on transforming<p></p> data into meaningful insights. 🚀</p>
-
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Contact</a>
         </div>
-        <div class="arrowlanding">
-            <a class="js-scroll-trigger" href="#description">
-                <p style="font-size: 80px; color: #69b3a2">&#xfe40;</p>
-            </a>
-        </div>
-    </header>
+        <!-- Centered <hr> -->
+        <hr style="width: 100px; height: 1px; border:none;color:#ffffff;background-color:#ffffff; margin: 20px auto 0 auto; transform: translateX(20px);">
+        <br>
+        <ul class="list-inline social-buttons">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                <ul class="list-inline" style="display: flex; gap: 20px; padding: 0; list-style: none;">
+                    <li class="list-inline-item social-buttons">
+                        <a href="https://github.com/cleidenirlopes" target="_blank">
+                            <i class="fab fa-github" style="color: white; font-size: 32px;"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item social-buttons">
+                        <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 32px;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+
+        <p>👋 Hi! I’m Cledenir Souza, a Junior Data Analyst <p></p>passionate about data visualization.</p>
+        <p>With over 8 years of experience in customer support <p></p>and a background in Computer Science, I’m now focused on transforming<p></p> data into meaningful insights. 🚀</p>
+
+    </div>
+    <div class="arrowlanding">
+        <a class="js-scroll-trigger" href="#description">
+            <p style="font-size: 80px; color: #035bff">&#xfe40;</p>
+        </a>
+    </div>
+</header>
+
 
 <!-- =======================  DESCRIPTION SECTION ======================= -->
+<div class="row hide-if-small-screen" style="padding-top: 0%; margin-top: -80px;"> 
 <section id="description" class="bg-light">
-    <div class="container" style="display: flex; justify-content: center; align-items: flex-start; height: 80vh; padding-top: 50px;">
+    <div class="container" style="display: flex; justify-content: center; align-items: flex-start; height: 50vh; padding-top: 10px;">
         <div class="row" style="display: flex; align-items: center; justify-content: center; width: 100%;">
             <div class="col-lg-4 text-center">
-                <img class="img-fluid rounded" src="assets/Profile.JPG" alt="Cledenir profile picture" style="max-width: 200px; height: auto; border-radius: 5px;">
+                <img class="img-fluid rounded" src="assets/Profile.JPG" alt="Cledenir profile picture" style="max-width: 250px; height: auto; border-radius: 10px;">
             </div>
             <div class="col-lg-8 text-left" style="text-align: left; padding-left: 20px;">
                 <p style="font-size: 20px; font-weight: bold;">Hi, I'm Cledenir.</p>
@@ -125,9 +123,45 @@
 </section>
 
 
+<!-- =======================  WORK EXPERIENCE ======================= -->
+<div class="row hide-if-small-screen" style="padding-top: 0; margin-top: -120px;"> 
+    <div class="col-lg-12 text-center">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <svg width="1000" height="100">
+                <line x1="0" y1="50" x2="1000" y2="50" style="stroke:rgb(255, 253, 253); stroke-width:1.5" />
+
+                <circle cx="220" cy="50" r="10" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
+                <text text-anchor="middle" x="220" y="80" fill="white">2014</text>
+                <text font-size="13" text-anchor="middle" x="90" y="30" fill="white">Support Technician</text>
+                <text style="font-style: italic" font-size="13" text-anchor="middle" x="90" y="80" fill="#808080">Wisdon Hardware</text>
+
+                <circle cx="450" cy="50" r="10" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
+                <text text-anchor="middle" x="450" y="80" fill="white">2015</text>
+                <text font-size="13" text-anchor="middle" x="320" y="30" fill="white">Graphic Design</text>
+                <text style="font-style: italic" font-size="13" text-anchor="middle" x="320" y="80" fill="#808080">Aquarela Infinity</text>
+
+                <circle cx="650" cy="50" r="10" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
+                <text text-anchor="middle" x="650" y="80" fill="white">2019</text>
+                <text font-size="13" text-anchor="middle" x="550" y="30" fill="white">Support Technician</text>
+                <text style="font-style: italic" font-size="13" text-anchor="middle" x="550" y="80" fill="#808080">Souza Cruz</text>
+
+                <circle cx="850" cy="50" r="10" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
+                <text text-anchor="middle" x="850" y="80" fill="white">2024</text>
+                <text font-size="13" text-anchor="middle" x="750" y="30" fill="white">Content Specialist</text>
+                <text style="font-style: italic" font-size="13" text-anchor="middle" x="750" y="80" fill="#808080">Accenture</text>
+
+                <text font-size="13" text-anchor="middle" x="930" y="30" fill="white">CS Support Analyst</text>
+                <text style="font-style: italic" font-size="13" text-anchor="middle" x="930" y="80" fill="#808080">Entain Group</text>
+
+            </svg>
+        </div>
+    </div>
+</div>
 
 
-    <!-- Skills Section -->
+<!-- ==================================Skills Section===================================== -->
+
+    <div class="row hide-if-small-screen" style="padding-top: 6%;"> 
     <section id="skills">
         <h2>Skills</h2>
         <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
@@ -161,39 +195,123 @@
             </div>
             
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, please reach out via my contact form or through my social links above.</p>
-        </div>
-    </section>
+      
+        <section id="skills" class="bg-light">
+            <div class="container" style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                    
+                        <p class="lead text-center" style="text-align: center;">
+                            <li style="margin-bottom: 15px;"> As an aspiring Junior Data Analyst, <p></p>I'm constantly expanding my skills <p>in data analysis, programming languages, and tools <p></p>to better contribute to data-driven decision-making.
+                                </li>
+                            <br>
+                        </p>
+                        <ul class="list-unstyled" style="text-align: left;">
+                            <li style="margin-bottom: 15px;">
+                                <strong>Analytical Tools:</strong> I am building proficiency in Power BI and MySQL,<p></p> with a strong foundation in Excel to manage and analyze data.
+                            </li>
+                            <br>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Programming Languages:</strong> I am currently focusing on SQL and Python, learning<p></p> key libraries like NumPy, Pandas, Matplotlib, and Seaborn to help with data visualization and analysis.
+                            </li>
+                            <br>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Data Wrangling and Cleaning:</strong> I am gaining experience in collecting, cleaning,<p></p> and transforming data from diverse sources into formats suitable for analysis.
+                            </li>
+                            <br>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Data Visualization:</strong> I am learning to create visualizations that effectively<p></p> communicate insights and findings to both technical and non-technical audiences.
+                            </li>
+                            <br>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Statistical Analysis:</strong> I am exploring how to apply statistical methods<p></p> to interpret and analyze data effectively.
+                            </li>
+                            <br>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Communication and Collaboration:</strong> I am working on improving my ability to <p></p>collaborate with cross-functional teams and clearly communicate insights to stakeholders.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Cledenir Souza. All rights reserved.</p>
-    </footer>
 
-    <!-- Particles.js Initialization -->
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 50, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffffff" },
-                shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 } },
-                opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0, sync: false } },
-                size: { value: 3, random: true, anim: { enable: true, speed: 40, size_min: 0, sync: false } },
-                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
-            },
-            interactivity: {
-                detect_on: "window",
-                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true }
-            },
-            retina_detect: true
-        });
-    </script>
-</body>
-</html>
+
+    <!-- ==================================Project Section===================================== -->
+    <div class="row hide-if-small-screen" style="padding-top: 0%; margin-top: -0px;"> 
+        <h3 style="margin-bottom: 20px;">Project Experience</h3>
+        <br> <!-- Added a line break here to create space -->
+        <li style="margin-bottom: 15px;">
+                I have worked on a range of data analysis projects that showcase my<p></p>
+                growing technical skills, problem-solving abilities, and eagerness<p></p>
+                to apply data-driven insights. Below are some examples of projects<p></p>
+                where I have contributed to data analysis and visualization:
+            </li>
+        </ul>
+    </div>
+            
+        <section id="description" class="bg-light">
+            <div class="container" style="display: flex; justify-content: center; align-items: flex-start; height: 50vh; padding-top: 10px;">
+                <div class="row" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <div class="col-lg-4 text-center">
+                        <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Cledenir profile picture" style="max-width: 400px; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="col-lg-8 text-left" style="text-align: left; padding-left: 20px;">
+                        <p style="font-size: 20px; font-weight: bold;">The Guardians of the Voiceless 🐾</p>Connecting Shelter Dogs with Communities
+                        <p>The Guardians of the Voiceless is a data-driven<p></p> project designed to connect shelter dogs with, <p>
+                        <p>community centers like retirement homes, schools, <p></p>and veteran associations in Los Angeles. By<p>
+                        <p>integrating Petfinder's real-time animal data with<p></p> the Google Maps API, the project identifies<p>
+                        <p>potential matches between shelter dogs and organizations<p></p> that can benefit from therapeutic animal visits.
+                        <p>The goal is to promote mental health, reduce <p></p>loneliness, and support animal welfare while<p>
+                        increasing adoption rates and community involvement. This initiative <p></p>showcases how data integration can create meaningful <p></p>social impact, benefiting both people and animals.
+        
+                        <div class="mt-5" style="margin-top: 20px;">
+                        <p><a href="https://github.com/cleidenirlopes/Data_Thieves_project">View Project</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+   
+
+                <!-- Contact Section -->
+                <section id="contact">
+                    <div class="container">
+                        <h2>Contact Me</h2>
+                        <p>If you'd like to get in touch, please reach out via my contact form or through my social links above.</p>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer>
+                    <p>&copy; 2025 Cledenir Souza. All rights reserved.</p>
+                </footer>
+
+                <!-- Particles.js Initialization -->
+                <script>
+                    particlesJS("particles-js", {
+                        particles: {
+                            number: { value: 50, density: { enable: true, value_area: 800 } },
+                            color: { value: "#ffffff" },
+                            shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 } },
+                            opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0, sync: false } },
+                            size: { value: 3, random: true, anim: { enable: true, speed: 40, size_min: 0, sync: false } },
+                            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                            move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+                        },
+                        interactivity: {
+                            detect_on: "window",
+                            events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true }
+                        },
+                        retina_detect: true
+                    });
+                </script>
+            </body>
+            </html>
