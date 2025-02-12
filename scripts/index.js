@@ -10,3 +10,6 @@ window.addEventListener('scroll', function () {
   if (this.window.pageYOffset > 0) return navbar.classList.add('active');
   return navbar.classList.remove('active');
 });
+<head>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
