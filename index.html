@@ -5,21 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Cledenir Souza, showcasing data analysis projects and skills.">
+    <meta name="keywords" content="data analyst, portfolio, data visualization, SQL, Python">
+    <meta name="author" content="Cledenir Souza">
     <title>Cledenir Souza</title>
     <link rel="stylesheet" href="css/extends.css">
-
-     <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-    type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- CSS Styles -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" as="style">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background: #111; color: #fff; line-height: 1.6; }
@@ -27,201 +23,185 @@
         nav ul { list-style: none; display: flex; gap: 20px; }
         nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
         nav a:hover { color: #f39c12; }
-
         header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 5vh; position: relative; z-index: 1; }
         h1.name { font-size: 60px; font-weight: bold; display: flex; align-items: center; gap: 10px; margin: 0; padding: 0; }
         .name-logo { width: 80px; height: auto; vertical-align: middle; }
         .intro-text { font-size: 1.2rem; max-width: 600px; margin: 20px auto 0; }
-
         section { padding: 60px 20px; text-align: center; }
         footer { background: #000; padding: 20px; text-align: center; }
-
         #particles-js { position: fixed; width: 100%; height: 50vh; z-index: -1; top: 0; left: 0; pointer-events: none; }
-        
-
-
     </style>
-
-    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
-        <body id="page-top"> 
-            <!-- Particles Background -->
-            <div id="particles-js" style="position: fixed; width: 100%; height: 80vh; z-index: -1; top: 0; left: 0;"></div>
-
-            <!-- Navigation Section -->
-            <nav id="mainNav">
-                <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
-                    <!-- HOME aligned left -->
-                    <a class="nav-home" href="#page-top" style="text-decoration: none; font-weight: bold;">HOME</a>
-
-                    <!-- Navigation Menu aligned right -->
-                    <ul class="nav-menu" style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
-                        <li><a href="#description" style="text-decoration: none;">About</a></li>
-                        <li><a href="#skills" style="text-decoration: none;">Skills</a></li>
-                        <li><a href="#projects" style="text-decoration: none;">Projects</a></li>
-                        <li><a href="#contact" style="text-decoration: none;">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <script>
-            // Smooth scrolling with offset to account for the fixed navigation bar
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - document.querySelector('nav').offsetHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-    </script>
-
-
-<!-- Landing Section -->
-<header class="masthead" style="position: relative; height: 100vh;">
-    <div class="textlanding" style="text-align: center; margin-top: -5cm;">
-
-        <!-- Name Section -->
-        <div style="display: inline-block; text-align: center;">
-            <p style="display: inline; font-size: 35px; padding-left: 35px; margin: 0;">Cledenir</p>
-            <img width="150px" style="display: inline; margin: 0 10px;" src="assets/logo.webp" alt="Logo" class="name-logo"> 
-            <p style="display: inline; font-size: 35px; margin: 0;">Souza</p>
-        </div>
-
-        <!-- Centered Line -->
-        <hr style="width: 100px; height: 1px; border: none; background-color: #ffffff; margin: 10px auto; transform: translateX(20px);">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-        <!-- Social Buttons (Correct Links Included) -->
-        <div style="display: flex; justify-content: center; align-items: center; height: 60px; margin: 20px 0;">
-            <ul class="list-inline" style="display: flex; gap: 20px; padding: 0; list-style: none; margin: 0;">
-                <li class="list-inline-item">
-                    <a href="https://github.com/cleidenirlopes" target="_blank">
-                        <i class="fab fa-github" style="color: white; font-size: 32px;"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank">
-                        <i class="fab fa-linkedin" style="color: white; font-size: 32px;"></i>
-                    </a>
-                </li>
+<body id="page-top">
+    <div id="particles-js" style="position: fixed; width: 100%; height: 100vh; z-index: -1; top: 0; left: 0;"></div>
+    <div id="background" style="position: fixed; width: 100%; height: 100vh; z-index: -2; top: 0; left: 0; background-color: #000;"></div>
+    <nav id="mainNav">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+            <a class="nav-home" href="#page-top" style="text-decoration: none; font-weight: bold;">HOME</a>
+            <ul class="navbar_links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-
-        <!-- Text Section -->
-        <div style="margin-top: 20px;">
-            <p style="margin: 2px 0;">👋 Hi! I’m Cledenir Souza, a Junior Data Analyst</p>
-            <p style="margin: 2px 0;">passionate about data visualization.</p>
-            <p style="margin: 2px 0;">With over 8 years of experience in customer support</p>
-            <p style="margin: 2px 0;">and a background in Computer Science,</p>
-            <p style="margin: 2px 0;">I’m now focused on transforming data into meaningful insights. 🚀</p>
+    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - document.querySelector('nav').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    
+    <!--============================== HOME SECTION ==============================-->
+    </script>
+    <header id="header" class="max-width">
+        <div class="row hide-if-small-screen" style="padding-top: 0%; margin-top: 180px !important;">
+            <header class="masthead" style="position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 0;">
+                <div class="textlanding" style="text-align: center; margin-top: -4cm; padding-top: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div style="display: inline-block; text-align: center;">
+                        <p style="display: inline; font-size: 60px; padding-left: 100px; margin: 0;">Cledenir</p>
+                        <img width="150px" style="display: inline; margin: 0 10px;" src="assets/logo.webp" alt="Logo" class="name-logo">
+                        <p style="display: inline; font-size: 60px; margin: 0;">Souza</p>
+                    </div>
+                    <hr style="width: 100px; height: 1px; border: none; background-color: #ffffff; margin: 10px auto; transform: translateX(20px);">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                    <div style="display: flex; justify-content: center; align-items: center; height: 60px; margin: 20px 0;">
+                        <ul class="list-inline" style="display: flex; gap: 20px; padding: 0; list-style: none; margin: 0;">
+                            <li class="list-inline-item">
+                                <a href="https://github.com/cleidenirlopes" target="_blank">
+                                    <i class="fab fa-github" style="color: white; font-size: 32px;"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank">
+                                    <i class="fab fa-linkedin" style="color: white; font-size: 32px;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <p style="margin: 2px 0;">👋 Hi! I’m Cledenir Souza, a Junior Data Analyst</p>
+                        <p style="margin: 2px 0;">passionate about data visualization.</p>
+                        <p style="margin: 2px 0;">With over 8 years of experience in customer support</p>
+                        <p style="margin: 2px 0;">and a background in Computer Science,</p>
+                        <p style="margin: 2px 0;">I’m now focused on transforming data into meaningful insights. 🚀</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin: 15px 0;">
+                    <a href="#contact" style="display: inline-block; padding: 10px 20px; background-color: #035bff; color: white; font-size: 16px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="arrowlanding">
+                    <a class="js-scroll-trigger" href="#description">
+                        <p style="font-size: 80px; color: #d14836">&#xfe40;</p>
+                    </a>
+                </div>
+            </header>
         </div>
-    </div>
+    </header>
 
-    <!-- Contact Button -->
-<div style="text-align: center; margin: 20px 0;">
-    <a href="#contact" style="display: inline-block; padding: 10px 20px; background-color: #035bff; color: white; font-size: 16px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
-        Contact Me
-    </a>
+    <!--============================== BACGROUND SECTION ==============================-->
+    <div style="
+    position: absolute;
+    width: 100%;
+    height: calc(100vh * 5);
+    background-color: #111;
+    top: 100vh;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+">
+    <div class="bg-wrapper" style="
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 10px 10px;
+    box-shadow: 
+        35px 0px 35px rgba(12, 12, 12, 0.8),
+        -35px 0px 35px rgba(12, 12, 12, 0.8),
+        45px 0px 45px rgba(12, 12, 12, 0.4),
+        -45px 0px 45px rgba(12, 12, 12, 0.4),
+        0px 0px 50px rgba(12, 12, 12, 0.3);
+    border-radius: 40px;
+    
+    /* CONTROL SIZE */
+    width: 58%; /* Adjust width (horizontal size) */
+    min-height: 3000px; /* Adjust height (vertical size) */
+    height: auto; /* Keep it flexible */
+    padding: 100px 50px; /* Adjust padding (top/bottom, left/right) */
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+"></div>
+
 </div>
-
-    <!-- Scroll Arrow -->
-    <div class="arrowlanding">
-        <a class="js-scroll-trigger" href="#description">
-            <p style="font-size: 80px; color: #035bff">&#xfe40;</p>
-        </a>
-    </div>
-</header>
-
-
-
-
-
-
-<!-- =======================  DESCRIPTION SECTION ======================= -->
-<div style="position: relative;">
-<div class="row hide-if-small-screen" style="padding-top: 0%; margin-top: -80px;"> 
-<section id="description" class="bg-light">
-    <div class="container" style="display: flex; justify-content: center; align-items: flex-start; height: 50vh; padding-top: 10px;">
-        <div class="row" style="display: flex; align-items: center; justify-content: center; width: 100%;">
-            <div class="col-lg-4 text-center">
-                <img class="img-fluid rounded" src="assets/Profile.JPG" alt="Cledenir profile picture" style="max-width: 250px; height: auto; border-radius: 10px;">
-            </div>
-            <div class="col-lg-8 text-left" style="text-align: left; padding-left: 20px;">
-                <p style="font-size: 20px; font-weight: bold;">Hi, I'm Cledenir.</p>
-                <p>I've always had a passion for technology, <p></p>which led me to pursue a degree in Computer Science.</p>
-                <p>I worked for over 10 years as a Technical Support Specialist,<p></p> gaining extensive experience in solving complex technical issues.</p>
-                <p>Later, I transitioned into Graphic Design, an area I truly love <p></p>that has become more than just a job—it's a fulfilling hobby.</p>
-                <p>For the past year, I've been diving into the world of Data Analysis, <p></p>and I'm currently finishing a Data Analytics Bootcamp to strengthen my skills.</p>
-                <p>My goal is to become a Data Visualization professional, combining my technical<p></p> background and creative skills to transform data into meaningful insights and impactful stories.</p>
-
-                <div class="mt-5" style="margin-top: 20px;">
-                    <a href="https://github.com/cleidenirlopes" target="_blank" style="border: 1px solid #f5f5f5; padding: 2px 5px; margin-right: 5px; text-decoration: none; color: #f5f5f5; border-radius: 1px;">GITHUB</a>
-                    <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank" style="border: 1px solid #f5f5f5; padding:2px 5px; text-decoration: none; color: #f5f5f5; border-radius: 1px;">LINKEDIN</a>
+<!--============================== INTRO SECTION ==============================-->
+    <section id="intro" class="bg-light">
+        <div class="container main-container">
+            <div class="row content-row">
+                <div class="col-lg-4 profile-image-container">
+                    <img class="profile-image" src="assets/Profile.JPG" alt="Cledenir profile picture">
+                </div>
+                <div class="col-lg-8 description-container">
+                    <p class="greeting">Hi, I'm Cledenir.</p>
+                    <p>I've always had a passion for technology, which led me to pursue a degree in Computer Science.</p>
+                    <p>I worked for over 10 years as a Technical Support Specialist, gaining extensive experience in solving complex technical issues.</p>
+                    <p>Later, I transitioned into Graphic Design, an area I truly love that has become more than just a job—it's a fulfilling hobby.</p>
+                    <p>For the past year, I've been diving into the world of Data Analysis, and I'm currently finishing a Data Analytics Bootcamp to strengthen my skills.</p>
+                    <p>My goal is to become a Data Visualization professional, combining my technical background and creative skills to transform data into meaningful insights and impactful stories.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/cleidenirlopes" target="_blank" class="social-button">GITHUB</a>
+                        <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank" class="social-button">LINKEDIN</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-<!-- =======================  WORK EXPERIENCE ======================= -->
-
-<div class="row hide-if-small-screen" style="padding-top: 0; margin-top: -100px; position: relative;"> 
-    <div class="col-lg-12 text-center">
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <svg width="1000" height="100">
-                <line x1="0" y1="50" x2="1000" y2="50" style="stroke:rgb(255, 253, 253); stroke-width:1.5" />
-
-                <circle cx="220" cy="50" r="10" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
-                <text text-anchor="middle" x="220" y="80" fill="white">2014</text>
-                <text font-size="13" text-anchor="middle" x="90" y="30" fill="white">Support Technician</text>
-                <text style="font-style: italic" font-size="13" text-anchor="middle" x="90" y="80" fill="#808080">Wisdon Hardware</text>
-
-                <circle cx="450" cy="50" r="10" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
-                <text text-anchor="middle" x="450" y="80" fill="white">2015</text>
-                <text font-size="13" text-anchor="middle" x="320" y="30" fill="white">Graphic Design</text>
-                <text style="font-style: italic" font-size="13" text-anchor="middle" x="320" y="80" fill="#808080">Aquarela Infinity</text>
-
-                <circle cx="650" cy="50" r="10" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
-                <text text-anchor="middle" x="650" y="80" fill="white">2019</text>
-                <text font-size="13" text-anchor="middle" x="550" y="30" fill="white">Support Technician</text>
-                <text style="font-style: italic" font-size="13" text-anchor="middle" x="550" y="80" fill="#808080">Souza Cruz</text>
-
-                <circle cx="850" cy="50" r="10" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
-                <text text-anchor="middle" x="850" y="80" fill="white">2024</text>
-                <text font-size="13" text-anchor="middle" x="750" y="30" fill="white">Content Specialist</text>
-                <text style="font-style: italic" font-size="13" text-anchor="middle" x="750" y="80" fill="#808080">Accenture</text>
-
-                <text font-size="13" text-anchor="middle" x="930" y="30" fill="white">CS Support Analyst</text>
-                <text style="font-style: italic" font-size="13" text-anchor="middle" x="930" y="80" fill="#808080">Entain Group</text>
-
-                <text font-size="13" text-anchor="middle" x="930" y="30" fill="white">CS Support Analyst</text>
-                <text style="font-style: italic" font-size="13" text-anchor="middle" x="930" y="80" fill="#808080">Entain Group</text>
-
-            </svg>
+    </section>
+    <section id="work-experience" style="padding-top: 50px; width: 100%; text-align: center;">
+        <div class="row hide-if-small-screen" style="padding-top: 0; margin-top: 50px; position: relative;">
+            <div class="col-lg-12 text-center">
+                <svg width="1000" height="120">
+                    <line x1="0" y1="60" x2="1000" y2="60" style="stroke:rgb(255, 253, 253); stroke-width:2" />
+                    <circle cx="220" cy="60" r="12" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
+                    <text text-anchor="middle" x="220" y="90" fill="white" font-size="16">2014</text>
+                    <text font-size="14" text-anchor="middle" x="90" y="40" fill="white">Support Technician</text>
+                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="90" y="90" fill="#808080">Wisdon Hardware</text>
+                    <circle cx="450" cy="60" r="12" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
+                    <text text-anchor="middle" x="450" y="90" fill="white" font-size="16">2015</text>
+                    <text font-size="14" text-anchor="middle" x="320" y="40" fill="white">Graphic Design</text>
+                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="320" y="90" fill="#808080">Aquarela Infinity</text>
+                    <circle cx="650" cy="60" r="12" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
+                    <text text-anchor="middle" x="650" y="90" fill="white" font-size="16">2019</text>
+                    <text font-size="14" text-anchor="middle" x="550" y="40" fill="white">Support Technician</text>
+                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="550" y="90" fill="#808080">Souza Cruz</text>
+                    <circle cx="850" cy="60" r="12" stroke="#035bff" stroke-width="6" fill="#f5f5f5" />
+                    <text text-anchor="middle" x="850" y="90" fill="white" font-size="16">2024</text>
+                    <text font-size="14" text-anchor="middle" x="750" y="40" fill="white">Content Specialist</text>
+                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="750" y="90" fill="#808080">Accenture</text>
+                    <text font-size="14" text-anchor="middle" x="930" y="40" fill="white">CS Support Analyst</text>
+                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="930" y="90" fill="#808080">Entain Group</text>
+                </svg>
+            </div>
         </div>
-    </div>
-<!-- Half Size Square with Shadow Below -->
-
-<!-- background -->
-
-<div style="background-color: #242525; width: 100%; height: 3100px; position: absolute; bottom: 0; left: 0; z-index: -1;"></div>
-
-
-<!-- Square Cyan Background Above -->
-<div style="background-color: #181a1a; width: 1300px; height: 600px; position: absolute; bottom: 2400px; left: 50%; transform: translateX(-50%); z-index: -1; box-shadow: 0 12px 10px rgba(0, 0, 0, 0.5);border-radius: 40px;"></div>
-
-<!-- ==================================Skills Section===================================== -->
-
-    <div class="row hide-if-small-screen" style="padding-top: 6%;"> 
+    </section>
     <section id="skills">
+        <!--============================== SKILL SECTION ==============================-->
         <h2>Skills</h2>
         <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
             <div style="text-align: center; margin-right: 15px;">
@@ -252,18 +232,15 @@
                 <i class="fab fa-microsoft" style="font-size: 50px; color: #0a914d;"></i>
                 <p style="color: #c9c9c9;">Excel</p>
             </div>
-            
         </div>
-
-       
         <section id="skills" class="bg-light">
             <div class="container" style="display: flex; justify-content: center; align-items: center; height: 60vh;">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                    
+                        <br><br>
                         <p class="lead text-center" style="text-align: center;">
                             <li style="margin-bottom: 15px;"> As an aspiring Junior Data Analyst, <p></p>I'm constantly expanding my skills <p>in data analysis, programming languages, and tools <p></p>to better contribute to data-driven decision-making.
-                                </li>
+                            </li>
                             <br>
                         </p>
                         <ul class="list-unstyled" style="text-align: left;">
@@ -296,233 +273,189 @@
             </div>
         </section>
 
-
-
-    <!-- ==================================Project Section===================================== -->
-    <div class="row hide-if-small-screen" style="padding-top: 0; margin-top: 120px;"> 
-        <h3 style="margin-bottom: 20px;">Projects </h3>
-        <br> 
-        <li style="margin-bottom: 15px;">
-            <p>I have worked on a range of data analysis projects that showcase my</p>
-            <p>growing technical skills, problem-solving abilities, and eagerness</p>
-            <p>to apply data-driven insights.</p>
-            <p>Below are some examples of projects</p>
-            <p>where I have contributed to data analysis and visualization:</p>
-            
-            </li>
-        </ul>
-    </div>
-            
-    <section id="description" class="bg-light">
-        <div class="container" style="display: flex; justify-content: center; align-items: flex-start; height: 50vh; padding-top: 10px;">
-            <div class="row" style="display: flex; align-items: center; justify-content: center; width: 100%;">
-                <div class="col-lg-4 text-center">
-                    <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Cledenir profile picture" style="max-width: 300px; height: auto; border-radius: 10px;">
-                </div>
-                <div class="col-lg-8 text-left" style="text-align: left; padding-left: 20px;">
-                    <p style="font-size: 20px; font-weight: bold;">The Guardians of the Voiceless 🐾</p>
-                    <p style="padding: 50px 0; font-size: 18px; font-weight: 500;">
-                        Connecting Shelter Dogs with Communities
-                    </p>
-                    <br>
-                
-                    <p>The Guardians of the Voiceless is a data-driven project</p>
-                    <p>designed to connect shelter dogs with community centers</p>
-                    <p>like retirement homes, schools, and veteran associations</p>
-                    <p>in Los Angeles.</p>
-
-                    <p>By integrating Petfinder's real-time animal data</p>
-                    <p>with the Google Maps API, the project identifies</p>
-                    <p>potential matches between shelter dogs and organizations</p>
-                    <p>that can benefit from therapeutic animal visits.</p>
-
-                    <p>The goal is to promote mental health, reduce loneliness,</p>
-                    <p>and support animal welfare while increasing adoption rates</p>
-                    <p>and community involvement.</p>
-
-                    <p>This initiative showcases how data integration</p>
-                    <p>can create meaningful social impact,</p>
-                    <p>benefiting both people and animals.</p>
-                     <br>
-                    <div class="mt-4">
-                        <a href="https://github.com/cleidenirlopes/Data_Thieves_project" target="_blank" style="
-                            background-color: #1261f3;
-                            color: white;
-                            padding: 10px 12px; /* Adjust padding for smaller button */
-                            font-size: 14px; /* Smaller font size */
-                            text-decoration: none;
-                            border-radius: 6px; /* Slightly smaller border radius */
-                            font-weight: bold;
-                            transition: background-color 0.3s ease;
-                            display: inline-block;
-                        "
-
-                        onmouseover="this.style.backgroundColor='#45a049'"
-                        onmouseout="this.style.backgroundColor='#4CAF50'">
-                        View Project
-                        </a>
+        <!--============================== PROJECT SECTION ==============================-->
+        <div class="row hide-if-small-screen" style="padding-top: 0; margin-top: 120px;">
+            <h3 style="margin-bottom: 20px;">Projects</h3>
+            <br>
+            <ul>
+                <li style="margin-bottom: 15px;">
+                    <p>I’m a Junior Data Analyst currently learning and growing my skills in data analysis and visualization.</p>
+                    <p>I’m eager to apply my knowledge to real-world projects and continue developing my technical abilities.</p>
+                    <p>Below are some examples of projects I’ve worked on while gaining hands-on experience in the field.</p>
+                </li>
+            </ul>
+        </div>
+        <section id="projects" class="bg-light" style="margin-top: 100vh;">
+            <div class="container" style="display: flex; justify-content: center; align-items: flex-start; height: 50vh; padding-top: 10px;">
+                <div class="row" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <div class="col-lg-4 text-center">
+                        <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Cledenir profile picture" style="max-width: 300px; height: auto; border-radius: 10px;">
                     </div>
-                    
+                    <div class="col-lg-8 text-left" style="text-align: left; padding-left: 20px;">
+                        <p style="font-size: 20px; font-weight: bold;">The Guardians of the Voiceless 🐾</p>
+                        <p style="padding: 50px 0; font-size: 18px; font-weight: 500;">Connecting Shelter Dogs with Communities</p>
+                        <br>
+                        <p>The Guardians of the Voiceless is a data-driven project designed to connect shelter <p>dogs with community centers like retirement homes, schools, and veteran associations in Los Angeles.</p>
+                        <p>By integrating Petfinder's real-time animal data with the Google Maps API, <p>the project identifies potential matches between shelter dogs and organizations <p>that can benefit from therapeutic animal visits.</p>
+                        <p>The goal is to promote mental health, reduce loneliness, and support animal <p>welfare while increasing adoption rates and community involvement.</p>
+                        <p>This initiative showcases how data integration can create meaningful <p>social impact, benefiting both people and animals.</p>
+                        <br>
+                        <div class="mt-4">
+                            <a href="https://github.com/cleidenirlopes/Data_Thieves_project" target="_blank" style="background-color: #1261f3; color: white; padding: 10px 12px; font-size: 14px; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s ease; display: inline-block;"
+                                onmouseover="this.style.backgroundColor='#45a049'"
+                                onmouseout="this.style.backgroundColor='#4CAF50'">
+                                View Project
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
 
-
-
-
- <!-- ==================================Contact Section===================================== -->
-                <section id="contact" style="padding: 50px 20px; background-color: #f4f4f4; color: #333;">
-                    <div class="container" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; padding-left: 20px;">
-                        <!-- Contact Me Heading aligned to the left -->
-                        <h3 style="font-size: 2.5rem; margin-bottom: 50px; margin-left: 0;">CONTACT ME</h3>
-                        <br>
-                        <!-- Icons Section with less space between the icons, aligned left -->
-                        <div style="text-align: left; margin-bottom: 30px;">
-                            <ul class="icons" style="list-style: none; display: inline-flex; gap: 20px; font-size: 2rem;">
-                                <li>
-                                    <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" style="text-decoration: none;">
-                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/cleidenirlopes" style="text-decoration: none;">
-                                        <i class="fab fa-github" style="color: #333;"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mailto:cleidenirlopes@outlook.com" style="text-decoration: none;">
-                                        <i class="fas fa-envelope" style="color: #d14836;"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Location Section with left alignment and some margin -->
-                        <p style="font-size: 2rem; margin-bottom: 30px;">🌎 Lisbon, Portugal</p>
-
-                        <br><br>
+        <!--============================== CONTACT SECTION ==============================-->
+        <section id="contact" style="padding: 80px 0; width: 100%; display: flex; justify-content: center; align-items: center; min-height: 100vh; background: none !important;">
+            <div class="container" style="max-width: 60%; background: #222; padding: 50px; border-radius: 20px;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 10px 10px 30px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; align-items: center;">
+                
+                <div style="width: 100%; text-align: left; margin-left: 10%;"> 
+                    <h3 style="font-size: 3rem; margin-bottom: 30px;">CONTACT ME</h3>
+        
+                    <ul class="icons" style="list-style: none; display: flex; gap: 15px; font-size: 2.5rem; margin-bottom: 20px; padding: 0;">
+                        <li>
+                            <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" style="text-decoration: none;">
+                                <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/cleidenirlopes" style="text-decoration: none;">
+                                <i class="fab fa-github" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:cleidenirlopes@outlook.com" style="text-decoration: none;">
+                                <i class="fas fa-envelope" style="color: #d14836;"></i>
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <p style="font-size: 2rem; margin-bottom: 30px;">🌎 Lisbon, Portugal</p>
+                </div>
+        
+                <form method="post" action="#" style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; max-width: 800px; margin: 0 auto;">
+                    <div style="width: 100%; display: flex; flex-direction: column; gap: 20px;">
+                        <input type="text" name="name" id="name" placeholder="Your Name" style="width: 100%; padding: 15px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
+                        <input type="email" name="email" id="email" placeholder="Your Email" style="width: 100%; padding: 15px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
                     </div>
-
-
-                <!-- Contact Form centered -->
-                <form method="post" action="#" style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; max-width: 600px; margin: 0 auto;">
-                    <!-- Name and Email fields in one row -->
-                    <div style="width: 100%; display: flex; justify-content: space-between; gap: 20px;">
-                        <input type="text" name="name" id="name" placeholder="Your Name" style="width: 48%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                        <input type="email" name="email" id="email" placeholder="Your Email" style="width: 48%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                    </div>
-
-                    <!-- Subject Field -->
                     <div style="width: 100%;">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" style="width: 100%; padding: 15px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
                     </div>
-
-                    <!-- Message Field -->
                     <div style="width: 100%;">
-                        <textarea name="message" id="message" placeholder="Your Message" rows="6" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                        <textarea name="message" id="message" placeholder="Your Message" rows="6" style="width: 100%; padding: 15px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);"></textarea>
                     </div>
-
-                    <!-- Submit and Reset buttons -->
                     <div style="width: 100%; text-align: center;">
-                        <button type="submit" class="primary" style="padding: 10px 20px; background-color: #035bff; color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; margin-right: 10px;">Send Message</button>
-                        <button type="reset" style="padding: 10px 20px; background-color: #ccc; color: black; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;">Reset Form</button>
+                        <button type="submit" class="primary" style="padding: 15px 25px; background-color: #035bff; color: white; border: none; border-radius: 10px; font-size: 1.2rem; cursor: pointer; margin-right: 10px; box-shadow: 2px 2px 8px rgba(3, 91, 255, 0.5), 4px 4px 16px rgba(3, 91, 255, 0.3);">Send Message</button>
+                        <button type="reset" style="padding: 15px 25px; background-color: #ccc; color: black; border: none; border-radius: 10px; font-size: 1.2rem; cursor: pointer; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3), 4px 4px 16px rgba(0, 0, 0, 0.2);">Reset Form</button>
                     </div>
                 </form>
             </div>
         </section>
+        <p>&copy; 2025 Cledenir Souza. All rights reserved.</p>
+               
+                
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-
-<!-- FontAwesome CDN -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-
-<!-- FontAwesome CDN -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-
-                <!-- Particles.js Initialization -->
-<script>
-    particlesJS("particles-js", {
-    particles: {
-        number: {
-            value: 200,  // Increase number of particles to cover more area
-            density: {
-                enable: true,
-                value_area: 1000  // Adjust this for better distribution across the page
+        <!--============================== PARTICLES SECTION ==============================-->
+        <script>
+            particlesJS("particles-js", {
+                particles: {
+                    number: {
+                        value: 300,
+                        density: {
+                            enable: true,
+                            value_area: 1000
+                        }
+                    },
+                    color: {
+                        value: "#ffffff"
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
+                        }
+                    },
+                    opacity: {
+                        value: 0.8,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 1,
+                            opacity_min: 0,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 8,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 60,
+                            size_min: 2,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#ffffff",
+                        opacity: 0.5,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 5,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false
+                    }
+                },
+                interactivity: {
+                    detect_on: "window",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "repulse"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                        resize: true
+                    }
+                },
+                retina_detect: true
+            });
+            let lastScrollPosition = window.scrollY;
+            let ticking = false;
+            function updateScrollPosition() {
+                document.documentElement.style.setProperty('--scroll-y', window.scrollY);
+                ticking = false;
             }
-        },
-        color: {
-            value: "#ffffff"  // Particle color
-        },
-        shape: {
-            type: "circle",  // Shape of particles
-            stroke: {
-                width: 0,
-                color: "#000000"
-            }
-        },
-        opacity: {
-            value: 0.8,
-            random: true,
-            anim: {
-                enable: true,
-                speed: 1,
-                opacity_min: 0,
-                sync: false
-            }
-        },
-        size: {
-            value: 4,  // Adjust size to ensure it's not too large
-            random: true,
-            anim: {
-                enable: true,
-                speed: 60,
-                size_min: 2,
-                sync: false
-            }
-        },
-        line_linked: {
-            enable: true,
-            distance: 150,  // Increased distance for connecting lines
-            color: "#ffffff",
-            opacity: 0.5,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 5,  // Adjust speed for smooth movement
-            direction: "none",  // Random movement
-            random: true,
-            straight: false,
-            out_mode: "out",
-            bounce: false
-        }
-    },
-    interactivity: {
-        detect_on: "window",
-        events: {
-            onhover: {
-                enable: true,
-                mode: "repulse"
-            },
-            onclick: {
-                enable: true,
-                mode: "push"
-            },
-            resize: true
-        }
-    },
-    retina_detect: true
-});
-
-</script>
-
-<!-- Particles Container -->
-
-
-
-            </body>
-            </html>
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        updateScrollPosition();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+                lastScrollPosition = window.scrollY;
+            });
+            updateScrollPosition();
+        </script>
+    </body>
+</html>

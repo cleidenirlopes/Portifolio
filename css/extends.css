@@ -8,6 +8,258 @@
 @import './components/projects.css';
 @import './components/footer.css';
 
+/* Add some spacing between sections */
+section:not(:first-child) {
+    margin-top: 20px;
+}
+
+/* Ensure smooth scrolling on the whole page */
+html, body {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* Primary welcome page */
+#welcome {
+    height: 100vh;
+    background: transparent;
+    position: relative; /* Added to ensure positioning context for particles */
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Optional: Add a resize cursor when hovering */
+.square-background {
+    resize: both;
+    overflow: auto;
+}
+
+/* Debugging styles */
+body {
+    position: relative; /* Ensures positioning is based on the body */
+    height: 100vh;
+    margin: 0;
+}
+
+/* About Section (Container for Description + Work Experience) */
+#about {
+    position: relative;
+    min-height: 120vh; /* Ensures enough space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px 20px;
+}
+
+/* Shared Container for Both Sections */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Description */
+#description {
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    background: rgba(26, 26, 26, 0.8);
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px; /* Ensures spacing before Work Experience */
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: auto;
+    padding-top: 0; /* Remove top padding completely */
+    margin-left: 600px;
+    margin-top: 0; /* Ensure no top margin */
+    position: relative; /* Add if you need more positioning control */
+    top: 0; /* Ensure it starts from the very top */
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    gap: 5px;
+}
+
+.profile-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.description-container {
+    flex: 2;
+    text-align: left;
+}
+
+.greeting {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-button {
+    border: 1px solid #f5f5f5;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #f5f5f5;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-button:last-child {
+    margin-right: 0;
+}
+
+/* Skills Background Container */
+#skills-background {
+    position: absolute; /* Positioned absolutely so it doesn't interfere with content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: rgba(26, 29, 29, 0.8); /* Dark background for skills */
+    z-index: -1; /* Ensure it stays behind all content */
+}
+
+/* Skills and Projects container */
+#skills-projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    position: relative; /* Ensures it stays on top of the background */
+}
+
+/* Skills Section */
+#skills {
+    flex: 1;
+    min-height: 80%; /* Adjust height for proper centering */
+    background: transparent; /* Remove background for skills */
+    margin: 0 10px; /* Optional space between skills and projects */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Projects Section */
+#projects {
+    flex: 1;
+    min-height: 80%; /* Adjust height to allow for proper centering */
+    background: rgba(60, 63, 63, 0.8); /* Different background for projects */
+    margin: 0 10px 0; /* Remove top margin to ensure it stays together */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Padding for content inside */
+}
+
+/* Contact section */
+
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+#contact button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+#contact .primary {
+    background-color: #035bff;
+    color: white;
+    border: none;
+}
+
+
+#contact button[type="reset"] {
+    background-color: #ccc;
+    color: black;
+    border: none;
+}
+
+#contact .icons i {
+    color: #ffffff;
+}
+
+/* Make scrolling smoother */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+/* Ensure sections align but don't force stops */
+section {
+    scroll-snap-align: start;
+}
+
+/* Optional: Add responsive design */
+@media (max-width: 768px) {
+    .floating-container {
+        width: 90%;
+        height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-container {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+/* Make sure the main content is above the floating container */
+main, section, .your-content-container {
+    position: relative;
+    z-index: 2;
+}
+
 /* Logo - Increase Size */
 .logo {
     width: 150px;   /* Adjust size as needed */
@@ -22,19 +274,12 @@ body, ul, li, a {
     text-decoration: none;
 }
 
-/* Background Color */
-body {
-    background-color: #111; /* Black background */
-    color: #fff; /* White text */
-    font-family: 'Montserrat', sans-serif;  /* Default font */
-    line-height: 1.6; 
-}
-
 /* Paragraph Styling */
 p {
     margin: 5px 0;  /* Decreased space between paragraphs */
     padding: 0;     /* No extra padding */
     line-height: 1.4; /* Reduced line height for less spacing */
+    color: #ffffff; /* Ensure font color is white */
 }
 
 /* Navbar Style */
@@ -83,18 +328,60 @@ p {
     color: #f39c12; /* Orange color on hover */
 }
 
-
 p, h3, li {
     line-height: 1.2 !important;
     margin: 0 !important;
     padding: 0 !important;
-  }
-
-  #particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;  /* Ensure particles cover the entire viewport height */
-    z-index: -1;
+    color: #ffffff !important; /* Ensure font color is white */
 }
+
+/* extends.css or <style> block */
+.sections-container {
+    margin-top: 100%; /* Adjust this value to move sections down */
+    position: relative; /* For background shadow positioning */
+}
+
+.sections-container .background-shadow {
+    background-color: #181a1a;
+    width: 1300px;
+    height: 600px;
+    position: absolute;
+    bottom: -100px; /* Adjust this to move the shadow */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+}
+
+/* Add smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add responsive navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+    }
+    
+    /* Add hamburger menu for mobile */
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Background Wrapper */
+.bg-wrapper {
+    background: rgba(26, 26, 26, 0.8);
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    margin: 20px;
+    padding: 20px;
+}
+
