@@ -228,15 +228,19 @@ body {
     color: #ffffff;
 }
 
+
+
+
 /* Make scrolling smoother */
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    scroll-padding-top: 80px; /* Adjust this value based on your navbar height */
 }
 
 /* Ensure sections align but don't force stops */
 section {
     scroll-snap-align: start;
+    scroll-margin-top: 80px; /* This helps with scroll positioning */
 }
 
 /* Optional: Add responsive design */
@@ -284,13 +288,12 @@ p {
 
 /* Navbar Style */
 #mainNav {
-    position: fixed; /* Fixed at the top */
+    position: fixed;
     top: 0;
-    width: 100%; /* Full width */
-    background-color: rgba(22, 22, 22, 0.9); /* Translucent black background */
-    padding: 10px 0; /* Adjusted padding for alignment */
-    z-index: 1000; /* Ensures it stays above other elements */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for emphasis */
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
 }
 
 /* Flexbox Container */
@@ -383,5 +386,61 @@ html {
     border-radius: 40px;
     margin: 20px;
     padding: 20px;
+}
+
+/*///////////////////////////////////////
+/* Adjust the top margin to move the section up */
+#intro {
+    margin-top: 100px; /* You can tweak this value */
+}
+
+#work-experience {
+    margin-top: -100px; /* You can tweak this value */
+}
+
+#Skills {
+    margin-top: -300px; /* You can tweak this value */
+}
+
+#DataManipulation {
+    margin-top: 100px; /* Adjust this value as needed */
+}
+
+/* Ensure the image container is centered */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative; /* Add position relative to allow for adjustments */
+    left: 40%; /* Adjust this value to move the image to the right */
+}
+
+/* Control the image size */
+.image-container img {
+    max-width: 90%; /* Adjust this value to control the image width */
+    height: auto;
+}
+
+#contact {
+    margin-top: 1500px; /* Adjust this value as needed */
+}
+
+
+
+#projects { 
+    position: relative; /* Allows precise movement */
+    top: -450px;  /* Move up/down (negative values move it up, positive moves it down) */
+    left: 620px; /* Move left/right (negative values move it left, positive moves it right) */
+    margin-top: 100px; /* Base margin, you can adjust it */
+}
+
+/* Ensure the image and content are properly centered */
+.container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative; /* Allows precise movement */
 }
 
