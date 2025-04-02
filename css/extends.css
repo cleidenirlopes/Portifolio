@@ -234,13 +234,12 @@ body {
 /* Make scrolling smoother */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Adjust this value based on your navbar height */
+    scroll-snap-type: y proximity;
 }
 
 /* Ensure sections align but don't force stops */
 section {
     scroll-snap-align: start;
-    scroll-margin-top: 80px; /* This helps with scroll positioning */
 }
 
 /* Optional: Add responsive design */
@@ -288,12 +287,13 @@ p {
 
 /* Navbar Style */
 #mainNav {
-    position: fixed;
+    position: fixed; /* Fixed at the top */
     top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+    width: 100%; /* Full width */
+    background-color: rgba(22, 22, 22, 0.9); /* Translucent black background */
+    padding: 10px 0; /* Adjusted padding for alignment */
+    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for emphasis */
 }
 
 /* Flexbox Container */

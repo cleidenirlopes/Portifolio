@@ -14,21 +14,153 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/extends.css">
 
+    <!-- Add these new Google Fonts links (choose ONE of these options) -->
+    <!-- Option 1: Outfit - Very modern and clean -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Option 2: Space Grotesk - Modern with unique character shapes -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Option 3: Plus Jakarta Sans - Contemporary and professional -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
+        /* Base styles */
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            /* Header/Name section */
+            .textlanding {
+                margin-top: -2cm !important;
+                padding-top: 20px !important;
+            }
+            
+            .textlanding p {
+                font-size: 50px !important;
+                padding-left: 20px !important;
+            }
+            
+            .name-logo {
+                width: 100px !important;
+            }
+            
+            /* Intro section */
+            #intro .row {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+                padding: 0 10px !important;
+            }
+            
+            /* Projects section */
+            #projects-section {
+                padding: 30px 10px !important;
+            }
+            
+            /* Make projects stack vertically on mobile */
+            #projects-section > div > div {
+                flex-direction: column !important;
+            }
+            
+            #projects-left, #projects-right, #projects-left-2, #projects-right-2 {
+                width: 100% !important;
+                margin-bottom: 30px !important;
+            }
+            
+            /* Contact section */
+            #contact {
+                width: 90% !important;
+                margin: 0 auto !important;
+                padding: 50px 20px !important;
+            }
+            
+            /* Social links */
+            .social-links {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+            
+            /* Navigation */
+            .navbar .container {
+                padding: 0 20px !important;
+            }
+            
+            .navbar-nav {
+                background: linear-gradient(to right, var(--royal-blue), var(--sapphire));
+                position: absolute !important;
+                top: 50px !important;
+                left: 0 !important;
+                width: 100% !important;
+                padding: 10px 0 !important;
+                transform: none !important;
+            }
+            
+            .nav-item {
+                width: 100% !important;
+                text-align: center !important;
+                padding: 10px 0 !important;
+            }
+        }
+
+        /* Tablet adjustments */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .textlanding p {
+                font-size: 70px !important;
+            }
+            
+            #projects-section > div > div {
+                flex-direction: column !important;
+            }
+            
+            #projects-left, #projects-right, #projects-left-2, #projects-right-2 {
+                width: 80% !important;
+                margin: 0 auto 30px auto !important;
+            }
+            
+            #contact {
+                width: 80% !important;
+                margin: 0 auto !important;
+            }
+        }
+
+        /* Ensure images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Make text more readable on small screens */
+        @media screen and (max-width: 480px) {
+            p {
+                font-size: 16px !important;
+                line-height: 1.6 !important;
+            }
+            
+            h2 {
+                font-size: 2.5rem !important;
+            }
+            
+            .project-description {
+                font-size: 14px !important;
+            }
+        }
+
         body { font-family: 'Poppins', sans-serif; background: #111; color: #fff; line-height: 1.6; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; font-weight: 600; letter-spacing: -0.02em; }
+        h1, h2, h3, h4, h5, h6 { 
+            /* Change 'Outfit' to whichever font you prefer from above */
+            font-family: 'Outfit', sans-serif !important; 
+            font-weight: 400 !important;
+            letter-spacing: 0.05em !important;
+        }
         p { font-family: 'Poppins', sans-serif; font-weight: 300; line-height: 1.8; }
         section { padding: 60px 20px; text-align: center; position: relative; z-index: 1; }
         footer { background: #000; padding: 20px; text-align: center; }
@@ -39,6 +171,24 @@
         nav.navbar {
             z-index: 1050 !important;
             background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Add these color variables */
+        :root {
+            --sapphire: #3C507D;
+            --royal-blue: #112250;
+            --quicksand: #E0C68F;
+            --swan-wing: #F5F0E9;
+            --shellstone: #D9CBC2;
+        }
+
+        /* Update text colors */
+        h1, h2, h3, h4, h5, h6 { 
+            color: var(--sapphire) !important;
+        }
+        
+        p { 
+            color: var(--swan-wing) !important; 
         }
     </style>
 
@@ -52,22 +202,23 @@
     <div id="particles-js" style="position: fixed; width: 100%; height: 100vh; z-index: -1; top: 0; left: 0; pointer-events: none;"></div>
     <div id="background-solid" style="position: fixed; width: 100%; height: 100vh; z-index: -2; top: 0; left: 0; background-color: #000; pointer-events: none;"></div>
     <div id="background-pattern" style="position: absolute; width: 100%; height: calc(100vh * 5); background-color: #111; top: 100vh; z-index: -1; pointer-events: none; display: flex; justify-content: center; align-items: flex-start; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);">
-        <div class="bg-wrapper" style="background: radial-gradient(circle, rgba(255, 255, 255, 0.116) 1px, transparent 1px); background-size: 10px 10px; box-shadow: 35px 0px 35px rgba(12, 12, 12, 0.8), -35px 0px 35px rgba(12, 12, 12, 0.8), 45px 0px 45px rgba(12, 12, 12, 0.4), -45px 0px 45px rgba(12, 12, 12, 0.4), 0px 0px 50px rgba(12, 12, 12, 0.3); border-radius: 40px; width: 70%; min-height: 4000px; height: auto; padding: 100px 50px; margin-top: 50px; position: relative; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; box-sizing: border-box;"></div>
+        <div class="bg-wrapper" style="background: radial-gradient(circle, rgba(255, 255, 255, 0.116) 1px, transparent 1px); background-size: 10px 10px; box-shadow: 35px 0px 35px rgba(12, 12, 12, 0.8), -35px 0px 35px rgba(12, 12, 12, 0.8), 45px 0px 45px rgba(12, 12, 12, 0.4), -45px 0px 45px rgba(12, 12, 12, 0.4), 0px 0px 50px rgba(12, 12, 12, 0.3); border-radius: 40px; width: 70%; min-height: 750px; height: auto; padding: 100px 50px; margin-top: 50px; position: relative; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; box-sizing: border-box;"></div>
     </div>
            
     
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="
-        background: rgba(0, 0, 0, 0.9);
-        padding: 0;  /* Remove default padding */
-        min-height: 50px;  /* Reduce minimum height */
+        background: rgba(0, 0, 0, 0.8);
+        padding: 0;
+        min-height: 50px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     ">
         <div class="container" style="
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 50px;
-            height: 50px;  /* Set fixed height */
+            height: 50px;
         ">
             <!-- HOME button far to the left -->
             <a class="navbar-brand scroll-link" href="#header" style="
@@ -78,7 +229,7 @@
                 margin-left: -30px;
                 line-height: 20px;
                 margin-top: 5px;
-                color: white;  /* Also adding white color to match other links */
+                color: var(--quicksand);
             ">HOME</a>
             
             <!-- Toggle button for responsive navbar -->
@@ -102,10 +253,10 @@
                     align-items: center;
                     transform: translateY(-50px);
                 "> 
-                    <li class="nav-item"><a class="nav-link scroll-link" href="#intro" style="font-size: 16px; padding: 8px 0; color: white;">Intro</a></li>
-                    <li class="nav-item"><a class="nav-link scroll-link" href="#skills" style="font-size: 16px; padding: 8px 0; color: white;">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link scroll-link" href="#projects" style="font-size: 16px; padding: 8px 0; color: white;">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link scroll-link" href="#contact" style="font-size: 16px; padding: 8px 0; color: white;">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#intro" style="font-size: 16px; padding: 8px 0; color: var(--swan-wing);">Intro</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#skills" style="font-size: 16px; padding: 8px 0; color: var(--swan-wing);">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#projects-section" style="font-size: 16px; padding: 8px 0; color: var(--swan-wing);">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#contact" style="font-size: 16px; padding: 8px 0; color: var(--swan-wing);">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -177,15 +328,15 @@
 
     <!--==============================  HOME SECTION ==============================-->
 <header id="header" class="max-width">
-    <div class="row hide-if-small-screen" style="padding-top: 0%; margin-top: 180px !important; margin-left: 220px;">
+    <div class="row hide-if-small-screen" style="padding-top: 0%; margin-top: 180px !important; margin-left: 115px;">
         <header class="masthead" style="position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 0;">
             <div class="textlanding" style="text-align: center; margin-top: -4cm; padding-top: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                 <div style="display: inline-block; text-align: center; position: relative; right: 45px;">
-                    <p style="display: inline; font-size: 60px; padding-left: 100px; margin: 0;">Cledenir</p>
+                    <p style="display: inline; font-size: 100px; padding-left: 100px; margin: 0; color: var(--quicksand);">Cledenir</p>
                     <img width="150px" style="display: inline; margin: 0 10px;" src="assets/logo.webp" alt="Logo" class="name-logo">
-                    <p style="display: inline; font-size: 60px; margin: 0;">Souza</p>
+                    <p style="display: inline; font-size: 100px; margin: 0; color: var(--quicksand);">Souza</p>
                 </div>
-                <hr style="width: 200px; height: 2px; border: none; background-color: #ffffff; margin: 12px auto; transform: translateX(0px);">
+               <hr style="width: 300px; height: 2px; border: none; background-color: #ffffff !important; margin: 12px auto; transform: translateX(0px); opacity: 1 !important;" 12px auto; transform: translateX(0px);">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
                 <div style="display: flex; justify-content: center; align-items: center; height: 60px; margin: 20px 0;">
                     <ul class="list-inline" style="display: flex; gap: 20px; padding: 0; list-style: none; margin: 0;">
@@ -199,6 +350,14 @@
                                 <i class="fab fa-linkedin" style="color: white; font-size: 32px;"></i>
                             </a>
                         </li>
+
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://x.com/DCledenir" target="_blank">
+                            <i class="fab fa-twitter" style="color: white; font-size: 32px;"></i>
+                        </a>
+                    </li>
+                    
                     </ul>
                 </div>
                 <div style="margin-top: 20px;">
@@ -210,22 +369,29 @@
                 </div>
             </div>
             <div style="text-align: center; margin: 15px 0; width: 100%;">
-                <a class="nav-link scroll-link" href="#contact" style="
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'start'})" style="
                     display: inline-block; 
                     padding: 10px 20px; 
-                    background-color: #035bff; 
-                    color: white; 
+                    background: linear-gradient(135deg, var(--royal-blue), var(--sapphire)); 
+                    color: var(--swan-wing); 
                     font-size: 16px; 
                     text-decoration: none; 
                     border-radius: 5px; 
-                    transition: background-color 0.3s;
+                    transition: all 0.3s;
                     cursor: pointer;
-                ">Contact Me</a>
+                    border: none;
+                    box-shadow: 0 4px 15px rgba(17, 34, 80, 0.3);
+                ">Contact Me</button>
             </div>
             <div class="arrowlanding">
-                <a class="js-scroll-trigger" href="#description">
-                    <p style="font-size: 80px; color: #d14836">&#xfe40;</p>
-                </a>
+                <button onclick="document.getElementById('intro').scrollIntoView({behavior: 'smooth', block: 'start'})" style="
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0;
+                ">
+                    <p style="font-size: 80px; color: #d14836; margin: 0;">&#xfe40;</p>
+                </button>
             </div>
         </header>
     </div>
@@ -245,16 +411,65 @@
             <div style="padding-left: 10px; text-align: left; max-width: 600px; line-height: 1.6;">
                 <p style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">Hi, I'm Cledenir.</p>
                 <div style="margin-bottom: 25px; font-size: 16px;">
-                    <p style="margin-bottom: 15px;">I've always had a passion for technology, which led me to pursue a degree in Computer Science.</p>
-                    <p style="margin-bottom: 15px;">I worked for over 10 years as a Technical Support Specialist, gaining extensive experience in solving complex technical issues.</p>
-                    <p style="margin-bottom: 15px;">Later, I transitioned into Graphic Design, an area I truly love that has become more than just a job—it's a fulfilling hobby.</p>
-                    <p style="margin-bottom: 15px;">For the past year, I've been diving into the world of Data Analysis, and I'm currently finishing a Data Analytics Bootcamp to strengthen my skills.</p>
-                    <p style="margin-bottom: 20px;">My goal is to become a Data Visualization professional, combining my technical background and creative skills to transform data into meaningful insights and impactful stories.</p>
+                    <p style="margin-bottom: 25px; line-height: 2;">I've always had a passion for technology, which led me to pursue a degree in Computer Science.</p>
+                    <p style="margin-bottom: 25px; line-height: 2;">I worked for over 10 years as a Technical Support Specialist, gaining extensive experience in solving complex technical issues.</p>
+                    <p style="margin-bottom: 25px; line-height: 2;">Later, I transitioned into Graphic Design, an area I truly love that has become more than just a job—it's a fulfilling hobby.</p>
+                    <p style="margin-bottom: 25px; line-height: 2;">For the past year, I've been diving into the world of Data Analysis, and I'm currently finishing a Data Analytics Bootcamp to strengthen my skills.</p>
+                    <p style="margin-bottom: 25px; line-height: 2;">My goal is to become a Data Visualization professional, combining my technical background and creative skills to transform data into meaningful insights and impactful stories.</p>
                 </div>
 
                 <div class="social-links" style="display: flex; gap: 15px; margin-top: 20px;">
-                    <a href="https://github.com/cleidenirlopes" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: bold; transition: background-color 0.3s ease;">GITHUB</a>
-                    <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: bold; transition: background-color 0.3s ease;">LINKEDIN</a>
+                    <a href="https://github.com/cleidenirlopes" target="_blank" style="
+                        background: linear-gradient(45deg, var(--royal-blue), var(--sapphire));
+                        color: var(--swan-wing);
+                        padding: 8px 16px;
+                        text-decoration: none;
+                        border-radius: 6px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 4px 15px rgba(17, 34, 80, 0.3);
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    ">
+                        <i class="fab fa-github"></i>
+                        GITHUB
+                    </a>
+                    <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank" style="
+                        background: linear-gradient(45deg, var(--royal-blue), var(--sapphire));
+                        color: var(--swan-wing);
+                        padding: 8px 16px;
+                        text-decoration: none;
+                        border-radius: 6px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 4px 15px rgba(17, 34, 80, 0.3);
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    ">
+                        <i class="fab fa-linkedin"></i>
+                        LINKEDIN
+                    </a>
+                    <a href="https://x.com/DCledenir" target="_blank" style="
+                        background: linear-gradient(45deg, var(--royal-blue), var(--sapphire));
+                        color: var(--swan-wing);
+                        padding: 8px 16px;
+                        text-decoration: none;
+                        border-radius: 6px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 4px 15px rgba(17, 34, 80, 0.3);
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    ">
+                        <i class="fab fa-twitter"></i>
+                        TWITTER
+                    </a>
                 </div>
             </div>
         </div>
@@ -297,15 +512,47 @@
 
             <<!--============================== SKILL SECTION ==============================-->
         <section id="skills" style="
-        padding-top: 120px; 
-        width: 100%; 
+        padding-top: 220px; 
+        width: 100vw !important; /* Changed to viewport width */
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.35) 0%,
+            rgba(0, 0, 0, 0.35) 30%,
+            transparent 100%
+        ) !important;
+        padding-bottom: 100px;
+        margin-top: 100px;
+        position: relative;
+        z-index: 2;
+        margin-left: calc(-50vw + 50%) !important; /* Center the section */
+        margin-right: calc(-50vw + 50%) !important;
+        left: 50% !important;
+        right: 50% !important;
+        transform: translateX(-50%) !important;
         ">
-        <h2>Skills</h2>
+        <div style="
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        "></div>
+        <h2 style="
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 4rem !important;
+            margin-bottom: 20px !important;
+            color: white !important;
+            font-weight: 400 !important;
+            letter-spacing: 0.05em !important;
+            text-transform: uppercase !important;
+        ">Skills</h2>
+        <hr style="width: 200px; height: 2px; border: none; background-color: #ffffff !important; margin: 0 auto 60px auto; transform: translateX(0px); opacity: 1 !important;">
 
         <div style="
             display: flex; 
@@ -317,43 +564,43 @@
         ">
             <!-- Skill 1: SQL -->
             <div style="text-align: center;">
-                <i class="fa fa-database" style="font-size: 50px; color: #0073e6;"></i>
+                <i class="fa fa-database" style="font-size: 50px; color: var(--sapphire);"></i>
                 <p>SQL</p>
             </div>
             
             <!-- Skill 2: Power BI -->
             <div style="text-align: center;">
-                <i class="fa fa-chart-bar" style="font-size: 50px; color: #ff6347;"></i>
+                <i class="fa fa-chart-bar" style="font-size: 50px; color: var(--royal-blue);"></i>
                 <p>Power BI</p>
             </div>
             
             <!-- Skill 3: Tableau -->
             <div style="text-align: center;">
-                <i class="fa fa-table" style="font-size: 50px; color: #00bfae;"></i>
+                <i class="fa fa-table" style="font-size: 50px; color: var(--sapphire);"></i>
                 <p>Tableau</p>
             </div>
             
             <!-- Skill 4: Python -->
             <div style="text-align: center;">
-                <i class="fab fa-python" style="font-size: 50px; color: #1261f3;"></i>
+                <i class="fab fa-python" style="font-size: 50px; color: var(--royal-blue);"></i>
                 <p>Python</p>
             </div>
             
             <!-- Skill 5: Data Visualization -->
             <div style="text-align: center;">
-                <i class="fa fa-chart-line" style="font-size: 50px; color: #32cd32;"></i>
+                <i class="fa fa-chart-line" style="font-size: 50px; color: var(--sapphire);"></i>
                 <p>Data Visualization</p>
             </div>
             
             <!-- Skill 6: Data Cleaning -->
             <div style="text-align: center;">
-                <i class="fa fa-cogs" style="font-size: 50px; color: #cf8700;"></i>
+                <i class="fa fa-cogs" style="font-size: 50px; color: var(--royal-blue);"></i>
                 <p>Data Cleaning</p>
             </div>
             
             <!-- Skill 7: Excel -->
             <div style="text-align: center;">
-                <i class="fab fa-microsoft" style="font-size: 50px; color: #0a914d;"></i>
+                <i class="fab fa-microsoft" style="font-size: 50px; color: var(--sapphire);"></i>
                 <p style="color: #c9c9c9;">Excel</p>
             </div>
         </div>
@@ -389,246 +636,320 @@
         </section>
 </section>
 
-
         <!--============================== PROJECT SECTION ==============================-->
-<div style="
-    width: 100%;
-    text-align: center;
-    margin-top: -200px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-">
-    <h2 style="
-        font-size: 2rem;
-        color: white;
-        margin-bottom: 20px;
-    ">Projects</h2>
-    
-    <div style="
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 20px;
-    ">
-        <p style="margin-bottom: 15px;">I'm a Junior Data Analyst currently learning and growing my skills in data analysis and visualization.</p>
-        <p style="margin-bottom: 15px;">I'm eager to apply my knowledge to real-world projects and continue developing my technical abilities.</p>
-        <p style="margin-bottom: 30px;">Below are some examples of projects I've worked on while gaining hands-on experience in the field.</p>
-    </div>
-</div>
-
-<br>
-
-<!--============================== VERTICAL LINE AND PROJECTS ==============================-->
-<div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 10px;">
-    <!-- Vertical Line -->
-    <hr style="height: 850px; width: 2px; border: none; background-color: #ffffff; position: absolute; left: 50%; transform: translateX(-50%);">
-    
-    <!-- Container for all projects -->
-    <div style="display: flex; flex-direction: column; width: 100%; max-width: 1800px; padding: 0 20px;">
-        <!-- First row of projects -->
-        <div style="display: flex; justify-content: space-between; margin-bottom: 50px;">
-            
-            <!-- Project 1: Left -->
-            <section id="projects-left" style="border-radius: 15px; padding: 20px; width: 45%; background-color: transparent; display: flex; justify-content: center; align-items: center;">
-                <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                    <div class="row" style="display: flex; justify-content: center; width: 100%;">
-                        <!-- Image -->
-                        <div class="col-lg-4 text-center" style="flex: 1; text-align: center;">
-                            <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Guardians Project" style="max-width: 250px; height: auto; border-radius: 10px;">
-                        </div>
-                        <!-- Text content -->
-                        <div class="col-lg-8 text-left" style="flex: 3; text-align: left; padding-left: 20px;">
-                            <p style="font-size: 20px; font-weight: bold;">The Guardians of the Voiceless 🐾</p>
-                            <p style="padding: 30px 0; font-size: 16px; font-weight: 500;">Connecting Shelter Dogs with Communities</p>
-                            <br>
-                            <p>The Guardians of the Voiceless is a data-driven project designed to connect shelter dogs with community centers like retirement homes, schools, and veteran associations in Los Angeles.</p>
-                            <p>By integrating Petfinder's real-time animal data with the Google Maps API, the project identifies potential matches between shelter dogs and organizations that can benefit from therapeutic animal visits.</p>
-                            <p>The goal is to promote mental health, reduce loneliness, and support animal welfare while increasing adoption rates and community involvement.</p>
-                            <p>This initiative showcases how data integration can create meaningful social impact, benefiting both people and animals.</p>
-
-                            <!-- Project Tags & Button -->
-                            <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                                <span style="background-color: #1261f3; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Python</span>
-                                <span style="background-color: #ff4b4b; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Streamlit</span>
-                                <span style="background-color: #f0db4f; color: black; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Excel</span>
-                                <span style="background-color: #00c3ca; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Pandas</span>
-                                <!-- View Project Button -->
-                                <a href="https://github.com/cleidenirlopes/Data_Thieves_project" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 12px; font-size: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s ease;">
-                                    View Project
-                                </a>
-                            </div>
-                        </div>
+        <div style="
+            width: 100vw !important;
+            background: linear-gradient(
+                to bottom,
+               
+                rgba(150, 160, 170, 0.9) 30%,
+                rgba(150, 160, 170, 0.95) 100%
+            ) !important;
+            margin-left: calc(-50vw + 50%) !important;
+            margin-right: calc(-50vw + 50%) !important;
+            left: 50% !important;
+            right: 50% !important;
+            transform: translateX(-50%) !important;
+            position: relative !important;
+            z-index: 2 !important;
+            padding-bottom: 100px !important;
+        ">
+            <!-- Projects Section Header -->
+            <section id="projects-section" style="
+                all: unset !important;
+                padding: 60px 0 !important; 
+                margin-top: -200px !important;
+                width: 100% !important; 
+                text-align: center !important;
+                position: relative !important;
+                z-index: 2 !important;
+                display: block !important;
+            ">
+                <div style="
+                    max-width: 1200px !important;
+                    margin: 0 auto !important;
+                    padding: 0 20px !important;
+                    background: transparent !important;
+                    position: relative !important;
+                    z-index: 2 !important;
+                ">
+                    <h2 style="
+                        font-family: 'Outfit', sans-serif !important;
+                        font-size: 4rem !important;
+                        color: #2A2A2A !important;
+                        margin-bottom: 20px !important;
+                        text-align: center !important;
+                        font-weight: 400 !important;
+                        letter-spacing: 0.05em !important;
+                        text-transform: uppercase !important;
+                    ">Projects</h2>
+                    <hr style="width: 300px; height: 2px; border: none; background-color: #2A2A2A !important; margin: 0 auto 60px auto; transform: translateX(0px); opacity: 1 !important;">
+                    
+                    <div style="
+                        max-width: 800px !important;
+                        margin: 0 auto !important;
+                        background: transparent !important;
+                        position: relative !important;
+                        z-index: 2 !important;
+                    ">
+                        <p class="project-description" style="color: #2A2A2A !important; margin-bottom: 15px;">I'm a Junior Data Analyst currently learning and growing my skills in data analysis and visualization.</p>
+                        <p class="project-description" style="color: #2A2A2A !important; margin-bottom: 15px;">I'm eager to apply my knowledge to real-world projects and continue developing my technical abilities.</p>
+                        <p class="project-description" style="color: #2A2A2A !important; margin-bottom: 15px;">Below are some examples of projects I've worked on while gaining hands-on experience in the field.</p>   
                     </div>
                 </div>
             </section>
 
-            <!-- Project 2: Right -->
-            <section id="projects-right" style="border-radius: 15px; padding: 20px; width: 45%; background-color: transparent; display: flex; justify-content: center; align-items: center;">
-                <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                    <div class="row" style="display: flex; justify-content: center; width: 100%;">
-                        <!-- Image -->
-                        <div class="col-lg-4 text-center" style="flex: 1; text-align: center;">
-                            <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Second Project" style="max-width: 250px; height: auto; border-radius: 10px;">
-                        </div>
-                        <!-- Text content -->
-                        <div class="col-lg-8 text-left" style="flex: 3; text-align: left; padding-left: 20px;">
-                            <p style="font-size: 20px; font-weight: bold;">Second Project Title 🚀</p>
-                            <p style="padding: 30px 0; font-size: 16px; font-weight: 500;">Brief Project Description</p>
-                            <br>
-                            <p>Description of your second project goes here. You can modify this text to match your actual second project.</p>
+            <!-- Projects Cards Container -->
+            <div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 10px;">
+                <!-- Vertical Line -->
+                <hr style="height: 850px; width: 2px; border: none; background-color: #4A4A4A; position: absolute; left: 50%; transform: translateX(-50%);">
+                
+                <!-- Container for all projects -->
+                <div style="display: flex; flex-direction: column; width: 100%; max-width: 1800px; padding: 0 20px;">
+                    <!-- First row of projects -->
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 50px;">
+                        <!-- Project cards with responsive styling -->
+                        <section id="projects-left" style="
+                            border-radius: 15px; 
+                            padding: 20px; 
+                            width: 45%; 
+                            background-color: transparent; 
+                            display: flex; 
+                            justify-content: center; 
+                            align-items: center;
+                            margin-bottom: 30px;
+                        ">
+                            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <div class="row" style="display: flex; justify-content: center; width: 100%;">
+                                    <!-- Image -->
+                                    <div class="col-lg-4 text-center" style="flex: 1; text-align: center;">
+                                        <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Guardians Project" style="max-width: 250px; height: auto; border-radius: 10px;">
+                                    </div>
+                                    <!-- Text content -->
+                                    <div class="col-lg-8 text-left" style="flex: 3; text-align: left; padding-left: 20px;">
+                                        <p style="font-size: 20px; font-weight: bold;">The Guardians of the Voiceless 🐾</p>
+                                        <p style="padding: 30px 0; font-size: 16px; font-weight: 500;">Connecting Shelter Dogs with Communities</p>
+                                        <br>
+                                        <p>The Guardians of the Voiceless is a data-driven project designed to connect shelter dogs with community centers like retirement homes, schools, and veteran associations in Los Angeles.</p>
+                                        <p>By integrating Petfinder's real-time animal data with the Google Maps API, the project identifies potential matches between shelter dogs and organizations that can benefit from therapeutic animal visits.</p>
+                                        <p>The goal is to promote mental health, reduce loneliness, and support animal welfare while increasing adoption rates and community involvement.</p>
+                                        <p>This initiative showcases how data integration can create meaningful social impact, benefiting both people and animals.</p>
 
-                            <!-- Project Tags & Button -->
-                            <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                                <span style="background-color: #1261f3; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Python</span>
-                                <span style="background-color: #ff4b4b; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">SQL</span>
-                                <span style="background-color: #f0db4f; color: black; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Power BI</span>
-                                <a href="#" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 12px; font-size: 12px; text-decoration: none; border-radius: 6px; font-weight: bold;">
-                                    View Project
-                                </a>
+                                        <!-- Project Tags & Button -->
+                                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                                            <span style="background-color: #1261f3; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Python</span>
+                                            <span style="background-color: #ff4b4b; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Streamlit</span>
+                                            <span style="background-color: #f0db4f; color: black; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Excel</span>
+                                            <span style="background-color: #00c3ca; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Pandas</span>
+                                            <!-- View Project Button -->
+                                            <a href="https://github.com/cleidenirlopes/Data_Thieves_project" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 12px; font-size: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s ease;">
+                                                View Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </section>
+
+                        <!-- Project 2: Right -->
+                        <section id="projects-right" style="
+                            border-radius: 15px; 
+                            padding: 20px; 
+                            width: 45%; 
+                            background-color: transparent; 
+                            display: flex; 
+                            justify-content: center; 
+                            align-items: center;
+                            margin-bottom: 30px;
+                        ">
+                            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <div class="row" style="display: flex; justify-content: center; width: 100%;">
+                                    <!-- Image -->
+                                    <div class="col-lg-4 text-center" style="flex: 1; text-align: center;">
+                                        <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Second Project" style="max-width: 250px; height: auto; border-radius: 10px;">
+                                    </div>
+                                    <!-- Text content -->
+                                    <div class="col-lg-8 text-left" style="flex: 3; text-align: left; padding-left: 20px;">
+                                        <p style="font-size: 20px; font-weight: bold;">Second Project Title 🚀</p>
+                                        <p style="padding: 30px 0; font-size: 16px; font-weight: 500;">Brief Project Description</p>
+                                        <br>
+                                        <p>Description of your second project goes here. You can modify this text to match your actual second project.</p>
+
+                                        <!-- Project Tags & Button -->
+                                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                                            <span style="background-color: #1261f3; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Python</span>
+                                            <span style="background-color: #ff4b4b; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">SQL</span>
+                                            <span style="background-color: #f0db4f; color: black; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Power BI</span>
+                                            <a href="#" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 12px; font-size: 12px; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                                                View Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Second row of projects -->
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                        
+                        <!-- Project 3: Left -->
+                        <section id="projects-left-2" style="
+                            border-radius: 15px; 
+                            padding: 20px; 
+                            width: 45%; 
+                            background-color: transparent; 
+                            display: flex; 
+                            justify-content: center; 
+                            align-items: center;
+                            margin-bottom: 30px;
+                        ">
+                            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <div class="row" style="display: flex; justify-content: center; width: 100%;">
+                                    <!-- Image -->
+                                    <div class="col-lg-4 text-center" style="flex: 1; text-align: center;">
+                                        <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Third Project" style="max-width: 250px; height: auto; border-radius: 10px;">
+                                    </div>
+                                    <!-- Text content -->
+                                    <div class="col-lg-8 text-left" style="flex: 3; text-align: left; padding-left: 20px;">
+                                        <p style="font-size: 20px; font-weight: bold;">Third Project Title 📊</p>
+                                        <p style="padding: 30px 0; font-size: 16px; font-weight: 500;">Data Analysis Project</p>
+                                        <br>
+                                        <p>Description of your third project goes here. Add details about the project's goals, implementation, and results.</p>
+
+                                        <!-- Project Tags & Button -->
+                                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                                            <span style="background-color: #1261f3; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Python</span>
+                                            <span style="background-color: #ff4b4b; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">SQL</span>
+                                            <span style="background-color: #f0db4f; color: black; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Tableau</span>
+                                            <a href="#" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 12px; font-size: 12px; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                                                View Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Project 4: Right -->
+                        <section id="projects-right-2" style="
+                            border-radius: 15px; 
+                            padding: 20px; 
+                            width: 45%; 
+                            background-color: transparent; 
+                            display: flex; 
+                            justify-content: center; 
+                            align-items: center;
+                            margin-bottom: 30px;
+                        ">
+                            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <div class="row" style="display: flex; justify-content: center; width: 100%;">
+                                    <!-- Image -->
+                                    <div class="col-lg-4 text-center" style="flex: 1; text-align: center;">
+                                        <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Fourth Project" style="max-width: 250px; height: auto; border-radius: 10px;">
+                                    </div>
+                                    <!-- Text content -->
+                                    <div class="col-lg-8 text-left" style="flex: 3; text-align: left; padding-left: 20px;">
+                                        <p style="font-size: 20px; font-weight: bold;">Fourth Project Title 📈</p>
+                                        <p style="padding: 30px 0; font-size: 16px; font-weight: 500;">Business Intelligence Project</p>
+                                        <br>
+                                        <p>Description of your fourth project goes here. Include details about how you implemented the project, the tools used, and the insights obtained.</p>
+
+                                        <!-- Project Tags & Button -->
+                                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                                            <span style="background-color: #1261f3; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Power BI</span>
+                                            <span style="background-color: #ff4b4b; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">SQL</span>
+                                            <span style="background-color: #f0db4f; color: black; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Excel</span>
+                                            <a href="#" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 12px; font-size: 12px; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                                                View Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
 
-        <!-- Second row of projects -->
-        <div style="display: flex; justify-content: space-between;">
-            
-            <!-- Project 3: Left -->
-            <section id="projects-left-2" style="border-radius: 15px; padding: 20px; width: 45%; background-color: transparent; display: flex; justify-content: center; align-items: center;">
-                <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                    <div class="row" style="display: flex; justify-content: center; width: 100%;">
-                        <!-- Image -->
-                        <div class="col-lg-4 text-center" style="flex: 1; text-align: center;">
-                            <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Third Project" style="max-width: 250px; height: auto; border-radius: 10px;">
-                        </div>
-                        <!-- Text content -->
-                        <div class="col-lg-8 text-left" style="flex: 3; text-align: left; padding-left: 20px;">
-                            <p style="font-size: 20px; font-weight: bold;">Third Project Title 📊</p>
-                            <p style="padding: 30px 0; font-size: 16px; font-weight: 500;">Data Analysis Project</p>
-                            <br>
-                            <p>Description of your third project goes here. Add details about the project's goals, implementation, and results.</p>
 
-                            <!-- Project Tags & Button -->
-                            <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                                <span style="background-color: #1261f3; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Python</span>
-                                <span style="background-color: #ff4b4b; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">SQL</span>
-                                <span style="background-color: #f0db4f; color: black; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Tableau</span>
-                                <a href="#" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 12px; font-size: 12px; text-decoration: none; border-radius: 6px; font-weight: bold;">
-                                    View Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Project 4: Right -->
-            <section id="projects-right-2" style="border-radius: 15px; padding: 20px; width: 45%; background-color: transparent; display: flex; justify-content: center; align-items: center;">
-                <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                    <div class="row" style="display: flex; justify-content: center; width: 100%;">
-                        <!-- Image -->
-                        <div class="col-lg-4 text-center" style="flex: 1; text-align: center;">
-                            <img class="img-fluid rounded" src="assets/data_thieves.png" alt="Fourth Project" style="max-width: 250px; height: auto; border-radius: 10px;">
-                        </div>
-                        <!-- Text content -->
-                        <div class="col-lg-8 text-left" style="flex: 3; text-align: left; padding-left: 20px;">
-                            <p style="font-size: 20px; font-weight: bold;">Fourth Project Title 📈</p>
-                            <p style="padding: 30px 0; font-size: 16px; font-weight: 500;">Business Intelligence Project</p>
-                            <br>
-                            <p>Description of your fourth project goes here. Include details about how you implemented the project, the tools used, and the insights obtained.</p>
-
-                            <!-- Project Tags & Button -->
-                            <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                                <span style="background-color: #1261f3; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Power BI</span>
-                                <span style="background-color: #ff4b4b; color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">SQL</span>
-                                <span style="background-color: #f0db4f; color: black; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px;">Excel</span>
-                                <a href="#" target="_blank" style="background-color: #1261f3; color: white; padding: 8px 12px; font-size: 12px; text-decoration: none; border-radius: 6px; font-weight: bold;">
-                                    View Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</div>
-
-
-        <!--============================== CONTACT SECTION ==============================-->
+       <!--============================== CONTACT SECTION ==============================-->
     <section id="contact" style="
-        padding: 80px 0; 
-        width: 60%; 
-        display: flex; 
+        padding: 100px 0; /* Reduced vertical padding */
+        display: flex;
         justify-content: center;
-        align-items: center; 
-        min-height: 100vh; 
-        background: none !important;
+        align-items: center;
+        background: linear-gradient(
+            to bottom,
+            rgba(17, 34, 80, 0.25),
+            transparent
+        ) !important;
         margin-top: 0px;
-        margin-left: 500px;  /* Adjusted to a more moderate value */
+        min-height: 100vh; /* Ensure the background still covers the full height */
     ">
         <div class="container" style="
             width: 100%;
-            background: #222; 
-            padding: 50px; 
+            background: #222;
+            padding: 30px;
             border-radius: 20px;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 10px 10px 30px rgba(0, 0, 0, 0.5);
-            display: flex; 
-            flex-direction: column; 
+            display: flex;
+            flex-direction: column;
             align-items: center;
             margin: 0 auto;
         ">
-            <div style="width: 80%; text-align: center;">  <!-- Changed text-align to center -->
-                    <h3 style="font-size: 3rem; margin-bottom: 30px;">CONTACT ME</h3>
-        
+            <div style="width: 80%; text-align: center;">
+                <h3 style="
+                    font-family: 'Outfit', sans-serif !important;
+                    font-size: 3rem !important; /* Reduced font size */
+                    margin-bottom: 40px !important; /* Reduced margin */
+                    font-weight: 400 !important;
+                    letter-spacing: 0.05em !important;
+                    text-transform: uppercase !important;
+                ">CONTACT ME</h3>
+
                 <ul class="icons" style="list-style: none; display: flex; justify-content: center; gap: 15px; font-size: 2.5rem; margin-bottom: 20px; padding: 0;">
-                        <li>
-                            <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" style="text-decoration: none;">
-                                <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/cleidenirlopes" style="text-decoration: none;">
-                                <i class="fab fa-github" style="color: #ffffff;"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:cleidenirlopes@outlook.com" style="text-decoration: none;">
-                                <i class="fas fa-envelope" style="color: #d14836;"></i>
-                            </a>
-                        </li>
-                    </ul>
-        
-                    <p style="font-size: 2rem; margin-bottom: 30px;">🌎 Lisbon, Portugal</p>
-                </div>
-        
-                <form method="post" action="#" style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; max-width: 800px; margin: 0 auto;">
-                    <div style="width: 100%; display: flex; flex-direction: column; gap: 20px;">
-                        <input type="text" name="name" id="name" placeholder="Your Name" style="width: 100%; padding: 15px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
-                        <input type="email" name="email" id="email" placeholder="Your Email" style="width: 100%; padding: 15px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
-                    </div>
-                    <div style="width: 100%;">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" style="width: 100%; padding: 15px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
-                    </div>
-                    <div style="width: 100%;">
-                        <textarea name="message" id="message" placeholder="Your Message" rows="6" style="width: 100%; padding: 15px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);"></textarea>
-                    </div>
-                    <div style="width: 100%; text-align: center;">
-                        <button type="submit" class="primary" style="padding: 15px 25px; background-color: #035bff; color: white; border: none; border-radius: 10px; font-size: 1.2rem; cursor: pointer; margin-right: 10px; box-shadow: 2px 2px 8px rgba(3, 91, 255, 0.5), 4px 4px 16px rgba(3, 91, 255, 0.3);">Send Message</button>
-                        <button type="reset" style="padding: 15px 25px; background-color: #ccc; color: black; border: none; border-radius: 10px; font-size: 1.2rem; cursor: pointer; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3), 4px 4px 16px rgba(0, 0, 0, 0.2);">Reset Form</button>
-                    </div>
-                </form>
+                    <li>
+                        <a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" style="text-decoration: none;">
+                            <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/cleidenirlopes" style="text-decoration: none;">
+                            <i class="fab fa-github" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:cleidenirlopes@outlook.com" style="text-decoration: none;">
+                            <i class="fas fa-envelope" style="color: #d14836;"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <p style="font-size: 1.5rem; margin-bottom: 30px;">🌎 Lisbon, Portugal</p>
             </div>
-        </section>
-<p style="text-align: center; width: 100%; margin: 20px 0;">&copy; 2025 Cledenir Souza. All rights reserved.</p>
-               
-                
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+            <form method="post" action="#" style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 800px; margin: 0 auto;">
+                <div style="width: 100%; display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" name="name" id="name" placeholder="Your Name" style="width: 100%; padding: 12px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
+                    <input type="email" name="email" id="email" placeholder="Your Email" style="width: 100%; padding: 12px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
+                </div>
+                <div style="width: 100%;">
+                    <input type="text" name="subject" id="subject" placeholder="Subject" style="width: 100%; padding: 12px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);">
+                </div>
+                <div style="width: 100%;">
+                    <textarea name="message" id="message" placeholder="Your Message" rows="5" style="width: 100%; padding: 12px; border: 2px solid #333; border-radius: 10px; font-size: 1.2rem; box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);"></textarea>
+                </div>
+                <div style="width: 100%; text-align: center;">
+                    <button type="submit" class="primary" style="padding: 12px 22px; background-color: #035bff; color: white; border: none; border-radius: 10px; font-size: 1.2rem; cursor: pointer; margin-right: 10px; box-shadow: 2px 2px 8px rgba(3, 91, 255, 0.5), 4px 4px 16px rgba(3, 91, 255, 0.3);">Send Message</button>
+                    <button type="reset" style="padding: 12px 22px; background-color: #ccc; color: black; border: none; border-radius: 10px; font-size: 1.2rem; cursor: pointer; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3), 4px 4px 16px rgba(0, 0, 0, 0.2);">Reset Form</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
 
         <!--============================== PARTICLES SECTION ==============================-->
         <script>
@@ -725,43 +1046,57 @@
 
     <!-- Replace all existing scroll-related scripts with this one at the bottom of your body tag -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Add click handlers to all scroll links
-        document.querySelectorAll('.scroll-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    const headerOffset = 80;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    });
-    </script>
-
-    <!-- Add this script at the bottom of your body tag, just before </body> -->
-    <script>
-    function scrollToContact(event) {
-        event.preventDefault();
-        const contactSection = document.getElementById('contact');
-        const headerOffset = 80; // Adjust this value based on your navbar height
-        const elementPosition = contactSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
+    // Simple scroll function
+    function scrollToElement(elementId) {
+        const element = document.querySelector(elementId);
+        if (!element) return;
+        
+        const offset = 80; // Adjust this value based on your navbar height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
         window.scrollTo({
             top: offsetPosition,
-            behavior: 'smooth'
+            behavior: "smooth"
         });
     }
+
+    // Add click handlers to all navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.onclick = function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            scrollToElement(href);
+        }
+    });
+
+    // Specific handler for the Contact Me button
+    const contactButton = document.querySelector('a[href="#contact"]');
+    if (contactButton) {
+        contactButton.onclick = function(e) {
+            e.preventDefault();
+            scrollToElement('#contact');
+        }
+    }
     </script>
+
+    <!-- Update your navigation link to match the new ID -->
+    <script>
+    document.querySelector('a[href="#projects"]').setAttribute('href', '#projects-section');
+    </script>
+
+    <!-- Update all project text colors in the project cards -->
+    <style>
+        .col-lg-8 p {
+            color: #4A4A4A !important;
+        }
+        .project-description {
+            color: #4A4A4A !important;
+        }
+        /* Update the Projects heading color */
+        #projects-section h2 {
+            color: #4A4A4A !important;
+        }
+    </style>
 </body>
 </html>
