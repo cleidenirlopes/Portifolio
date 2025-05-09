@@ -96,6 +96,7 @@
 								<li><a href="Left Sidebar.html">Left Sidebar</a></li>
 								<li><a href="Guardians-of-the-Voiceless.html">Guardians -of-the-Voiceless</a></li>
 								<li><a href="Escape-Room-Project.html">Scape-Room-Project</a></li>
+								<li><a href="Global-Imigration.html">Global-Imigration</a></li>
 							</ul>
 						</li>
 						<li><a href="Contact-Me.html">Contacts</a></li>
@@ -109,72 +110,78 @@
 <main id="main">
 	<div class="container">
 		<div class="row topspace">
-			<!-- Article main content -->
-			<article class="col-sm-8 maincontent">
-				<header class="page-header">
-					<h3 class="page-title">Connecting Shelter Dogs with Communities.</h3>				
-				</header>
 
-				<p style="text-align: center;">
-					<img src="assets/images/data_thieves.png" alt="" style="width: 50%;" class="img-responsive">
-				  </p>
-				  
+			<!--==============================  Article main content ==============================-->
+				<article class="col-sm-8 maincontent">
+					<header class="page-header">
+						<h3 class="page-title" style="margin-left: 75px;">Global Immigration Visualization project</h3>				
+					</header>
 
-				<p>The Guardians of the Voiceless is an initiative that connects shelter dogs with local community centers like retirement homes and schools to promote mental health, companionship, and emotional well-being. By integrating Petfinder's real-time animal data and the Google Maps API, the project matches shelter dogs with suitable community centers in Los Angeles, increasing awareness and providing companionship to those in need.</p>
+					<p style="text-align: center;">
+						<img src="assets/images/Dashboard.png" alt="Global Immigration" style="width: 50%;" class="img-responsive">
+					</p>
 
-				<h3>Description of the Project</h3>
-				<p>"The Guardians of the Voiceless" is a project aimed at connecting shelter dogs with local community centers, such as retirement homes, schools, and organizations, to promote mental health, companionship, and emotional well-being. By leveraging Petfinder's real-time animal data and the Google Maps API, the project matches shelter dogs with community centers, increasing awareness of shelter animals and promoting their adoption.</p>
-				
-				<div class="project-description">
-					<h2>Steps Taken in the Project:</h2>
-					
-					<h3>Data Integration:</h3>
-					<ul>
-						<li><strong>Petfinder Web Scraping:</strong> The team extracted real-time data about available shelter dogs, including their breed, personality, photos, and availability.</li>
-						<li><strong>Google Maps API:</strong> The team used the API to locate community centers like retirement homes and schools in Los Angeles, gathering essential details like addresses and contact information.</li>
-						<li><strong>Matching Shelter Dogs with Community Needs:</strong> Using the data from both sources, the team developed a matching system that pairs shelter dogs with suitable community settings. For example, calm dogs are matched with retirement homes, while energetic dogs are directed to schools.</li>
-					</ul>
-					
-					<h3>Core Concept – Visits and Awareness:</h3>
-					<p>The project facilitates visits by shelter dogs to various community locations, offering emotional support to retirees, schoolchildren, and others. This not only benefits the individuals involved but also increases awareness of the animals, boosting their chances of adoption and raising funds for shelters.</p>
-					
-					<h3>Revenue Model:</h3>
-					<ul>
-						<li><strong>Corporate Sponsorships:</strong> The team partnered with local businesses to cover costs like transportation and animal care.</li>
-						<li><strong>Individual Sponsorships:</strong> Opportunities were provided for people to sponsor an animal financially.</li>
-						<li><strong>Shelter Donations:</strong> A portion of funds raised was allocated to support shelter operations.</li>
-					</ul>
-					
-					<h3>Target Locations and Demographics:</h3>
-					<p>The initial focus is on Los Angeles, targeting:</p>
-					<ul>
-						<li>Retirees in assisted living facilities.</li>
-						<li>Schoolchildren to foster empathy and responsibility.</li>
-						<li>Veteran associations and other groups in need of therapeutic animal companionship.</li>
-					</ul>
-					<p>The project primarily focuses on dogs, but expansion to other animals is planned.</p>
-					
-					<h3>Unique Value Proposition:</h3>
-					<ul>
-						<li><strong>For Communities:</strong> Reduces loneliness and promotes emotional well-being.</li>
-						<li><strong>For Shelters:</strong> Increases exposure and adoption opportunities.</li>
-						<li><strong>For Animals:</strong> Provides companionship, reducing isolation.</li>
-						<li><strong>For Society:</strong> Builds empathy and awareness around animal welfare.</li>
-					</ul>
-					
-					<h3>Way Forward:</h3>
-					<ul>
-						<li><strong>Geographic Analysis:</strong> Target shelters in high-abandonment areas.</li>
-						<li><strong>Diversify Animal Types:</strong> Expand to include cats and rabbits.</li>
-						<li><strong>Personalized Matching:</strong> Create filters based on animal traits for more tailored community matching.</li>
-					</ul>
-					
-					<h3>Conclusion:</h3>
-					<p>This initiative creates a powerful synergy between technology, compassion, and community. It connects shelter dogs with people in need, fostering emotional connections, supporting animal welfare, and raising awareness about adoption opportunities. Moving forward, the project plans to expand and refine its services to make an even greater impact.</p>
-				</div>
-			</article>
-			<!-- /Article -->
+					<p>The Global Immigration Visualization project explores patterns and dynamics of international migration over the past decades. Using interactive charts and maps, the project highlights migration flows between regions, countries, and continents, offering a comprehensive view of how people move across borders and the reasons behind these movements.</p>
 
+					<h3>Description of the Project</h3>
+					<p>This project leverages public immigration datasets from trusted sources such as the UN, World Bank, and OECD to provide visual insights into global migration. It showcases trends such as the top countries of origin and destination, historical shifts in migration volumes, and regional push-and-pull factors like economy, conflict, and climate change.</p>
+					
+					<div class="project-description">
+						<h2>Steps Taken in the Project:</h2>
+
+						<h3>Data Collection and Preparation:</h3>
+						<ul>
+							<li><strong>UN and World Bank Datasets:</strong> Compiled global immigration statistics by year, country, and region.</li>
+							<li><strong>Cleaning and Transformation:</strong> Used Python (Pandas & NumPy) to clean missing values, normalize country names, and structure data into analysis-ready format.</li>
+							<li><strong>Enrichment:</strong> Included GDP, conflict index, and climate risk data to cross-analyze migration motives.</li>
+						</ul>
+
+						<h3>Interactive Visualizations:</h3>
+						<p>The project features multiple visualizations built with Power BI and Python libraries such as Plotly and Seaborn:</p>
+						<ul>
+							<li><strong>Choropleth Maps:</strong> Show immigration and emigration flows by region and year.</li>
+							<li><strong>Line and Bar Charts:</strong> Track changes in immigration over time across key countries.</li>
+							<li><strong>Heatmaps and Correlation Matrices:</strong> Reveal relationships between economic factors and migration volumes.</li>
+						</ul>
+
+						<h3>Core Findings:</h3>
+						<p>The data reveals significant global trends, such as:</p>
+						<ul>
+							<li>Increasing migration from the Global South to developed countries.</li>
+							<li>Economic stability and job opportunities as key pull factors.</li>
+							<li>Conflicts and climate events as major drivers of displacement.</li>
+						</ul>
+
+						<h3>Impact and Use Cases:</h3>
+						<ul>
+							<li><strong>For Policymakers:</strong> Supports informed decisions on migration policy and refugee intake.</li>
+							<li><strong>For Researchers:</strong> Offers a data-driven view of migration dynamics over time.</li>
+							<li><strong>For the Public:</strong> Promotes awareness and understanding of global migration patterns.</li>
+						</ul>
+
+						<h3>Target Audience and Scope:</h3>
+						<p>The project is aimed at analysts, students, educators, NGOs, and international institutions interested in the study of global migration. It can be extended to include refugee statistics and forecasts using machine learning models.</p>
+
+						<h3>Unique Value Proposition:</h3>
+						<ul>
+							<li><strong>Data Transparency:</strong> Based entirely on open, verified global datasets.</li>
+							<li><strong>Comparative Insights:</strong> Allows users to compare countries and regions interactively.</li>
+							<li><strong>Educational Utility:</strong> Ideal for classroom or academic use as an exploratory tool.</li>
+						</ul>
+
+						<h3>Next Steps:</h3>
+						<ul>
+							<li><strong>Time Series Forecasting:</strong> Predict future migration patterns with LSTM and regression models.</li>
+							<li><strong>Deeper Geopolitical Analysis:</strong> Cross-analyze with conflict and climate displacement data.</li>
+							<li><strong>Dashboard Deployment:</strong> Host visualizations on a live dashboard using Power BI or Streamlit.</li>
+						</ul>
+
+						<h3>Conclusion:</h3>
+						<p>The Global Immigration Visualization project transforms raw data into meaningful insights about migration. It not only informs policy and public understanding, but also opens doors for future research, encouraging data-driven discussions about one of the most pressing global issues of our time.</p>
+					</div>
+				</article>
+
+		
 			<!--==============================  Sidebar Section ==============================-->
 			<aside class="col-md-4 sidebar sidebar-left">
 				<div class="widget">
@@ -191,8 +198,8 @@
 				
 						<!-- Streamlit -->
 						<div style="text-align: center;">
-							<i class="fas fa-bolt" style="font-size: 64px; color: #ff4b00;"></i>
-							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Streamlit</p>
+							<i class="fas fa-chart-pie" style="font-size: 64px; color: #ff4b00;"></i>
+							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Power BI</p>
 						</div>
 						
 						<!-- Pandas -->
