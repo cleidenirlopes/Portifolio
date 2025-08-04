@@ -110,124 +110,125 @@
 <main id="main">
 	<div class="container">
 		<div class="row topspace">
-			<!-- Article main content -->
+			
+			<!--==============================  Article Section ==============================-->
+			
 			<article class="col-sm-8 maincontent">
-				<header class="page-header">
-					<h3 class="page-title">Connecting Shelter Dogs with Communities.</h3>				
-				</header>
+    <header class="page-header">
+        <h3 class="page-title">Connecting Lisbon’s Public Transport with Communities.</h3>				
+    </header>
 
-				<p style="text-align: center;">
-					<img src="assets/images/data_thieves.png" alt="" style="width: 50%;" class="img-responsive">
-				  </p>
-				  
+    <p style="text-align: center;">
+        <img src="assets/images/Dash.png" alt="Lisbon Dashboard" style="width: 50%;" class="img-responsive">
+    </p>
 
-				<p>The Guardians of the Voiceless is an initiative that connects shelter dogs with local community centers like retirement homes and schools to promote mental health, companionship, and emotional well-being. By integrating Petfinder's real-time animal data and the Google Maps API, the project matches shelter dogs with suitable community centers in Los Angeles, increasing awareness and providing companionship to those in need.</p>
+    <p>Lisbon Urban Mobility Insights is an initiative that connects real-time data from Lisbon’s bus network with local communities and decision-makers to improve service quality, accessibility, and engagement. By integrating live transport data and advanced geospatial analysis, the project brings visibility to public transit operations and empowers communities with meaningful insights.</p>
 
-				<h3>Description of the Project</h3>
-				<p>"The Guardians of the Voiceless" is a project aimed at connecting shelter dogs with local community centers, such as retirement homes, schools, and organizations, to promote mental health, companionship, and emotional well-being. By leveraging Petfinder's real-time animal data and the Google Maps API, the project matches shelter dogs with community centers, increasing awareness of shelter animals and promoting their adoption.</p>
-				
-				<div class="project-description">
-					<h2>Steps Taken in the Project:</h2>
-					
-					<h3>Data Integration:</h3>
-					<ul>
-						<li><strong>Petfinder Web Scraping:</strong> The team extracted real-time data about available shelter dogs, including their breed, personality, photos, and availability.</li>
-						<li><strong>Google Maps API:</strong> The team used the API to locate community centers like retirement homes and schools in Los Angeles, gathering essential details like addresses and contact information.</li>
-						<li><strong>Matching Shelter Dogs with Community Needs:</strong> Using the data from both sources, the team developed a matching system that pairs shelter dogs with suitable community settings. For example, calm dogs are matched with retirement homes, while energetic dogs are directed to schools.</li>
-					</ul>
-					
-					<h3>Core Concept – Visits and Awareness:</h3>
-					<p>The project facilitates visits by shelter dogs to various community locations, offering emotional support to retirees, schoolchildren, and others. This not only benefits the individuals involved but also increases awareness of the animals, boosting their chances of adoption and raising funds for shelters.</p>
-					
-					<h3>Revenue Model:</h3>
-					<ul>
-						<li><strong>Corporate Sponsorships:</strong> The team partnered with local businesses to cover costs like transportation and animal care.</li>
-						<li><strong>Individual Sponsorships:</strong> Opportunities were provided for people to sponsor an animal financially.</li>
-						<li><strong>Shelter Donations:</strong> A portion of funds raised was allocated to support shelter operations.</li>
-					</ul>
-					
-					<h3>Target Locations and Demographics:</h3>
-					<p>The initial focus is on Los Angeles, targeting:</p>
-					<ul>
-						<li>Retirees in assisted living facilities.</li>
-						<li>Schoolchildren to foster empathy and responsibility.</li>
-						<li>Veteran associations and other groups in need of therapeutic animal companionship.</li>
-					</ul>
-					<p>The project primarily focuses on dogs, but expansion to other animals is planned.</p>
-					
-					<h3>Unique Value Proposition:</h3>
-					<ul>
-						<li><strong>For Communities:</strong> Reduces loneliness and promotes emotional well-being.</li>
-						<li><strong>For Shelters:</strong> Increases exposure and adoption opportunities.</li>
-						<li><strong>For Animals:</strong> Provides companionship, reducing isolation.</li>
-						<li><strong>For Society:</strong> Builds empathy and awareness around animal welfare.</li>
-					</ul>
-					
-					<h3>Way Forward:</h3>
-					<ul>
-						<li><strong>Geographic Analysis:</strong> Target shelters in high-abandonment areas.</li>
-						<li><strong>Diversify Animal Types:</strong> Expand to include cats and rabbits.</li>
-						<li><strong>Personalized Matching:</strong> Create filters based on animal traits for more tailored community matching.</li>
-					</ul>
-					
-					<h3>Conclusion:</h3>
-					<p>This initiative creates a powerful synergy between technology, compassion, and community. It connects shelter dogs with people in need, fostering emotional connections, supporting animal welfare, and raising awareness about adoption opportunities. Moving forward, the project plans to expand and refine its services to make an even greater impact.</p>
-				</div>
-			</article>
-			<!-- /Article -->
+    <h3>Description of the Project</h3>
+    <p>The Lisbon Urban Mobility Insights project was developed to demonstrate the power of real-time analytics in public transport. Using Python, SQL, and Power BI, the project provides dashboards that show the operational status of Lisbon's bus lines minute by minute. The focus is to offer a transparent and accessible view of how the transport system functions in real time, supporting planners, citizens, and researchers alike.</p>
 
+    <div class="project-description">
+        <h2>Steps Taken in the Project:</h2>
+
+        <h3>Data Integration:</h3>
+        <ul>
+            <li><strong>Real-Time API Collection:</strong> Public data sources were accessed to retrieve live data from Lisbon's bus and tram systems, including vehicle locations, speed, operational status, and line IDs.</li>
+            <li><strong>Operational Status Logic:</strong> Vehicles were categorized as "active," "stopped," "arriving," or "completed" using timestamped GPS coordinates and status flags.</li>
+            <li><strong>Line Categorization:</strong> Using patterns in the line IDs, trams and buses were separated, and each was analyzed for line usage per hour and per region.</li>
+        </ul>
+
+        <h3>Core Concept – Interactive Dashboard Metrics:</h3>
+        <p>The dashboard allows users to monitor operational metrics such as total buses per hour, buses in operation per moment, buses completing their trips, and vehicles stopped in real time. Each card in the interface is interactive, filtering the data in maps and charts like BusLineDistrict, BusPerLine, and BusLineShare when selected.</p>
+
+        <h3>Impact Model:</h3>
+        <ul>
+            <li><strong>Public Planners:</strong> Make informed decisions on fleet distribution and frequency adjustments.</li>
+            <li><strong>Residents:</strong> Gain transparency on public transport operations in their neighborhood.</li>
+            <li><strong>Students & Researchers:</strong> Use the real-time dataset for urban mobility studies and machine learning models.</li>
+        </ul>
+
+        <h3>Target Locations and Use Cases:</h3>
+			<p>The dashboard covers the entire bus network operated by Carris, analyzing all stops, districts, and municipalities within Lisbon. It is designed for broad use cases such as:</p>
+			<ul>
+			<li>Urban planning and transportation policy decision-making.</li>
+			<li>Commuter pattern analysis across multiple districts.</li>
+			<li>Service optimization for public transport authorities.</li>
+			</ul>
+
+        <p>Users can explore movement density, coverage by district, and line saturation in peak hours.</p>
+
+        <h3>Unique Value Proposition:</h3>
+        <ul>
+            <li><strong>For Communities:</strong> Understand how many vehicles are circulating in their area in real time.</li>
+            <li><strong>For Technicians:</strong> Detect issues such as bottlenecks, delays, or gaps in service.</li>
+            <li><strong>For Decision Makers:</strong> Prioritize infrastructure investments and line restructuring.</li>
+        </ul>
+
+        <h3>Way Forward:</h3>
+        <ul>
+            <li><strong>Expand Modal Coverage:</strong> Integrate Lisbon Metro and ferry services.</li>
+            <li><strong>Historical Trends:</strong> Store and visualize historical data to analyze long-term patterns.</li>
+            <li><strong>User Feedback:</strong> Allow users to suggest adjustments to improve public service based on dashboard findings.</li>
+        </ul>
+
+        <h3>Conclusion:</h3>
+        <p>This real-time transport dashboard turns data into decisions. It reveals Lisbon’s transport performance minute by minute and bridges the gap between service providers and the public. With continued development, it will grow into a foundational tool for data-driven urban planning.</p>
+    </div>
+</article>
+
+			
 			<!--==============================  Sidebar Section ==============================-->
 			<aside class="col-md-4 sidebar sidebar-left">
-				<div class="widget">
-					<h3>Tools Used</h3>
-					
-					<!-- Icon Column (Vertical Stack) -->
-					<div style="margin-top: 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
-						
-						<!-- Python -->
-						<div style="text-align: center;">
-							<i class="fab fa-python" style="font-size: 64px; color: #12a1f3;"></i>
-							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Python</p>
-						</div>
+			<div class="widget">
+				<h3>Tools Used</h3>
 				
-						<!-- Streamlit -->
-						<div style="text-align: center;">
-							<i class="fas fa-bolt" style="font-size: 64px; color: #ff4b00;"></i>
-							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Streamlit</p>
-						</div>
-						
-						<!-- Pandas -->
-						<div style="text-align: center;">
-							<i class="fas fa-table" style="font-size: 64px; color: #5a9b9f;"></i>
-							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Pandas</p>
-						</div>
-						
-						<!-- View Project Button -->
-					<div style="margin-top: 30px; text-align: left;">
-						<a href="https://github.com/cleidenirlopes/Data_Thieves_project" target="_blank"
-							style="
-								background-color: #1261f3; 
-								color: white; 
-								padding: 12px 20px; 
-								font-size: 14px;
-								font-weight: bold;
-								text-decoration: none; 
-								border-radius: 8px; 
-								box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-								transition: background-color 0.3s ease, transform 0.3s ease;
-								display: inline-block;
-								cursor: pointer;
-							"
-							class="btn-improved"
-						>
-							View Project
-						</a>
-					</div>
-
-					</div>
+				<!-- Icon Column (Vertical Stack) -->
+				<div style="margin-top: 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+				
+				<!-- Python -->
+				<div style="text-align: center;">
+					<i class="fab fa-python" style="font-size: 64px; color: #12a1f3;"></i>
+					<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Python</p>
 				</div>
+				
+				<!-- SQL -->
+				<div style="text-align: center;">
+					<i class="fas fa-database" style="font-size: 64px; color: #00758F;"></i>
+					<p style="font-size: 10px; margin: 5px 0 0; color: #000;">SQL</p>
+				</div>
+				
+				<!-- Power BI -->
+				<div style="text-align: center;">
+					<i class="fas fa-chart-bar" style="font-size: 64px; color: #F2C811;"></i>
+					<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Power BI</p>
+				</div>
+				
+				<!-- View Project Button -->
+				<div style="margin-top: 30px; text-align: left;">
+					<a href="https://github.com/cleidenirlopes/Lisbon-s-Public-Transport-Network" target="_blank"
+					style="
+						background-color: #1261f3; 
+						color: white; 
+						padding: 12px 20px; 
+						font-size: 14px;
+						font-weight: bold;
+						text-decoration: none; 
+						border-radius: 8px; 
+						box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+						transition: background-color 0.3s ease, transform 0.3s ease;
+						display: inline-block;
+						cursor: pointer;
+					"
+					class="btn-improved"
+					>
+					View Project
+					</a>
+				</div>
+
+				</div>
+			</div>
 			</aside>
-			<!--============================== Sidebar Section ==============================-->
+
 		</div>
 	</div>
 </main>
