@@ -1,7 +1,21 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const path = require('path');
+const livereload = require('livereload');
+const connectLivereload = require('connect-livereload');
+
 const app = express();
+
+// Live Reload Server
+const liveReloadServer = livereload.createServer();
+liveReloadServer.watch(path.join(__dirname, '../../'));
+
+// Inject livereload script into pages
+app.use(connectLivereload());
+
+// Serve static files from the root directory
+app.use(express.static(path.join(__dirname, '../../')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -34,4 +48,17 @@ app.post('/send-message', (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+// Serve the main page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../index.html'));
+});
+
+// Serve any other HTML files
+app.get('/:page.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../', req.params.page + '.html'));
+});
+
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+    console.log('Open http://localhost:3000 in your browser');
+});

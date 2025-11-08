@@ -1,0 +1,41 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "Initio - Free, multipurpose html5 template\r =============",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon assets/js/server.js --watch assets --watch *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cleidenirlopes/Portifolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cleidenirlopes/Portifolio/issues"
+  },
+  "homepage": "https://github.com/cleidenirlopes/Portifolio#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.10",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "babel-loader": "^10.0.0",
+    "connect-livereload": "^0.6.1",
+    "html-webpack-plugin": "^5.6.4",
+    "livereload": "^0.10.3",
+    "nodemon": "^3.1.10",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

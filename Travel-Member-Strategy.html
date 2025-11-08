@@ -93,8 +93,8 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="Travel-Member-Strategy.html">Travel Member Stratergy</a></li>
-								<li><a href="Guardians-of-the-Voiceless.html">Guardians -of-the-Voiceless</a></li>
+								<li><a href="Travel Member Stratergy.html">Travel Member Stratergy</a></li>
+								<li><a href="Guardians -of-the-Voiceless.html">Guardians -of-the-Voiceless</a></li>
 								<li><a href="Escape-Room-Project.html">Scape-Room-Project</a></li>
 								<li><a href="Global-Imigration.html">Global-Imigration</a></li>
 								<li><a href="Lisbon-s-Public-Transport-Network.html">Lisbon’s Public Transport Network</a></li>
@@ -111,78 +111,53 @@
 <main id="main">
 	<div class="container">
 		<div class="row topspace">
-
-			<!--==============================  Article main content ==============================-->
-				<article class="col-sm-8 maincontent">
-					<header class="page-header">
-						<h3 class="page-title" style="margin-left: 75px;">Global Immigration Visualization project</h3>				
-					</header>
-
-					<p style="text-align: center;">
-						<img src="assets/images/Dashboard.png" alt="Global Immigration" style="width: 50%;" class="img-responsive">
-					</p>
-
-					<p>The Global Immigration Visualization project explores patterns and dynamics of international migration over the past decades. Using interactive charts and maps, the project highlights migration flows between regions, countries, and continents, offering a comprehensive view of how people move across borders and the reasons behind these movements.</p>
-
-					<h3>Description of the Project</h3>
-					<p>This project leverages public immigration datasets from trusted sources such as the UN, World Bank, and OECD to provide visual insights into global migration. It showcases trends such as the top countries of origin and destination, historical shifts in migration volumes, and regional push-and-pull factors like economy, conflict, and climate change.</p>
-					
-					<div class="project-description">
-						<h2>Steps Taken in the Project:</h2>
-
-						<h3>Data Collection and Preparation:</h3>
-						<ul>
-							<li><strong>UN and World Bank Datasets:</strong> Compiled global immigration statistics by year, country, and region.</li>
-							<li><strong>Cleaning and Transformation:</strong> Used Python (Pandas & NumPy) to clean missing values, normalize country names, and structure data into analysis-ready format.</li>
-							<li><strong>Enrichment:</strong> Included GDP, conflict index, and climate risk data to cross-analyze migration motives.</li>
-						</ul>
-
-						<h3>Interactive Visualizations:</h3>
-						<p>The project features multiple visualizations built with Power BI and Python libraries such as Plotly and Seaborn:</p>
-						<ul>
-							<li><strong>Choropleth Maps:</strong> Show immigration and emigration flows by region and year.</li>
-							<li><strong>Line and Bar Charts:</strong> Track changes in immigration over time across key countries.</li>
-							<li><strong>Heatmaps and Correlation Matrices:</strong> Reveal relationships between economic factors and migration volumes.</li>
-						</ul>
-
-						<h3>Core Findings:</h3>
-						<p>The data reveals significant global trends, such as:</p>
-						<ul>
-							<li>Increasing migration from the Global South to developed countries.</li>
-							<li>Economic stability and job opportunities as key pull factors.</li>
-							<li>Conflicts and climate events as major drivers of displacement.</li>
-						</ul>
-
-						<h3>Impact and Use Cases:</h3>
-						<ul>
-							<li><strong>For Policymakers:</strong> Supports informed decisions on migration policy and refugee intake.</li>
-							<li><strong>For Researchers:</strong> Offers a data-driven view of migration dynamics over time.</li>
-							<li><strong>For the Public:</strong> Promotes awareness and understanding of global migration patterns.</li>
-						</ul>
-
-						<h3>Target Audience and Scope:</h3>
-						<p>The project is aimed at analysts, students, educators, NGOs, and international institutions interested in the study of global migration. It can be extended to include refugee statistics and forecasts using machine learning models.</p>
-
-						<h3>Unique Value Proposition:</h3>
-						<ul>
-							<li><strong>Data Transparency:</strong> Based entirely on open, verified global datasets.</li>
-							<li><strong>Comparative Insights:</strong> Allows users to compare countries and regions interactively.</li>
-							<li><strong>Educational Utility:</strong> Ideal for classroom or academic use as an exploratory tool.</li>
-						</ul>
-
-						<h3>Next Steps:</h3>
-						<ul>
-							<li><strong>Time Series Forecasting:</strong> Predict future migration patterns with LSTM and regression models.</li>
-							<li><strong>Deeper Geopolitical Analysis:</strong> Cross-analyze with conflict and climate displacement data.</li>
-							<li><strong>Dashboard Deployment:</strong> Host visualizations on a live dashboard using Power BI or Streamlit.</li>
-						</ul>
-
-						<h3>Conclusion:</h3>
-						<p>The Global Immigration Visualization project transforms raw data into meaningful insights about migration. It not only informs policy and public understanding, but also opens doors for future research, encouraging data-driven discussions about one of the most pressing global issues of our time.</p>
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header" style="text-align: center;">
+					<div style="text-align: center; margin: 20px 0;">
+						<h3 style="font-size: 30px; margin: 0;">Análise de Performance</h3>
+						<p style="font-size: px; margin: 5px 0 0 0;">Rentabilidade e Fidelidade de Sócios</p>
 					</div>
-				</article>
 
-		
+			  </header>
+				  
+
+				<p style="text-align: center;">
+					<img src="assets/images/DashSocios.png" alt="" style="width: 80%;" class="img-responsive">
+				  </p>				  
+				  <div class="project-description">  
+
+				<h3>📝 Nota Explicativa Detalhada: O Projeto de BI da Agência de Viagens</h3>
+				<p>Eu desenvolvi o dashboard "<strong>Análises Estratégicas: Rentabilidade e Fidelidade</strong>" para a Agência de Viagens, com o objetivo de dar suporte à gestão do programa de Sócios e à avaliação dos canais de distribuição. Este projeto demonstrou minhas habilidades em migrar de um ambiente de dados brutos para uma solução analítica robusta.</p>
+
+				<h3>I. Modelagem e Engenharia de Dados (O Desafio da Consolidação)</h3>
+				<p>Minha primeira atenção foi na modelagem, pois a base de dados inicial estava fragmentada:</p>
+				<ul>
+					<li><strong>Unificação das Fontes:</strong> As vendas estavam em três tabelas separadas (VENDAS_SAC, VENDAS_LOJAS, VENDAS_OUTBOUND). Unifiquei-as em uma única tabela <strong>VENDAS_UNIFICADAS</strong>, criando uma dimensão de CANAL consistente e um modelo dimensional mais limpo, eliminando a necessidade de múltiplas relações.</li>
+					<li><strong>Modelagem da Lógica do Desconto de Sócios:</strong> A regra de desconto foi complexa: 10% no 1º pacote do mês e +2% nos seguintes, priorizando o pacote de maior preço no mesmo dia. Implementei no Power Query/DAX, ranqueando vendas por cliente e mês, garantindo que a <strong>Receita Líquida Final</strong> fosse precisa para análise de rentabilidade.</li>
+				</ul>
+
+				<h3>II. Criação de Medidas Analíticas (DAX)</h3>
+				<p>Usei DAX para criar métricas que respondem diretamente aos objetivos de negócio:</p>
+				<ul>
+					<li><strong>Métricas Chave de Desempenho (KPIs):</strong> As métricas principais foram <strong>Receita_Líquida_Final</strong> e <strong>Total de Sócios Ativos</strong>, garantindo visibilidade imediata sobre desempenho financeiro e saúde da base de clientes.</li>
+					<li><strong>Resolução da Interatividade:</strong> Para o Infográfico de Fluxo de Sócios (Gráfico de Transição), criei seis medidas DAX isoladas (ex: SOCIOS_MAR_LOJAS) usando CALCULATE para “forçar” o contexto de filtro (CANAL e DATA), permitindo atualização automática ao clicar em qualquer Continente.</li>
+				</ul>
+
+				<h3>III. Análise Estratégica e Visualização</h3>
+				<p>Minha estratégia de visualização priorizou clareza executiva e resposta direta aos requisitos:</p>
+				<ul>
+					<li><strong>Destaque na Margem de Desconto:</strong> Utilizei o gráfico Variação de Receita por Continentes para comparar Receita Bruta vs. Receita Líquida, mostrando o custo da fidelidade e o impacto do produto premium (Receita Joias) em cada região.</li>
+					<li><strong>Prioridade na Fidelidade:</strong> Escolhi um Infográfico de Transição (Gráfico de Fluxo) para visualizar a variação dos Sócios Ativos entre Março e Abril, comunicando de forma poderosa o KPI de retenção.</li>
+				</ul>
+
+				<p>Em resumo, entreguei uma solução completa que não só resolveu questões de cálculo complexas do programa de fidelidade, mas também forneceu à gestão uma ferramenta visualmente estratégica para tomada de decisões.</p>
+
+				</div>
+				  
+			</article>
+			<!-- /Article -->
+
 			<!--==============================  Sidebar Section ==============================-->
 			<aside class="col-md-4 sidebar sidebar-left">
 				<div class="widget">
@@ -191,27 +166,28 @@
 					<!-- Icon Column (Vertical Stack) -->
 					<div style="margin-top: 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
 						
-						<!-- Python -->
+						<!-- Power BI -->
 						<div style="text-align: center;">
-							<i class="fab fa-python" style="font-size: 64px; color: #12a1f3;"></i>
-							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Python</p>
-						</div>
-				
-						<!-- Streamlit -->
-						<div style="text-align: center;">
-							<i class="fas fa-chart-pie" style="font-size: 64px; color: #ff4b00;"></i>
+							<i class="fas fa-chart-bar" style="font-size: 64px; color: #f2c811;"></i>
 							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Power BI</p>
 						</div>
-						
-						<!-- Pandas -->
+
+						<!-- Excel -->
 						<div style="text-align: center;">
-							<i class="fas fa-table" style="font-size: 64px; color: #5a9b9f;"></i>
-							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Pandas</p>
+							<i class="fas fa-file-excel" style="font-size: 64px; color: #217346;"></i>
+							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Excel</p>
 						</div>
+
+						<!-- Power Query -->
+						<div style="text-align: center;">
+							<i class="fas fa-project-diagram" style="font-size: 64px; color: #f2a900;"></i>
+							<p style="font-size: 10px; margin: 5px 0 0; color: #000;">Power Query</p>
+						</div>
+
 						
 						<!-- View Project Button -->
 					<div style="margin-top: 30px; text-align: left;">
-						<a href="https://github.com/cleidenirlopes/Data_Thieves_project" target="_blank"
+						<a href="https://github.com/cleidenirlopes/Travel-Member-Strategy" target="_blank"
 							style="
 								background-color: #1261f3; 
 								color: white; 
