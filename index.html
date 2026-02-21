@@ -185,21 +185,41 @@
 
 			.hero-socials {
 				display: flex;
-				gap: 18px;
+				gap: 30px;
 				margin-bottom: 30px;
 				align-items: center;
 				position: relative;
-				z-index: 2;
+				z-index: 5;
 			}
 
 			.hero-socials a {
-				font-size: 22px;
-				color: #888;
-				transition: color 0.25s;
+				height: 38px !important;
+				font-size: 38px !important;
+				color: #888 !important;
+				transition: color 0.3s ease, filter 0.3s ease !important;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none !important;
 			}
 
 			.hero-socials a:hover {
-				color: #2b88c6;
+				color: #2b88c6 !important;
+				filter: drop-shadow(0 0 10px rgba(43,136,198,0.8)) !important;
+			}
+
+			.hero-socials a img {
+				height: 38px !important;
+				width: auto !important;
+				vertical-align: middle;
+				transition: filter 0.3s ease, opacity 0.3s ease !important;
+				opacity: 0.7;
+				filter: none;
+			}
+
+			.hero-socials a:hover img {
+				opacity: 1 !important;
+				filter: drop-shadow(0 0 10px rgba(43,136,198,0.8)) !important;
 			}
 
 			.hero-cta {
@@ -318,8 +338,7 @@
 					<a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank" title="LinkedIn"><i
 							class="fab fa-linkedin"></i></a>
 					<a href="https://cledenir-cv.netlify.app/" target="_blank">
-						<img src="assets/images/CV.png" alt="Online CV"
-							style="width: 32px; height: auto; vertical-align: middle;">
+						<img src="assets/images/CV.png" alt="Online CV">
 					</a>
 				</div>
 			</div>
