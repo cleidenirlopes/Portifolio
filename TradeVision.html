@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
-	
+	<meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+
 	<title>Left Sidebar | Initio - Free, multipurpose html5 template by GetTemplate</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	
+
 	<!-- Bootstrap -->
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
 	<!-- Icon font -->
@@ -21,392 +22,433 @@
 
 	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
 
-<style id="dark-mode-override">
-/* ─── Dark Mode Base ─── */
-html, body {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-    font-family: 'Open Sans', sans-serif !important;
-}
+	<style id="dark-mode-override">
+		/* ─── Dark Mode Base ─── */
+		html,
+		body {
+			background-color: #121212 !important;
+			color: #e0e0e0 !important;
+			font-family: 'Open Sans', sans-serif !important;
+		}
 
-/* ─── Nav bar ─── */
-.navbar, .navbar-default {
-    background-color: rgba(10,10,14,0.97) !important;
-    border: none !important;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.05) !important;
-}
-.navbar-default .navbar-nav > li > a,
-.navbar-default .navbar-nav .dropdown-menu > li > a {
-    color: #b0b0b0 !important;
-    transition: color 0.2s;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav .dropdown-menu > li > a:hover {
-    color: #2b88c6 !important;
-    background: transparent !important;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus {
-    background: transparent !important;
-    color: #2b88c6 !important;
-}
-.dropdown-menu {
-    background-color: #1A2238 !important;
-    border: 1px solid rgba(255,255,255,0.08) !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
-}
-.navbar-toggle .icon-bar { background-color: #b0b0b0 !important; }
+		/* ─── Nav bar ─── */
+		.navbar,
+		.navbar-default {
+			background-color: rgba(10, 10, 14, 0.97) !important;
+			border: none !important;
+			box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+		}
 
-/* ─── Hero header band ─── */
-#head {
-    background: linear-gradient(135deg, #0d1117 0%, #1A2238 100%) !important;
-    padding: 60px 0 !important;
-}
-#logo .title {
-    color: #ffffff !important;
-    font-size: 36px !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.5px !important;
-}
-#logo .tagline, #logo .tagline a {
-    color: #2b88c6 !important;
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.5px !important;
-    text-decoration: none !important;
-}
+		.navbar-default .navbar-nav>li>a,
+		.navbar-default .navbar-nav .dropdown-menu>li>a {
+			color: #b0b0b0 !important;
+			transition: color 0.2s;
+		}
 
-/* ─── Main content area ─── */
-#main, .maincontent, article, .container {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-}
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff !important;
-}
-.page-header {
-    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
-}
-p, li, td, th { color: #d0d0d0 !important; line-height: 1.8 !important; }
-strong { color: #ffffff !important; }
-a { color: #2b88c6 !important; }
-a:hover { color: #68b8f0 !important; }
+		.navbar-default .navbar-nav>li>a:hover,
+		.navbar-default .navbar-nav .dropdown-menu>li>a:hover {
+			color: #2b88c6 !important;
+			background: transparent !important;
+		}
 
-/* ─── Sidebar / Tools ─── */
-.sidebar, aside {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-}
-.widget {
-    background: #1A2238 !important;
-    border-radius: 12px !important;
-    padding: 24px !important;
-    border: 1px solid rgba(255,255,255,0.06) !important;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5) !important;
-}
-.widget h3 {
-    color: #ffffff !important;
-    border-bottom: 2px solid #2b88c6 !important;
-    padding-bottom: 8px !important;
-    margin-bottom: 20px !important;
-    font-size: 16px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-}
-/* Tool icon labels */
-.widget p { color: #b0b0b0 !important; font-size: 12px !important; }
+		.navbar-default .navbar-nav>.active>a,
+		.navbar-default .navbar-nav>.active>a:focus {
+			background: transparent !important;
+			color: #2b88c6 !important;
+		}
 
-/* ─── View Project button ─── */
-.btn-improved, .btn-improved:visited {
-    background-color: #2b88c6 !important;
-    color: #ffffff !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.3px !important;
-    box-shadow: 0 4px 14px rgba(43,136,198,0.35) !important;
-    border: none !important;
-    transition: background 0.25s, box-shadow 0.25s !important;
-}
-.btn-improved:hover {
-    background-color: #1f6ea0 !important;
-    box-shadow: 0 6px 20px rgba(43,136,198,0.55) !important;
-    color: #fff !important;
-}
+		.dropdown-menu {
+			background-color: #1A2238 !important;
+			border: 1px solid rgba(255, 255, 255, 0.08) !important;
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+		}
 
-/* ─── Footer ─── */
-footer {
-    background-color: #1A2238 !important;
-    border-top: 1px solid rgba(255,255,255,0.06) !important;
-    color: #b0b0b0 !important;
-}
-footer h3 { color: #2b88c6 !important; }
-footer a { color: #b0b0b0 !important; }
-footer a:hover { color: #2b88c6 !important; }
-</style>
+		.navbar-toggle .icon-bar {
+			background-color: #b0b0b0 !important;
+		}
+
+		/* ─── Hero header band ─── */
+		#head {
+			background: linear-gradient(135deg, #0d1117 0%, #1A2238 100%) !important;
+			padding: 60px 0 !important;
+		}
+
+		#logo .title {
+			color: #ffffff !important;
+			font-size: 36px !important;
+			font-weight: 700 !important;
+			letter-spacing: -0.5px !important;
+		}
+
+		#logo .tagline,
+		#logo .tagline a {
+			color: #2b88c6 !important;
+			font-size: 15px !important;
+			font-weight: 600 !important;
+			letter-spacing: 0.5px !important;
+			text-decoration: none !important;
+		}
+
+		/* ─── Main content area ─── */
+		#main,
+		.maincontent,
+		article,
+		.container {
+			background-color: #121212 !important;
+			color: #e0e0e0 !important;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #ffffff !important;
+		}
+
+		.page-header {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+		}
+
+		p,
+		li,
+		td,
+		th {
+			color: #d0d0d0 !important;
+			line-height: 1.8 !important;
+		}
+
+		strong {
+			color: #ffffff !important;
+		}
+
+		a {
+			color: #2b88c6 !important;
+		}
+
+		a:hover {
+			color: #68b8f0 !important;
+		}
+
+		/* ─── Sidebar / Tools ─── */
+		.sidebar,
+		aside {
+			background-color: #121212 !important;
+			color: #e0e0e0 !important;
+		}
+
+		.widget {
+			background: #1A2238 !important;
+			border-radius: 12px !important;
+			padding: 24px !important;
+			border: 1px solid rgba(255, 255, 255, 0.06) !important;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+		}
+
+		.widget h3 {
+			color: #ffffff !important;
+			border-bottom: 2px solid #2b88c6 !important;
+			padding-bottom: 8px !important;
+			margin-bottom: 20px !important;
+			font-size: 16px !important;
+			text-transform: uppercase !important;
+			letter-spacing: 1px !important;
+		}
+
+		/* Tool icon labels */
+		.widget p {
+			color: #b0b0b0 !important;
+			font-size: 12px !important;
+		}
+
+		/* ─── View Project button ─── */
+		.btn-improved,
+		.btn-improved:visited {
+			background-color: #2b88c6 !important;
+			color: #ffffff !important;
+			border-radius: 8px !important;
+			font-weight: 600 !important;
+			letter-spacing: 0.3px !important;
+			box-shadow: 0 4px 14px rgba(43, 136, 198, 0.35) !important;
+			border: none !important;
+			transition: background 0.25s, box-shadow 0.25s !important;
+		}
+
+		.btn-improved:hover {
+			background-color: #1f6ea0 !important;
+			box-shadow: 0 6px 20px rgba(43, 136, 198, 0.55) !important;
+			color: #fff !important;
+		}
+
+		/* ─── Footer ─── */
+		footer {
+			background-color: #1A2238 !important;
+			border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+			color: #b0b0b0 !important;
+		}
+
+		footer h3 {
+			color: #2b88c6 !important;
+		}
+
+		footer a {
+			color: #b0b0b0 !important;
+		}
+
+		footer a:hover {
+			color: #2b88c6 !important;
+		}
+	</style>
 
 
-<style id="detail-page-refinement">
-/* ─── Header band: 40% slimmer ─── */
-#head {
-    padding: 36px 0 !important; /* was 60px */
-}
-/* ─── Larger name ─── */
-#logo .title {
-    font-size: 46px !important; /* was 36px */
-    letter-spacing: -1px !important;
-}
-/* ─── Sub-headline: smaller and subtler ─── */
-#logo .tagline, #logo .tagline a {
-    font-size: 13px !important;
-    letter-spacing: 1.5px !important;
-    text-transform: uppercase !important;
-}
+	<style id="detail-page-refinement">
+		/* ─── Header band: 40% slimmer ─── */
+		#head {
+			padding: 36px 0 !important;
+			/* was 60px */
+		}
 
-/* ─── Sidebar: compact, integrated width ─── */
-.sidebar-left, aside.sidebar {
-    margin-top: 20px !important;
-}
-.widget {
-    padding: 18px !important;      /* was 24px */
-    max-width: 240px !important;   /* constrains width */
-    margin: 0 auto !important;
-}
-/* Tools icon container: tighter gap */
-.widget > div[style*="flex-direction: column"] {
-    gap: 12px !important;          /* was 20px */
-    margin-top: 16px !important;
-}
-/* Tool icon font-size */
-.widget i[class*="fas"] {
-    font-size: 48px !important;    /* was 64px */
-}
+		/* ─── Larger name ─── */
+		#logo .title {
+			font-size: 46px !important;
+			/* was 36px */
+			letter-spacing: -1px !important;
+		}
 
-/* ─── Main content / sidebar spacing ─── */
-.row.topspace {
-    margin-top: 10px !important;
-    gap: 0 !important;
-}
-.col-sm-8.maincontent {
-    padding-right: 12px !important;
-}
-.col-md-4.sidebar {
-    padding-left: 12px !important;
-}
+		/* ─── Sub-headline: smaller and subtler ─── */
+		#logo .tagline,
+		#logo .tagline a {
+			font-size: 13px !important;
+			letter-spacing: 1.5px !important;
+			text-transform: uppercase !important;
+		}
 
-/* ─── CTA button colour + text is handled by JS below ─── */
-.btn-improved, .btn-improved:visited {
-    background-color: #2b88c6 !important;
-    color: #ffffff !important;
-    padding: 10px 18px !important;    /* slightly tighter */
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.5px !important;
-    text-transform: uppercase !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 14px rgba(43,136,198,0.35) !important;
-    transition: background 0.25s, box-shadow 0.25s !important;
-    display: block !important;
-    text-align: center !important;
-    margin-top: 20px !important;
-}
-.btn-improved:hover {
-    background-color: #1f6ea0 !important;
-    box-shadow: 0 6px 22px rgba(43,136,198,0.55) !important;
-}
-</style>
-<script>
-// ─── Rename "View Project" → "View on GitHub" ───
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.btn-improved').forEach(function(btn) {
-        if (btn.textContent.trim() === 'View Project') {
-            btn.textContent = 'View on GitHub';
-        }
-    });
-});
-</script>
+		/* ─── Sidebar: compact, integrated width ─── */
+		.sidebar-left,
+		aside.sidebar {
+			margin-top: 20px !important;
+		}
+
+		.widget {
+			padding: 18px !important;
+			/* was 24px */
+			max-width: 240px !important;
+			/* constrains width */
+			margin: 0 auto !important;
+		}
+
+		/* Tools icon container: tighter gap */
+		.widget>div[style*="flex-direction: column"] {
+			gap: 12px !important;
+			/* was 20px */
+			margin-top: 16px !important;
+		}
+
+		/* Tool icon font-size */
+		.widget i[class*="fas"] {
+			font-size: 48px !important;
+			/* was 64px */
+		}
+
+		/* ─── Main content / sidebar spacing ─── */
+		.row.topspace {
+			margin-top: 10px !important;
+			gap: 0 !important;
+		}
+
+		.col-sm-8.maincontent {
+			padding-right: 12px !important;
+		}
+
+		.col-md-4.sidebar {
+			padding-left: 12px !important;
+		}
+
+		/* ─── CTA button colour + text is handled by JS below ─── */
+		.btn-improved,
+		.btn-improved:visited {
+			background-color: #2b88c6 !important;
+			color: #ffffff !important;
+			padding: 10px 18px !important;
+			/* slightly tighter */
+			font-size: 13px !important;
+			font-weight: 700 !important;
+			letter-spacing: 0.5px !important;
+			text-transform: uppercase !important;
+			border-radius: 8px !important;
+			box-shadow: 0 4px 14px rgba(43, 136, 198, 0.35) !important;
+			transition: background 0.25s, box-shadow 0.25s !important;
+			display: block !important;
+			text-align: center !important;
+			margin-top: 20px !important;
+		}
+
+		.btn-improved:hover {
+			background-color: #1f6ea0 !important;
+			box-shadow: 0 6px 22px rgba(43, 136, 198, 0.55) !important;
+		}
+	</style>
+	<script>
+		// ─── Rename "View Project" → "View on GitHub" ───
+		document.addEventListener('DOMContentLoaded', function () {
+			document.querySelectorAll('.btn-improved').forEach(function (btn) {
+				if (btn.textContent.trim() === 'View Project') {
+					btn.textContent = 'View on GitHub';
+				}
+			});
+		});
+	</script>
 
 </head>
+
 <body>
 
-<header id="header">
-	<div id="head" class="parallax" parallax-speed="1">
-		<h1 id="logo" class="text-center">
-			<span class="title">Anthony Russel</span>
-			<span class="tagline">A mystery person<br>
-				<a href="">anthony.russel42@example.com</a></span>
-		</h1>
-	</div>
+	<header id="header">
+		<div id="head" class="parallax" parallax-speed="1">
+			<h1 id="logo" class="text-center">
+				<span class="title">Cledenir Souza</span>
+				<span class="tagline">Tariff Impact Analysis</span>
+			</h1>
+		</div>
 
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b
+									class="caret"></b></a>
+
+							<ul class="dropdown-menu">
+								<li><a href="Travel-Member-Strategy.html">Travel Member Strategy</a></li>
+								<li><a href="Lisbon-s-Public-Transport-Network.html">Lisbon's Public Transport
+										Network</a></li>
+								<li><a href="Global-Imigration.html">Global Immigration Visualization</a></li>
+								<li><a href="Guardians-of-the-Voiceless.html">Guardians of the Voiceless</a></li>
+								<li><a href="Escape-Room-Project.html">Adventure Escape Room</a></li>
+								<li><a href="TradeVision.html">Trade Vision (Tariff Analysis)</a></li>
+							</ul>
+
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+							<ul class="dropdown-menu"
+								style="background:#1A2238; border:1px solid rgba(255,255,255,0.08);">
+								<li><a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank"
+										style="color:#e0e0e0;"><i class="fab fa-linkedin"
+											style="color:#2b88c6; margin-right:8px;"></i>LinkedIn</a></li>
+								<li><a href="mailto:cleidenirlopes@outlook.com" style="color:#e0e0e0;"><i
+											class="fas fa-envelope"
+											style="color:#2b88c6; margin-right:8px;"></i>Email</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div><!--/.nav-collapse -->
 			</div>
-			
-			<div class="navbar-collapse collapse">
-				
-				<ul class="nav navbar-nav">
-					<li><a href="index.html">Home</a></li>
-					<li class="active"><a href="about.html">About</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
-						
-						<ul class="dropdown-menu">
-							<li><a href="Travel-Member-Strategy.html">Travel Member Strategy</a></li>
-							<li><a href="Lisbon-s-Public-Transport-Network.html">Lisbon's Public Transport Network</a></li>
-							<li><a href="Global-Imigration.html">Global Immigration Visualization</a></li>
-							<li><a href="Guardians-of-the-Voiceless.html">Guardians of the Voiceless</a></li>
-							<li><a href="Escape-Room-Project.html">Adventure Escape Room</a></li>
-							<li><a href="TradeVision.html">Trade Vision (Tariff Analysis)</a></li>
-						</ul>
+		</nav>
+	</header>
 
-					</li>
-					<li><a href="blog.html">Blog</a></li>
-				</ul>
-			
-			</div><!--/.nav-collapse -->			
-		</div>	
-	</nav>
-</header>
+	<main id="main">
+		<div class="container">
+			<div class="row topspace">
+				<!-- Article main content -->
+				<article class="col-sm-8 maincontent">
+					<header class="page-header" style="text-align: center;">
+						<h3 class="page-title">Tariff Impact Analysis</h3>
+					</header>
+					<p style="text-align: center; margin-top: 50px;">
+						<i class="fas fa-tools" style="font-size: 80px; color: #f2a900; margin-bottom: 20px;"></i><br>
+						<span style="font-size: 24px; font-weight: bold; color: #ffffff;">Under Construction</span>
+					</p>
+					<p style="text-align: center; color: #d0d0d0; margin-top: 15px;">
+						This project detail page is currently being built. Please check back soon for updates on the
+						Tariff Impact Analysis.
+					</p>
+				</article>
+				<!-- /Article -->
 
-<main id="main">
+				<!--==============================  Sidebar Section ==============================-->
+				<aside class="col-md-4 sidebar sidebar-left">
+					<div class="widget">
+						<h3>Tools Used</h3>
 
-	<div class="container">
-
-		<div class="row topspace">
-			
-			<!-- Sidebar -->
-			<aside class="col-md-4 sidebar sidebar-left">
-
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Lorem ipsum dolor sit</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione delectus reiciendis nulla nisi pariatur molestias animi eos repellat? Vel.</p>
+						<!-- Icon Column (Vertical Stack) -->
+						<div
+							style="margin-top: 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+							<p>Check back later to see the tools used for this project.</p>
+						</div>
 					</div>
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Lorem ipsum dolor sit</h4>
-						<p><img src="assets/images/s1.jpg" alt=""></p>
-					</div>
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Lorem ipsum dolor sit</h4>
-						<p><img src="assets/images/s1.jpg" alt=""></p>
-						<p>Qui, debitis, ad, neque reprehenderit laborum soluta dolor voluptate eligendi enim consequuntur eveniet recusandae rerum? Atque eos corporis provident tenetur.</p>
-					</div>
-				</div>
+				</aside>
+				<!--============================== Sidebar Section ==============================-->
+			</div>
+		</div>
+	</main>
 
-			</aside>			<!-- /Sidebar -->
+	<!--============================== FOOTER SECTION ==============================-->
 
-			<!-- Article main content -->
-			<article class="col-sm-8 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">Lorem ipsum dolor sit amet, consectetur.</h1>
-				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.</p>
-				<h3>Necessitatibus</h3>
-				<p>Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</p>
-				<blockquote>Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</blockquote>
-				<p>Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</p>
-				<h3>Fugit, laboriosam</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea a reiciendis vitae provident atque accusamus nam repudiandae accusantium perspiciatis consectetur. Ad, est, deleniti quis iusto labore iste totam cum maiores accusantium nobis error inventore explicabo laboriosam temporibus in rem nemo?</p>
-				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus!</li>
-					<li>Laboriosam, aliquam totam asperiores nam velit voluptatum non quidem.</li>
-					<li>Voluptatem, libero quia voluptatum ab modi facere dolore assumenda?</li>
-					<li>Expedita, officia tenetur doloremque nulla temporibus ab voluptates adipisci.</li>
-					<li>Nostrum, nesciunt, inventore amet temporibus officia perferendis doloremque nulla.</li>
-					<li>Dolorum, ex earum maiores perspiciatis modi sequi odit mollitia.</li>
-				</ul>
-				<p>Eum, quasi, est, vitae, ipsam nobis consectetur ea aspernatur ad eos voluptatibus fugiat nisi perferendis impedit. Quam, nulla, excepturi, voluptate minus illo tenetur sint ab in culpa cumque impedit quibusdam. Saepe, molestias quia voluptatem natus velit fugiat omnis rem eos sapiente quasi quaerat aspernatur quisquam deleniti accusantium laboriosam odio id?</p>
-			</article>
-			<!-- /Article -->
-			
+	<footer style="background-color: #232323; color: #ccc; padding: 20px 0; width: 100%;">
+		<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+			<!-- Column 1: Contact -->
+			<div style="flex: 1; min-width: 200px; padding: 10px;">
+				<h3 style="color: rgb(27, 133, 253);">Contact</h3>
+				<p style="margin:2px 0; font-size:13px;">Phone: +351 914 569 328</p>
+				<p style="margin:2px 0; font-size:13px;">Email: <a href="mailto:cleidenirlopes@outlook.com"
+						style="color: #ccc;">cleidenirlopes@outlook.com</a></p>
+				<p style="margin:2px 0; font-size:13px;">Lisboa, Portugal</p>
+			</div>
+			<!-- Column 2: Social Icons -->
+			<div style="flex: 1; min-width: 200px; padding: 10px;">
+				<h3 style="color: rgb(27, 133, 253);">Follow Me</h3>
+				<div style="display: flex; flex-direction: column;">
+
+					<a href="https://www.linkedin.com/in/decledenir/" style="color: #ccc; margin-bottom: 10px;">
+						<i class="fab fa-linkedin"></i> LinkedIn
+					</a>
+					<a href="https://github.com/cleidenirlopes" style="color: #ccc; margin-bottom: 10px;">
+						<i class="fab fa-github"></i> GitHub
+					</a>
+				</div>
+			</div>
+			<!-- Column 3: Text Widget -->
+			<div style="flex: 1; min-width: 200px; padding: 10px;">
+				<h3 style="color: rgb(27, 133, 253);">About</h3>
+				<p>I am a dedicated Data Analyst passionate about building analytical solutions that drive strategic
+					decisions. If you're interested in collaborating or if you'd like to know more about my work, feel
+					free to reach out!</p>
+				<p>Whether you have questions, ideas, or opportunities, I would love to connect and discuss how we can
+					work together to solve data challenges.</p>
+				<p>Looking forward to hearing from you!</p>
+			</div>
 
 		</div>
-	</div>	<!-- /container -->
-	
-</main>
-
-<footer id="footer" class="topspace">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact</h3>
-				<div class="widget-body">
-					<p>+234 23 9873237<br>
-						<a href="mailto:#">some.email@somewhere.com</a><br>
-						<br>
-						234 Hidden Pond Road, Ashland City, TN 37015
-					</p>	
-				</div>
-			</div>
-
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Follow me</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href=""><i class="fa fa-twitter fa-2"></i></a>
-						<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-						<a href=""><i class="fa fa-github fa-2"></i></a>
-						<a href=""><i class="fa fa-facebook fa-2"></i></a>
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Text widget</h3>
-				<div class="widget-body">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-				</div>
-			</div>
-
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Form widget</h3>
-				<div class="widget-body">
-					<p>+234 23 9873237<br>
-						<a href="mailto:#">some.email@somewhere.com</a><br>
-						<br>
-						234 Hidden Pond Road, Ashland City, TN 37015
-					</p>	
-				</div>
-			</div>
-
-		</div> <!-- /row of widgets -->
+	</footer>
+	<div style="background-color: #191919; color: #999; padding: 10px 0; width: 100%;">
+		<div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between;">
+			<!-- Left: Address -->
+			<p>Lisboa, Portugal</p>
+			<!-- Right: Copyright -->
+			<p>&copy; 2025 <a href="https://www.linkedin.com/in/decledenir/" style="color: #2b88c6;" target="_blank"
+					rel="noopener noreferrer">DeCledenir</a>. All Rights Reserved.</p>
+		</div>
 	</div>
-</footer>
-
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>234 Hidden Pond Road, Ashland City, TN 37015 </p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; 2014, Your awesome name here<br> 
-						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> </p>
-				</div>
-			</div>
-
-		</div> <!-- /row of widgets -->
-	</div>
-</footer>
 
 
 
-<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="assets/js/template.js"></script>
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/template.js"></script>
 </body>
+
 </html>
