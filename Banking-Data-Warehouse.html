@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data Analyst Portfolio - Cleidenir Lopes">
+    <meta name="author" content="Cleidenir Lopes">
+
+    <title>Cleidenir Lopes | Data Analyst Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+
+    <!-- Bootstrap 3 (from secure CDN) -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- HTML5 shim for IE8 support -->
+    <!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+    <!-- Additional CSS for layout fix -->
+    <style>
+        /* Align the content to the center of the page */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Centers the container */
+        }
+
+        /* Make the image responsive */
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Ensure the article is centered within the main content */
+        .maincontent {
+            text-align: justify;
+        }
+
+        /* Additional styling for the sidebar */
+        .sidebar-left {
+            margin-top: 50px;
+        }
+    </style>
+
+    <!-- jQuery (obrigatório para Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style id="dark-mode-override">
+        /* ─── Dark Mode Base ─── */
+        html,
+        body {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+            font-family: 'Open Sans', sans-serif !important;
+        }
+
+        /* ─── Nav bar ─── */
+        .navbar,
+        .navbar-default {
+            background-color: rgba(10, 10, 14, 0.97) !important;
+            border: none !important;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+        }
+
+        .navbar-default .navbar-nav>li>a,
+        .navbar-default .navbar-nav .dropdown-menu>li>a {
+            color: #b0b0b0 !important;
+            transition: color 0.2s;
+        }
+
+        .navbar-default .navbar-nav>li>a:hover,
+        .navbar-default .navbar-nav .dropdown-menu>li>a:hover {
+            color: #2b88c6 !important;
+            background: transparent !important;
+        }
+
+        .navbar-default .navbar-nav>.active>a,
+        .navbar-default .navbar-nav>.active>a:focus {
+            background: transparent !important;
+            color: #2b88c6 !important;
+        }
+
+        .dropdown-menu {
+            background-color: #1A2238 !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        .navbar-toggle .icon-bar {
+            background-color: #b0b0b0 !important;
+        }
+
+        /* ─── Hero header band ─── */
+        #head {
+            background: linear-gradient(135deg, #0d1117 0%, #1A2238 100%) !important;
+            padding: 60px 0 !important;
+        }
+
+        #logo .title {
+            color: #ffffff !important;
+            font-size: 36px !important;
+            font-weight: 700 !important;
+            letter-spacing: -0.5px !important;
+        }
+
+        #logo .tagline,
+        #logo .tagline a {
+            color: #2b88c6 !important;
+            font-size: 15px !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.5px !important;
+            text-decoration: none !important;
+        }
+
+        /* ─── Main content area ─── */
+        #main,
+        .maincontent,
+        article,
+        .container {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #ffffff !important;
+        }
+
+        .page-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+
+        p,
+        li,
+        td,
+        th {
+            color: #d0d0d0 !important;
+            line-height: 1.8 !important;
+        }
+
+        strong {
+            color: #ffffff !important;
+        }
+
+        a {
+            color: #2b88c6 !important;
+        }
+
+        a:hover {
+            color: #68b8f0 !important;
+        }
+
+        /* ─── Sidebar / Tools ─── */
+        .sidebar,
+        aside {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+        }
+
+        .widget {
+            background: #1A2238 !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+            border: 1px solid rgba(255, 255, 255, 0.06) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .widget h3 {
+            color: #ffffff !important;
+            border-bottom: 2px solid #2b88c6 !important;
+            padding-bottom: 8px !important;
+            margin-bottom: 20px !important;
+            font-size: 16px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+        }
+
+        /* Tool icon labels */
+        .widget p {
+            color: #b0b0b0 !important;
+            font-size: 12px !important;
+        }
+
+        /* ─── View Project button ─── */
+        .btn-improved,
+        .btn-improved:visited {
+            background-color: #2b88c6 !important;
+            color: #ffffff !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 14px rgba(43, 136, 198, 0.35) !important;
+            border: none !important;
+            transition: background 0.25s, box-shadow 0.25s !important;
+        }
+
+        .btn-improved:hover {
+            background-color: #1f6ea0 !important;
+            box-shadow: 0 6px 20px rgba(43, 136, 198, 0.55) !important;
+            color: #fff !important;
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            background-color: #1A2238 !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+            color: #b0b0b0 !important;
+        }
+
+        footer h3 {
+            color: #2b88c6 !important;
+        }
+
+        footer a {
+            color: #b0b0b0 !important;
+        }
+
+        footer a:hover {
+            color: #2b88c6 !important;
+        }
+    </style>
+
+
+    <style id="detail-page-refinement">
+        /* ─── Header band: 40% slimmer ─── */
+        #head {
+            padding: 36px 0 !important;
+            /* was 60px */
+        }
+
+        /* ─── Larger name ─── */
+        #logo .title {
+            font-size: 46px !important;
+            /* was 36px */
+            letter-spacing: -1px !important;
+        }
+
+        /* ─── Sub-headline: smaller and subtler ─── */
+        #logo .tagline,
+        #logo .tagline a {
+            font-size: 13px !important;
+            letter-spacing: 1.5px !important;
+            text-transform: uppercase !important;
+        }
+
+        /* ─── Sidebar: compact, integrated width ─── */
+        .sidebar-left,
+        aside.sidebar {
+            margin-top: 20px !important;
+        }
+
+        .widget {
+            padding: 18px !important;
+            /* was 24px */
+            max-width: 240px !important;
+            /* constrains width */
+            margin: 0 auto !important;
+        }
+
+        /* Tools icon container: tighter gap */
+        .widget>div[style*="flex-direction: column"] {
+            gap: 12px !important;
+            /* was 20px */
+            margin-top: 16px !important;
+        }
+
+        /* Tool icon font-size */
+        .widget i[class*="fas"] {
+            font-size: 48px !important;
+            /* was 64px */
+        }
+
+        /* ─── Main content / sidebar spacing ─── */
+        .row.topspace {
+            margin-top: 10px !important;
+            gap: 0 !important;
+        }
+
+        .col-sm-8.maincontent {
+            padding-right: 12px !important;
+        }
+
+        .col-md-4.sidebar {
+            padding-left: 12px !important;
+        }
+
+        /* ─── CTA button colour + text is handled by JS below ─── */
+        .btn-improved,
+        .btn-improved:visited {
+            background-color: #2b88c6 !important;
+            color: #ffffff !important;
+            padding: 10px 18px !important;
+            /* slightly tighter */
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px !important;
+            text-transform: uppercase !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 14px rgba(43, 136, 198, 0.35) !important;
+            transition: background 0.25s, box-shadow 0.25s !important;
+            display: block !important;
+            text-align: center !important;
+            margin-top: 20px !important;
+        }
+
+        .btn-improved:hover {
+            background-color: #1f6ea0 !important;
+            box-shadow: 0 6px 22px rgba(43, 136, 198, 0.55) !important;
+        }
+    </style>
+    <script>
+        // ─── Rename "View Project" → "View on GitHub" ───
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.btn-improved').forEach(function (btn) {
+                if (btn.textContent.trim() === 'View Project') {
+                    btn.textContent = 'View on GitHub';
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<!-- jQuery (necessário para os plugins JavaScript do Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<body>
+
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="1">
+            <h1 id="logo" class="text-center">
+                <span class="title">Cledenir Souza</span>
+                <span class="tagline">Project Performance Analysis</span>
+            </h1>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b
+                                    class="caret"></b></a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="Travel-Member-Strategy.html">Travel Member Strategy</a></li>
+                                <li><a href="Lisbon-s-Public-Transport-Network.html">Lisbon's Public Transport
+                                        Network</a></li>
+                                <li><a href="Global-Imigration.html">Global Immigration Visualization</a></li>
+                                <li><a href="Guardians-of-the-Voiceless.html">Guardians of the Voiceless</a></li>
+                                <li><a href="Escape-Room-Project.html">Adventure Escape Room</a></li>
+                                <li><a href="TradeVision.html">Trade Vision (Tariff Analysis)</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                            <ul class="dropdown-menu"
+                                style="background:#1A2238; border:1px solid rgba(255,255,255,0.08);">
+                                <li><a href="https://www.linkedin.com/in/cledenir-souza-01a920162/" target="_blank"
+                                        style="color:#e0e0e0;"><i class="fab fa-linkedin"
+                                            style="color:#2b88c6; margin-right:8px;"></i>LinkedIn</a></li>
+                                <li><a href="mailto:cleidenirlopes@outlook.com" style="color:#e0e0e0;"><i
+                                            class="fas fa-envelope"
+                                            style="color:#2b88c6; margin-right:8px;"></i>Email</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <div class="row topspace">
+
+                <!--==============================  Article Section ==============================-->
+
+                <article class="col-sm-8 maincontent">
+                    <header class="page-header">
+                        <h3 class="page-title">Banking Data Warehouse & Risk Analytics.</h3>
+                    </header>
+
+                    <p style="text-align: center;">
+                        <img src="assets/images/banking_data_warehouse_cover.png"
+                            alt="Banking Data Warehouse ER Diagram"
+                            style="width: 90%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;"
+                            class="img-responsive">
+                    </p>
+
+                    <p>The Banking Data Warehouse is an end-to-end SQL project designed to handle the complex data
+                        engineering and analytical requirements of a modern financial institution. It focuses on the
+                        crucial steps required to ingest, clean, and analyze high-volume financial data to extract
+                        actionable business intelligence regarding customer credit risk, transaction volumetrics, and
+                        regional net-worth analysis.</p>
+
+                    <h3>The Story (The Process)</h3>
+                    <p>This project was built entirely from the ground up to showcase robust relational database
+                        architecture using SQL Server/MySQL syntax. The dataset simulates a realistic, fragmented
+                        banking environment—complete with over 10,000 transactions, 1,200 accounts, and 500 customers
+                        distributed globally.</p>
+
+                    <div class="project-description">
+                        <h2>Steps Taken in the Project:</h2>
+
+                        <h3>Data Sourcing:</h3>
+                        <p>A highly realistic Python data generator was engineered to synthesize raw, fragmented
+                            datasets simulating a real-world banking environment. To accurately emulate production
+                            scenarios, intentional anomalies—such as missing contact information (NULLs) and
+                            incompatible currency tags—were strategically injected into the raw tables.</p>
+
+                        <h3>The Challenge (ETL & Cleansing):</h3>
+                        <p>The primary challenge was unifying the disjointed data entities (Customers, Accounts,
+                            Transactions). A rigorous ETL SQL script was written to sanitize the raw ingested files,
+                            standardize currency formats strictly to USD, enforce credit boundaries, and gracefully
+                            handle NULL values, preparing a pristine foundation for analytics.</p>
+
+                        <h3>The SQL Solution (Schema Design):</h3>
+                        <p>A resilient relational Star Schema was constructed. The architecture utilizes
+                            <code>Customers</code> and <code>Accounts</code> as the foundational Dimension tables,
+                            strictly enforcing Data Integrity via explicit Primary Key constraints. The highly volatile
+                            <code>Transactions</code> table serves as the Fact table, secured with resilient Foreign Key
+                            mappings to actively prevent orphaned financial records.</p>
+
+                        <h2>Core Concepts – Key Insights & Analytics:</h2>
+                        <ul>
+                            <li><strong>High-Risk Clients (Credit Risk Scoring):</strong> Leveraging precise
+                                <code>INNER JOIN</code> logic and multi-condition <code>WHERE</code> clauses to
+                                instantly filter out high-risk profiles—customers holding active loan debts but
+                                suffering from sub-prime credit scores (&lt; 600). The query surfaces the most severe
+                                negative debt exposures to the top.</li>
+                            <li><strong>Transactional Volumetrics:</strong> Utilizing aggregations (<code>SUM</code>,
+                                <code>COUNT</code>, <code>AVG</code>) coupled with robust <code>GROUP BY</code>
+                                structural grouping to calculate the sheer macroeconomic volume and liquidity flowing
+                                through specific account types (Checking vs. Savings).</li>
+                            <li><strong>Regional Financial Performance:</strong> Deploying advanced Common Table
+                                Expressions (<code>WITH</code> CTE) to pre-aggregate customer balances, followed by
+                                strict regional filtering (<code>IN ('North America', 'Europe')</code>) and dynamic
+                                sorting to isolate the Top 10 Elite High Net Worth Individuals (HNWI).</li>
+                        </ul>
+                    </div>
+                </article>
+
+
+                <!--==============================  Sidebar Section ==============================-->
+                <aside class="col-md-4 sidebar sidebar-left">
+                    <div class="widget">
+                        <h3>Tools Used</h3>
+
+                        <!-- Icon Column (Vertical Stack) -->
+                        <div
+                            style="margin-top: 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+
+                            <!-- SQL -->
+                            <div style="text-align: center;">
+                                <i class="fas fa-database" style="font-size: 64px; color: #00758F;"></i>
+                                <p style="font-size: 10px; margin: 5px 0 0; color: #000;">SQL Server</p>
+                            </div>
+
+                            <!-- Data Modeling -->
+                            <div style="text-align: center;">
+                                <i class="fas fa-project-diagram" style="font-size: 64px; color: #F2C811;"></i>
+                                <p style="font-size: 10px; margin: 5px 0 0; color: #000;">Data Modeling</p>
+                            </div>
+
+                            <!-- ETL -->
+                            <div style="text-align: center;">
+                                <i class="fas fa-cogs" style="font-size: 64px; color: #12a1f3;"></i>
+                                <p style="font-size: 10px; margin: 5px 0 0; color: #000;">ETL Systems</p>
+                            </div>
+
+                            <!-- View Project Button -->
+                            <div style="margin-top: 30px; text-align: left;">
+                                <a href="https://github.com/cleidenirlopes/Banking-Data-Warehouse" target="_blank"
+                                    style="
+						background-color: #1261f3; 
+						color: white; 
+						padding: 12px 20px; 
+						font-size: 14px;
+						font-weight: bold;
+						text-decoration: none; 
+						border-radius: 8px; 
+						box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+						transition: background-color 0.3s ease, transform 0.3s ease;
+						display: inline-block;
+						cursor: pointer;
+					" class="btn-improved">
+                                    View Code
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!--============================== FOOTER SECTION ==============================-->
+
+    <footer style="background-color: #232323; color: #ccc; padding: 4px 0; width: 100%;">
+        <div
+            style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 100px;">
+            <!-- Column 1: Contact -->
+            <div style="flex: 1; min-width: 200px; padding: 5px 10px;">
+                <h3 style="color: rgb(27, 133, 253);">Contact</h3>
+                <p style="margin:2px 0; font-size:12px;">Phone: +351 914 569 328</p>
+                <p style="margin:2px 0; font-size:12px;">Email: <a href="mailto:some.email@somewhere.com"
+                        style="color: #ccc;">cleidenirlopes@outlook.com</a></p>
+                <p style="margin:2px 0; font-size:12px;">Lisboa, Portugal</p>
+            </div>
+            <!-- Column 2: Social Icons -->
+            <div style="flex: 1; min-width: 200px; padding: 5px 10px;">
+                <h3 style="color: rgb(27, 133, 253);">Follow Me</h3>
+                <div style="display: flex; flex-direction: column;">
+
+                    <a href="https://www.linkedin.com/in/decledenir/" style="color: #ccc; margin-bottom: 10px;">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/cleidenirlopes" style="color: #ccc; margin-bottom: 10px;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+    <div style="background-color: #191919; color: #999; padding: 4px 0; width: 100%; font-size: 11px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between;">
+            <!-- Left: Address -->
+            <p>Lisboa, Portugal</p>
+            <!-- Right: Copyright -->
+            <p>&copy; 2025 <a href="https://www.linkedin.com/in/decledenir/" style="color: #2b88c6;" target="_blank"
+                    rel="noopener noreferrer">DeCledenir</a>. All Rights Reserved.</p>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+       
