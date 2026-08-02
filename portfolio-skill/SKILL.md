@@ -31,9 +31,15 @@ Refer to these files for detailed specifics to keep the context clean:
 - **Cards:** Implement 'Image-Overlay' style for a sophisticated Data Analyst look.
 
 ## 6. Deployment Standards
-- **Credentials:** Pull from the `.env` file (`NETLIFY_AUTH_TOKEN`, `NETLIFY_SITE_ID`).
-- **Command:** Execute production deploys via Netlify CLI: `netlify deploy --prod --dir=.`
-- **Verification:** After deploy, provide the live URL for functionality audit.
+- **Credentials:** Never read, print, log, commit, or transmit the contents of `.env` or any
+  other secret file. Environment secrets stay local and are only ever passed to a tool
+  invocation directly by the project owner, never read and reused autonomously by an agent.
+- **Deploys:** Do not run production deploy commands (Netlify CLI or otherwise) without the
+  owner's explicit, per-action approval for that specific deploy. Pushing to the connected Git
+  branch and letting the existing Netlify integration deploy it is the default path; a manual
+  CLI deploy is the exception, not the standard procedure.
+- **Verification:** After a deploy the owner has approved, verify the live URL independently
+  before reporting success.
 
 
 
