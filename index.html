@@ -73,7 +73,7 @@
 	</a>
 
 	<!-- Nav links — centred via auto-margin trick to pull them away from the rightmost edge -->
-	<div style="display: flex; gap: 36px; align-items: center; margin-right: 80px;">
+	<div class="nav-links-desktop" style="display: flex; gap: 36px; align-items: center; margin-right: 80px;">
 		<a href="#header"
 			style="color: #b0b0b0; text-decoration: none; font-size: 14px; letter-spacing: 0.3px; transition: color 0.2s;"
 			onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#b0b0b0'">Home</a>
@@ -119,7 +119,69 @@
 			});
 		</script>
 	</div>
+
+	<!-- Mobile menu toggle (hidden on desktop; shown only under the mobile breakpoint) -->
+	<button type="button" id="nav-toggle" class="nav-toggle-btn" aria-expanded="false" aria-controls="mobile-menu"
+		aria-label="Open navigation menu"
+		style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #ffffff; font-size: 20px; cursor: pointer; padding: 0;">
+		<span aria-hidden="true">&#9776;</span>
+	</button>
 </nav>
+
+<!-- Mobile menu panel: sits below the fixed 56px nav, hidden by default, shown only via JS toggle -->
+<div id="mobile-menu" class="mobile-menu-panel" role="dialog" aria-label="Site navigation"
+	style="display: none; position: fixed; top: 56px; left: 0; width: 100%; max-height: calc(100vh - 56px); overflow-y: auto; background: #0a0a0e; border-top: 1px solid rgba(255,255,255,0.08); z-index: 999; padding: 12px 20px 24px;">
+	<a href="#header" class="mobile-menu-link"
+		style="display: block; padding: 14px 4px; color: #ffffff; text-decoration: none; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.06);">Home</a>
+	<a href="#Projects" class="mobile-menu-link"
+		style="display: block; padding: 14px 4px; color: #ffffff; text-decoration: none; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.06);">Projects</a>
+	<a href="#About Me" class="mobile-menu-link"
+		style="display: block; padding: 14px 4px; color: #ffffff; text-decoration: none; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.06);">About</a>
+	<div style="padding: 14px 4px 4px; color: #7c8393; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">
+		Contact</div>
+	<a href="https://www.linkedin.com/in/decledenir-seo/" target="_blank" rel="noopener noreferrer" class="mobile-menu-link"
+		style="display: flex; align-items: center; gap: 10px; padding: 14px 4px; color: #ffffff; text-decoration: none; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+		<i class="fab fa-linkedin" style="color:#2b88c6;" aria-hidden="true"></i> LinkedIn</a>
+	<a href="mailto:cleidenirlopes@outlook.com" class="mobile-menu-link"
+		style="display: flex; align-items: center; gap: 10px; padding: 14px 4px; color: #ffffff; text-decoration: none; font-size: 16px;">
+		<i class="fas fa-envelope" style="color:#2b88c6;" aria-hidden="true"></i> Email</a>
+</div>
+
+<script>
+	(function () {
+		var toggle = document.getElementById('nav-toggle');
+		var menu = document.getElementById('mobile-menu');
+		if (!toggle || !menu) return;
+
+		function openMenu() {
+			menu.style.display = 'block';
+			toggle.setAttribute('aria-expanded', 'true');
+			toggle.setAttribute('aria-label', 'Close navigation menu');
+		}
+		function closeMenu() {
+			menu.style.display = 'none';
+			toggle.setAttribute('aria-expanded', 'false');
+			toggle.setAttribute('aria-label', 'Open navigation menu');
+		}
+		toggle.addEventListener('click', function () {
+			if (toggle.getAttribute('aria-expanded') === 'true') { closeMenu(); } else { openMenu(); }
+		});
+		menu.querySelectorAll('.mobile-menu-link').forEach(function (link) {
+			link.addEventListener('click', closeMenu);
+		});
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+				closeMenu();
+				toggle.focus();
+			}
+		});
+		document.addEventListener('click', function (e) {
+			if (toggle.getAttribute('aria-expanded') === 'true' && !menu.contains(e.target) && !toggle.contains(e.target)) {
+				closeMenu();
+			}
+		});
+	})();
+</script>
 
 <!-- Responsive styling -->
 <style>
@@ -129,19 +191,21 @@
 			/* Reduce padding for smaller screens */
 		}
 
-		nav>div {
-			display: flex;
-			flex-wrap: wrap;
-			/* Allow items to wrap when needed */
-			justify-content: center;
-			/* Center the content */
-			gap: 15px;
-			/* Adjust the gap between items */
+		.nav-links-desktop {
+			display: none !important;
 		}
 
-		nav>div a {
-			font-size: 14px;
-			/* Make text smaller on mobile */
+		.nav-toggle-btn {
+			display: flex !important;
+		}
+
+		.exec-summary-card {
+			padding: 30px 24px !important;
+		}
+
+		.exec-summary-grid {
+			grid-template-columns: 1fr !important;
+			gap: 24px !important;
 		}
 	}
 </style>
@@ -363,12 +427,12 @@
 
 	<!-- EXECUTIVE SUMMARY — Standalone section below fold -->
 	<div id="About Me" style="max-width: 1200px; margin: 20px auto 60px auto; padding: 0 30px;">
-		<div
+		<div class="exec-summary-card"
 			style="background: #1A2238; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 8px 30px rgba(0,0,0,0.5); padding: 50px 50px;">
 			<h2
 				style="color: #ffffff; font-size: 26px; font-weight: 700; margin-bottom: 28px; border-bottom: 2px solid #2b88c6; padding-bottom: 12px; display: inline-block;">
 				Executive Summary</h2>
-			<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px 50px;">
+			<div class="exec-summary-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px 50px;">
 				<p style="font-size: 15px; color: #ffffff; font-weight: 300; line-height: 1.8; margin: 0;">
 					<strong style="color: #2b88c6; font-weight: 600;">Background:</strong> With a completed five-year
 					Computer Science degree and more than ten years of experience in technical support, customer
