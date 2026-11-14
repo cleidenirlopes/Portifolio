@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Phase 0 of my AI agent curriculum: LLM fundamentals — tokens, context windows, temperature, prompts, API anatomy, function calling and grounding.">
+	<title>AI Learning Journey — Phase 0: LLM Fundamentals | Cledenir Souza</title>
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<style id="dark-mode-override">
+		html, body { background-color: #121212 !important; color: #e0e0e0 !important; font-family: 'Open Sans', sans-serif !important; }
+		.navbar, .navbar-default { background-color: rgba(10, 10, 14, 0.97) !important; border: none !important; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) !important; }
+		.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav .dropdown-menu>li>a { color: #b0b0b0 !important; transition: color 0.2s; }
+		.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav .dropdown-menu>li>a:hover { color: #2b88c6 !important; background: transparent !important; }
+		.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus { background: transparent !important; color: #2b88c6 !important; }
+		.dropdown-menu { background-color: #1A2238 !important; border: 1px solid rgba(255, 255, 255, 0.08) !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important; }
+		.navbar-toggle .icon-bar { background-color: #b0b0b0 !important; }
+		#head { background: linear-gradient(135deg, #0d1117 0%, #1A2238 100%) !important; padding: 36px 0 !important; }
+		#logo .title { color: #ffffff !important; font-size: 40px !important; font-weight: 700 !important; letter-spacing: -1px !important; }
+		#logo .tagline, #logo .tagline a { color: #2b88c6 !important; font-size: 13px !important; font-weight: 600 !important; letter-spacing: 1.5px !important; text-transform: uppercase !important; text-decoration: none !important; }
+		#main, .maincontent, article, .container { background-color: #121212 !important; color: #e0e0e0 !important; }
+		h1, h2, h3, h4, h5, h6 { color: #ffffff !important; }
+		p, li, td, th { color: #d0d0d0 !important; line-height: 1.8 !important; }
+		strong { color: #ffffff !important; }
+		a { color: #2b88c6 !important; }
+		a:hover { color: #68b8f0 !important; }
+		footer { background-color: #1A2238 !important; border-top: 1px solid rgba(255, 255, 255, 0.06) !important; color: #b0b0b0 !important; }
+		footer h3 { color: #2b88c6 !important; }
+
+		/* Concept cards — glassmorphism */
+		.concept-card { background: #1A2238; border-radius: 12px; padding: 24px 26px; border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); transition: transform .2s ease, border-color .2s ease; }
+		.concept-card:hover { transform: translateY(-3px); border-color: rgba(43, 136, 198, 0.45); }
+		.concept-card h3 { color: #2b88c6 !important; font-size: 19px; font-weight: 700; margin-top: 0; letter-spacing: 0.3px; }
+		.concept-card h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #b0b0b0 !important; margin: 16px 0 4px; }
+		.concept-card p, .concept-card li { font-size: 14px; }
+		.concept-card .say-it { background: rgba(43, 136, 198, 0.10); border-left: 3px solid #2b88c6; border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 14px; font-size: 13px; font-style: italic; color: #e0e0e0 !important; }
+		.concept-card .say-it strong { color: #68b8f0 !important; font-style: normal; }
+		.phase-badge { display: inline-block; background: rgba(43, 136, 198, 0.15); color: #68b8f0 !important; border: 1px solid rgba(43, 136, 198, 0.5); border-radius: 20px; padding: 4px 14px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+		.roadmap-table { width: 100%; border-collapse: collapse; background: #1A2238; border-radius: 12px; overflow: hidden; }
+		.roadmap-table th { background: rgba(43, 136, 198, 0.18); color: #ffffff !important; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 12px 16px; text-align: left; }
+		.roadmap-table td { padding: 12px 16px; font-size: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); vertical-align: top; }
+		.roadmap-table td:first-child { color: #68b8f0 !important; font-weight: 700; white-space: nowrap; }
+		.section-heading { font-size: 26px; font-weight: 700; margin: 46px 0 8px; }
+		.section-sub { color: #b0b0b0 !important; font-size: 14px; margin-bottom: 22px; }
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="AI-Fundamentos-LLM.html">AI Learning Journey — LLM Fundamentals</a></li>
+							<li><a href="TradeVision.html">Trade Vision (Tariff Analysis)</a></li>
+							<li><a href="Global-Tariff-Impact-Analysis.html">Global Tariff Impact Analysis</a></li>
+							<li><a href="Business-Financial-Analysis.html">Business Financial Analysis</a></li>
+							<li><a href="Banking-Data-Warehouse.html">Banking Data Warehouse</a></li>
+							<li><a href="Travel-Member-Strategy.html">Travel Member Strategy</a></li>
+							<li><a href="Lisbon-s-Public-Transport-Network.html">Lisbon's Public Transport Network</a></li>
+							<li><a href="Global-Immigration.html">Global Immigration Visualization</a></li>
+							<li><a href="Guardians-of-the-Voiceless.html">Guardians of the Voiceless</a></li>
+							<li><a href="Escape-Room-Project.html">Adventure Escape Room</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+						<ul class="dropdown-menu" style="background:#1A2238; border:1px solid rgba(255,255,255,0.08);">
+							<li><a href="https://www.linkedin.com/in/decledenir-seo/" target="_blank" style="color:#e0e0e0;"><i class="fab fa-linkedin" style="color:#2b88c6; margin-right:8px;"></i>LinkedIn</a></li>
+							<li><a href="mailto:cleidenirlopes@outlook.com" style="color:#e0e0e0;"><i class="fas fa-envelope" style="color:#2b88c6; margin-right:8px;"></i>Email</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div id="head" class="home-header">
+		<div class="container">
+			<div id="logo">
+				<h1 class="title">AI Learning Journey</h1>
+				<span class="tagline">Phase 0 — LLM Fundamentals · A 16-project curriculum, from first principles to production agents</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="body" class="maincontent">
+		<div class="container" style="padding: 40px 15px 60px;">
+
+			<span class="phase-badge">Phase 0 of 6 · Foundation</span>
+			<p style="font-size: 16px; margin-top: 22px; max-width: 860px;">
+				Before building chatbots, RAG pipelines or multi-agent systems, everything rests on a small set of
+				fundamentals. This page is my structured glossary of the core concepts behind every LLM-powered
+				system — written the way I explain them, in plain language, with the interview-ready version of each
+				definition. Every project in this curriculum builds directly on these ideas.
+			</p>
+
+			<h2 class="section-heading">1 · The Core Concepts</h2>
+			<p class="section-sub">What each term means, why it matters, and how to explain it in one breath.</p>
+
+			<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;">
+				<div class="concept-card">
+					<h3>Large Language Model (LLM)</h3>
+					<h4>What it is</h4>
+					<p>A neural network trained on massive amounts of text to predict the next token. Given a sequence of words, it generates the most plausible continuation — which, at scale, produces reasoning, translation, summarization and code.</p>
+					<h4>Why it matters</h4>
+					<p>Every AI product — chatbots, agents, copilots — is an LLM wrapped in instructions, tools and data. Understanding the prediction-at-core model explains both its power and its failure modes.</p>
+					<div class="say-it"><strong>Say it:</strong> "An LLM is a pattern-completion engine trained on text — it predicts the next token, and everything we build on top (agents, RAG, tools) is about steering that prediction with the right context."</div>
+				</div>
+
+				<div class="concept-card">
+					<h3>Tokens &amp; Context Window</h3>
+					<h4>What it is</h4>
+					<p>Models don't read words — they read <strong>tokens</strong> (chunks of ~4 characters). The <strong>context window</strong> is the model's working memory: the maximum number of tokens (input + output) it can consider at once.</p>
+					<h4>Why it matters</h4>
+					<p>Tokens are how APIs charge, how limits are enforced, and why long documents don't "fit". Context windows define what you can put in a single prompt vs. what needs retrieval (RAG).</p>
+					<div class="say-it"><strong>Say it:</strong> "A token is the unit of text an LLM reads and bills. The context window is its short-term memory — when knowledge doesn't fit, we don't retrain the model, we retrieve just the right pieces."</div>
+				</div>
+
+				<div class="concept-card">
+					<h3>Temperature &amp; Sampling</h3>
+					<h4>What it is</h4>
+					<p>The model picks each next token from a probability distribution. <strong>Temperature</strong> controls how adventurous that pick is: low (0–0.3) = deterministic and consistent; high (0.8–1.2) = creative and varied.</p>
+					<h4>Why it matters</h4>
+					<p>It's a production decision, not a detail: a data-extraction bot needs temperature near 0 for reliability; a brainstorming assistant wants it higher. Knowing this separates intentional design from guesswork.</p>
+					<div class="say-it"><strong>Say it:</strong> "Temperature tunes the trade-off between consistency and creativity — I set it near zero for anything that must be repeatable, like classification or extraction."</div>
+				</div>
+
+				<div class="concept-card">
+					<h3>System Prompt vs. User Prompt</h3>
+					<h4>What it is</h4>
+					<p>The <strong>system prompt</strong> sets the model's persistent role, rules and boundaries for the whole conversation. The <strong>user prompt</strong> is the individual request. A conversation is an ordered list of messages of these types.</p>
+					<h4>Why it matters</h4>
+					<p>The system prompt is where product behavior lives: tone, safety rules, output format. It's the difference between "using ChatGPT" and engineering a consistent AI product.</p>
+					<div class="say-it"><strong>Say it:</strong> "The system prompt is the job description; the user prompt is the daily task. Product behavior is engineered in the system prompt, not hoped for in the user prompt."</div>
+				</div>
+
+				<div class="concept-card">
+					<h3>Anatomy of an LLM API Call</h3>
+					<h4>What it is</h4>
+					<p>An HTTPS request to a provider endpoint with: the <strong>model</strong> name, a list of <strong>messages</strong> (role + content), and parameters like <strong>temperature</strong> and <strong>max_tokens</strong>. The response returns generated text plus <strong>usage</strong> (input/output tokens) — the basis of cost.</p>
+					<h4>Why it matters</h4>
+					<p>This single request/response pattern is the building block of every module in this curriculum — n8n flows, RAG chains and agent frameworks all reduce to it. Cost = tokens × price per token.</p>
+					<div class="say-it"><strong>Say it:</strong> "An LLM API call is just: send a model + a list of messages + settings, get text and a token bill back. Everything more complex is orchestration around this loop."</div>
+				</div>
+
+				<div class="concept-card">
+					<h3>Function Calling &amp; Structured Outputs</h3>
+					<h4>What it is</h4>
+					<p>You describe functions (name, parameters, purpose) to the model; it decides when to "call" one and returns structured JSON — your code executes the real action (query a database, send an email). <strong>Structured outputs</strong> force the reply to match a strict schema.</p>
+					<h4>Why it matters</h4>
+					<p>This is the bridge between language and action — the mechanism that turns a chatbot into an agent. It's how LLMs touch real systems reliably instead of printing suggestions.</p>
+					<div class="say-it"><strong>Say it:</strong> "Function calling lets the model choose the tool and fill in the arguments, but my code stays in control of execution — that's what makes an LLM safe to connect to real operations."</div>
+				</div>
+
+				<div class="concept-card">
+					<h3>Hallucination &amp; Grounding</h3>
+					<h4>What it is</h4>
+					<p>A hallucination is a confident but false answer — a natural side effect of a next-token predictor that optimizes plausibility, not truth. <strong>Grounding</strong> means anchoring answers in provided sources: retrieved documents, databases, tool results.</p>
+					<h4>Why it matters</h4>
+					<p>In Trust &amp; Safety terms: ungrounded output is unverified output. Mitigation is layered — grounding (RAG), structured validation, human review, and evals that measure factuality.</p>
+					<div class="say-it"><strong>Say it:</strong> "An LLM optimizes for plausible text, not verified truth — so production systems ground it in retrieved sources and keep a human in the loop for anything consequential."</div>
+				</div>
+
+				<div class="concept-card">
+					<h3>Where This Leads: RAG, Agents &amp; MCP</h3>
+					<h4>What it is</h4>
+					<p><strong>RAG</strong> retrieves relevant documents and injects them into the context window (grounding at scale). <strong>Agents</strong> add function calling + loops + memory, so the LLM plans and acts across steps. <strong>MCP</strong> is the open standard that connects agents to tools and data sources uniformly.</p>
+					<h4>Why it matters</h4>
+					<p>These are the three pillars of the next phases of this curriculum — each gets a dedicated project, from a RAG knowledge base to a multi-agent team and an MCP server.</p>
+					<div class="say-it"><strong>Say it:</strong> "RAG solves knowledge, function calling solves action, agent loops solve multi-step tasks, and MCP standardizes the connections — that's the whole architecture of modern AI systems."</div>
+				</div>
+			</div>
+
+			<h2 class="section-heading">2 · The Curriculum Roadmap</h2>
+			<p class="section-sub">Each phase ends with a published project — this portfolio grows as the journey advances.</p>
+			<table class="roadmap-table">
+				<thead>
+					<tr><th>Phase</th><th>Focus</th><th>Portfolio deliverables</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>0 — Foundation</td><td>LLM fundamentals: tokens, context, temperature, prompts, API anatomy, function calling, grounding</td><td>This page — structured glossary (live)</td></tr>
+					<tr><td>1 — First AI systems</td><td>Chatbot with an LLM API · n8n workflows with human-in-the-loop validation · automated reporting</td><td>3 projects</td></tr>
+					<tr><td>2 — Knowledge (RAG)</td><td>RAG knowledge bases, visual orchestration in Langflow, advanced RAG with LangChain + FAISS</td><td>2 projects</td></tr>
+					<tr><td>3 — Real agents</td><td>Stateful agents with LangGraph · multi-agent teams with CrewAI · MCP servers with FastAPI</td><td>3 projects</td></tr>
+					<tr><td>4 — Quality &amp; trust</td><td>Observability with Langfuse · prompt engineering + LLM evaluation · agent security (prompt injection, guardrails)</td><td>3 projects</td></tr>
+					<tr><td>5 — Specialization</td><td>Enterprise low-code agents (Copilot Studio), MLOps concepts, classic ML with Hugging Face</td><td>Elective</td></tr>
+					<tr><td>6 — Capstone</td><td>End-to-end customer-support agent: RAG + human validation + observability + MCP</td><td>Capstone project</td></tr>
+				</tbody>
+			</table>
+
+			<p style="margin-top: 34px; max-width: 860px;">
+				<em>Phase 0 status: complete. Next: Phase 1 — building a chatbot directly on an LLM API, the
+				foundation project of the curriculum.</em>
+			</p>
+
+		</div>
+	</div>
+
+	<footer>
+		<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; padding: 10px 20px 0;">
+			<div style="flex: 1; min-width: 200px; padding: 5px 10px;">
+				<h3>Get in Touch</h3>
+				<p style="margin:2px 0; font-size:12px;">Email: <a href="mailto:cleidenirlopes@outlook.com" style="color: #ccc;">cleidenirlopes@outlook.com</a></p>
+				<p style="margin:2px 0; font-size:12px;">Lisboa, Portugal</p>
+			</div>
+			<div style="flex: 1; min-width: 200px; padding: 5px 10px;">
+				<h3>Follow Me</h3>
+				<div style="display: flex; flex-direction: column;">
+					<a href="https://www.linkedin.com/in/decledenir-seo/" style="color: #ccc; margin-bottom: 10px;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+					<a href="https://github.com/cleidenirlopes" style="color: #ccc; margin-bottom: 10px;"><i class="fab fa-github"></i> GitHub</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div style="background-color: #191919; color: #999; padding: 4px 0; width: 100%; font-size: 11px;">
+		<div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between;">
+			<p>Lisboa, Portugal</p>
+			<p>&copy; 2026 <a href="https://www.linkedin.com/in/decledenir-seo/" style="color: #2b88c6;" target="_blank" rel="noopener noreferrer">DeCledenir</a>. All Rights Reserved.</p>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/template.js"></script>
+</body>
+
+</html>
